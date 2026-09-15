@@ -1,0 +1,256 @@
+{
+  "literal_names": [
+    "Header_Length>=bin1",
+    "Header_Length>=bin2",
+    "Header_Length>=bin3",
+    "Header_Length>=bin4",
+    "Header_Length>=bin5",
+    "Header_Length>=bin6",
+    "Header_Length>=bin7",
+    "Header_Length>=bin8",
+    "Header_Length>=bin9",
+    "Protocol Type>=bin1",
+    "Protocol Type>=bin2",
+    "Protocol Type>=bin3",
+    "Rate>=bin1",
+    "Rate>=bin2",
+    "Rate>=bin3",
+    "Rate>=bin4",
+    "Rate>=bin5",
+    "Rate>=bin6",
+    "Rate>=bin7",
+    "Rate>=bin8",
+    "Rate>=bin9",
+    "fin_flag_number>=bin1",
+    "fin_flag_number>=bin2",
+    "fin_flag_number>=bin3",
+    "fin_flag_number>=bin4",
+    "fin_flag_number>=bin5",
+    "fin_flag_number>=bin6",
+    "fin_flag_number>=bin7",
+    "fin_flag_number>=bin8",
+    "fin_flag_number>=bin9",
+    "syn_flag_number>=bin1",
+    "syn_flag_number>=bin2",
+    "syn_flag_number>=bin3",
+    "syn_flag_number>=bin4",
+    "syn_flag_number>=bin5",
+    "syn_flag_number>=bin6",
+    "syn_flag_number>=bin7",
+    "syn_flag_number>=bin8",
+    "syn_flag_number>=bin9",
+    "rst_flag_number>=bin1",
+    "rst_flag_number>=bin2",
+    "rst_flag_number>=bin3",
+    "rst_flag_number>=bin4",
+    "rst_flag_number>=bin5",
+    "rst_flag_number>=bin6",
+    "rst_flag_number>=bin7",
+    "rst_flag_number>=bin8",
+    "rst_flag_number>=bin9",
+    "psh_flag_number>=bin1",
+    "psh_flag_number>=bin2",
+    "psh_flag_number>=bin3",
+    "psh_flag_number>=bin4",
+    "psh_flag_number>=bin5",
+    "psh_flag_number>=bin6",
+    "psh_flag_number>=bin7",
+    "psh_flag_number>=bin8",
+    "psh_flag_number>=bin9",
+    "ack_flag_number>=bin1",
+    "ack_flag_number>=bin2",
+    "ack_flag_number>=bin3",
+    "ack_flag_number>=bin4",
+    "ack_flag_number>=bin5",
+    "ack_flag_number>=bin6",
+    "ack_flag_number>=bin7",
+    "ack_flag_number>=bin8",
+    "ack_flag_number>=bin9",
+    "ece_flag_number>=bin1",
+    "ece_flag_number>=bin2",
+    "ece_flag_number>=bin3",
+    "cwr_flag_number>=bin1",
+    "cwr_flag_number>=bin2",
+    "rst_count>=bin1",
+    "rst_count>=bin2",
+    "rst_count>=bin3",
+    "rst_count>=bin4",
+    "rst_count>=bin5",
+    "rst_count>=bin6",
+    "rst_count>=bin7",
+    "rst_count>=bin8",
+    "rst_count>=bin9",
+    "HTTP>=bin1",
+    "HTTP>=bin2",
+    "HTTP>=bin3",
+    "HTTP>=bin4",
+    "HTTP>=bin5",
+    "HTTP>=bin6",
+    "HTTP>=bin7",
+    "HTTP>=bin8",
+    "HTTP>=bin9",
+    "HTTPS>=bin1",
+    "HTTPS>=bin2",
+    "HTTPS>=bin3",
+    "HTTPS>=bin4",
+    "HTTPS>=bin5",
+    "HTTPS>=bin6",
+    "HTTPS>=bin7",
+    "HTTPS>=bin8",
+    "HTTPS>=bin9",
+    "DNS>=bin1",
+    "DNS>=bin2",
+    "DNS>=bin3",
+    "DNS>=bin4",
+    "DNS>=bin5",
+    "DNS>=bin6",
+    "DNS>=bin7",
+    "DNS>=bin8",
+    "DNS>=bin9",
+    "Telnet>=bin1",
+    "Telnet>=bin2",
+    "SMTP>=bin1",
+    "SMTP>=bin2",
+    "SSH>=bin1",
+    "SSH>=bin2",
+    "SSH>=bin3",
+    "SSH>=bin4",
+    "SSH>=bin5",
+    "IRC>=bin1",
+    "IRC>=bin2",
+    "DHCP>=bin1",
+    "DHCP>=bin2",
+    "DHCP>=bin3",
+    "DHCP>=bin4",
+    "DHCP>=bin5",
+    "DHCP>=bin6",
+    "DHCP>=bin7",
+    "DHCP>=bin8",
+    "DHCP>=bin9",
+    "ARP>=bin1",
+    "ARP>=bin2",
+    "ARP>=bin3",
+    "ARP>=bin4",
+    "ARP>=bin5",
+    "ARP>=bin6",
+    "ARP>=bin7",
+    "ARP>=bin8",
+    "ARP>=bin9",
+    "ICMP>=bin1",
+    "ICMP>=bin2",
+    "ICMP>=bin3",
+    "ICMP>=bin4",
+    "ICMP>=bin5",
+    "ICMP>=bin6",
+    "ICMP>=bin7",
+    "ICMP>=bin8",
+    "ICMP>=bin9",
+    "IGMP>=bin1",
+    "IGMP>=bin2",
+    "IGMP>=bin3",
+    "IGMP>=bin4",
+    "IGMP>=bin5",
+    "IGMP>=bin6",
+    "IGMP>=bin7",
+    "IGMP>=bin8",
+    "IGMP>=bin9"
+  ],
+  "families": [
+    "Benign",
+    "DDoS",
+    "DoS",
+    "MQTT",
+    "Recon",
+    "Spoofing"
+  ],
+  "binarizers": [
+    {
+      "feature": "Header_Length",
+      "n_bits": 9
+    },
+    {
+      "feature": "Protocol Type",
+      "n_bits": 3
+    },
+    {
+      "feature": "Rate",
+      "n_bits": 9
+    },
+    {
+      "feature": "fin_flag_number",
+      "n_bits": 9
+    },
+    {
+      "feature": "syn_flag_number",
+      "n_bits": 9
+    },
+    {
+      "feature": "rst_flag_number",
+      "n_bits": 9
+    },
+    {
+      "feature": "psh_flag_number",
+      "n_bits": 9
+    },
+    {
+      "feature": "ack_flag_number",
+      "n_bits": 9
+    },
+    {
+      "feature": "ece_flag_number",
+      "n_bits": 3
+    },
+    {
+      "feature": "cwr_flag_number",
+      "n_bits": 2
+    },
+    {
+      "feature": "rst_count",
+      "n_bits": 9
+    },
+    {
+      "feature": "HTTP",
+      "n_bits": 9
+    },
+    {
+      "feature": "HTTPS",
+      "n_bits": 9
+    },
+    {
+      "feature": "DNS",
+      "n_bits": 9
+    },
+    {
+      "feature": "Telnet",
+      "n_bits": 2
+    },
+    {
+      "feature": "SMTP",
+      "n_bits": 2
+    },
+    {
+      "feature": "SSH",
+      "n_bits": 5
+    },
+    {
+      "feature": "IRC",
+      "n_bits": 2
+    },
+    {
+      "feature": "DHCP",
+      "n_bits": 9
+    },
+    {
+      "feature": "ARP",
+      "n_bits": 9
+    },
+    {
+      "feature": "ICMP",
+      "n_bits": 9
+    },
+    {
+      "feature": "IGMP",
+      "n_bits": 9
+    }
+  ]
+}

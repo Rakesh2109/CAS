@@ -1,0 +1,37 @@
+{
+  "dataset": "wustl",
+  "seed": 42,
+  "signature_sizes": {
+    "normal": 3,
+    "Spoofing": 3,
+    "Data Alteration": 7
+  },
+  "t_hat_raw": 2,
+  "covers_raw": {
+    "normal": 3,
+    "Spoofing": 3,
+    "Data Alteration": 3
+  },
+  "t_hat_reduced": 2,
+  "covers_reduced": {
+    "normal": 3,
+    "Spoofing": 3,
+    "Data Alteration": 3
+  },
+  "n_clauses_removed": 0,
+  "reduced_signature_sizes": {
+    "normal": 3,
+    "Spoofing": 3,
+    "Data Alteration": 7
+  },
+  "mixture_decode_acc_t2_raw_noise0.0_thr1.0": 1.0,
+  "mixture_decode_acc_t2_raw_noise0.05_thr1.0": 0.652,
+  "mixture_decode_acc_t2_raw_noise0.05_thr0.9": 0.652,
+  "mixture_decode_acc_t2_raw_noise0.05_thr0.8": 0.814,
+  "mixture_decode_acc_t2_raw_noise0.15_thr0.8": 0.434,
+  "mixture_decode_acc_t2_reduced_noise0.0_thr1.0": 1.0,
+  "mixture_decode_acc_t2_reduced_noise0.05_thr1.0": 0.652,
+  "mixture_decode_acc_t2_reduced_noise0.05_thr0.9": 0.652,
+  "mixture_decode_acc_t2_reduced_noise0.05_thr0.8": 0.814,
+  "mixture_decode_acc_t2_reduced_noise0.15_thr0.8": 0.434
+}

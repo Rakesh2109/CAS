@@ -1,0 +1,60 @@
+{
+  "dataset": "wustl",
+  "seed": 42,
+  "delta": 5.107774032076821e-07,
+  "m": 600,
+  "macro_f1": 0.5573685450859491,
+  "report": {
+    "normal": {
+      "precision": 0.9654747225647349,
+      "recall": 0.5510204081632653,
+      "f1-score": 0.7016129032258065,
+      "support": 1421.0
+    },
+    "Spoofing": {
+      "precision": 0.14221556886227546,
+      "recall": 0.7723577235772358,
+      "f1-score": 0.2402022756005057,
+      "support": 123.0
+    },
+    "Data Alteration": {
+      "precision": 0.5751633986928104,
+      "recall": 1.0,
+      "f1-score": 0.7302904564315352,
+      "support": 88.0
+    },
+    "accuracy": 0.5919117647058824,
+    "macro avg": {
+      "precision": 0.5609512300399403,
+      "recall": 0.7744593772468337,
+      "f1-score": 0.5573685450859491,
+      "support": 1632.0
+    },
+    "weighted avg": {
+      "precision": 0.882381418394311,
+      "recall": 0.5919117647058822,
+      "f1-score": 0.6683838085470026,
+      "support": 1632.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      783,
+      573,
+      65
+    ],
+    [
+      28,
+      95,
+      0
+    ],
+    [
+      0,
+      0,
+      88
+    ]
+  ],
+  "margin_delta": 17.40923319924537,
+  "n_eval": 1632,
+  "tm_argmax_macro_f1_reference": 0.6352045445606826
+}

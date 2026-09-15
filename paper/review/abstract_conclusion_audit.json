@@ -1,0 +1,73 @@
+{
+  "numeric_checks": [
+    {
+      "claim": "full TM macro-F1",
+      "unrounded_value": 0.6922123945049062,
+      "printed_value": "0.692",
+      "paper_support": "Table I"
+    },
+    {
+      "claim": "full TM SD",
+      "unrounded_value": 0.004228966433313825,
+      "printed_value": "0.004",
+      "paper_support": "Table I"
+    },
+    {
+      "claim": "full CAS macro-F1",
+      "unrounded_value": 0.765350456608076,
+      "printed_value": "0.765",
+      "paper_support": "Table I"
+    },
+    {
+      "claim": "full CAS SD",
+      "unrounded_value": 0.029117547013362697,
+      "printed_value": "0.029",
+      "paper_support": "Table I"
+    },
+    {
+      "claim": "pruned CAS macro-F1",
+      "unrounded_value": 0.7868065837621795,
+      "printed_value": "0.787",
+      "paper_support": "Table I"
+    },
+    {
+      "claim": "pruned CAS SD",
+      "unrounded_value": 0.023303480363986905,
+      "printed_value": "0.023",
+      "paper_support": "Table I"
+    },
+    {
+      "claim": "base macro-F1 decrease",
+      "unrounded_value": 0.004154779730448088,
+      "printed_value": "0.004",
+      "paper_support": "Table I and pruning results"
+    },
+    {
+      "claim": "binary CAS AUROC",
+      "unrounded_value": 0.9378713303746862,
+      "printed_value": "0.938",
+      "paper_support": "Table IV"
+    },
+    {
+      "claim": "binary TM raw attack AUROC",
+      "unrounded_value": 0.9131665082587004,
+      "printed_value": "0.913",
+      "paper_support": "Table IV"
+    }
+  ],
+  "pool_sizes": [
+    2400,
+    390
+  ],
+  "retained_pool_percent": 16.25,
+  "seed_count": 3,
+  "selected_operating_points_verified": true,
+  "threshold_sensitivity_support": "Figure 2(a), saved threeway_cas.json grids",
+  "synthetic_identifiability_scope": "62 tested unions per seed, clause-index OR model; not real-traffic mixtures",
+  "wording_clarifications": [
+    "CPSS repeated half-sample selection, not cross-model reproducibility",
+    "Synthetic identifiability restricted to tested signature unions"
+  ],
+  "conclusion_values": "Only values already reported in manuscript; macro-F1 from Table I, AUROC from Table IV, pool fraction from pruning results",
+  "introduction_methodology_results_unchanged": true
+}

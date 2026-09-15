@@ -1,0 +1,79 @@
+{
+  "original_tm_polarity": {
+    "42": {
+      "positive_per_class": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "negative_per_class": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    "7": {
+      "positive_per_class": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "negative_per_class": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    "123": {
+      "positive_per_class": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "negative_per_class": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    }
+  },
+  "historical_binary_baselines_reproduced": {
+    "dt": true,
+    "rf": true,
+    "xgb": true,
+    "l1": true
+  },
+  "binary_feature_count": 154,
+  "numeric_feature_count": 22,
+  "baseline_train_rows": 175803,
+  "selection_rows": 19535,
+  "test_rows": 80868,
+  "split_seed": 0,
+  "estimator_seeds": [
+    42,
+    7,
+    123
+  ],
+  "smote": false,
+  "sd_ddof": 0,
+  "binary_xgb_rerun": "Historical selection-set-chosen configuration (depth 4, 200 trees); all other final baseline runs search their saved grids.",
+  "numeric_l1_scaling": "StandardScaler fitted on the 175803 baseline-training rows only."
+}

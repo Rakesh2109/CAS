@@ -1,0 +1,26 @@
+{
+  "train_raw": 6987390,
+  "train_dedup": 1605583,
+  "test_raw": 2175604,
+  "test_dedup": 705644,
+  "test_leaked_removed": 106262,
+  "test_clean": 599382,
+  "train_class_counts": {
+    "DDoS": 731608,
+    "DoS": 530222,
+    "MQTT": 261807,
+    "Recon": 47713,
+    "Benign": 19284,
+    "Spoofing": 14949
+  },
+  "test_clean_class_counts": {
+    "MQTT": 346115,
+    "DoS": 111777,
+    "DDoS": 100243,
+    "Benign": 27464,
+    "Recon": 8190,
+    "Spoofing": 5593
+  },
+  "time_s": 11.0,
+  "n_literals_nbins10": null
+}

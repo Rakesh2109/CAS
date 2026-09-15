@@ -1,0 +1,49 @@
+{
+  "source": "results_audit.json and results/threeway_binary.json",
+  "full_pool_class_f1": {
+    "Benign": {
+      "base_classes": 0.3898723784433404,
+      "cas_classes": 0.7496106054089268
+    },
+    "DDoS": {
+      "base_classes": 0.8217414328276599,
+      "cas_classes": 0.7787440887309091
+    },
+    "DoS": {
+      "base_classes": 0.8328429280700748,
+      "cas_classes": 0.7508677246610658
+    },
+    "MQTT": {
+      "base_classes": 0.7026398743398699,
+      "cas_classes": 0.8236949420926871
+    },
+    "Recon": {
+      "base_classes": 0.8690431254269563,
+      "cas_classes": 0.8678118037521938
+    },
+    "Spoofing": {
+      "base_classes": 0.5371346279215364,
+      "cas_classes": 0.6213735750026734
+    }
+  },
+  "full_pool_accuracy": {
+    "base_classes": {
+      "mean": 0.724241974575852,
+      "sd": 0.006239963686014698
+    },
+    "cas_classes": {
+      "mean": 0.7818337702593526,
+      "sd": 0.03204842490972211
+    }
+  },
+  "binary_benign_f1": {
+    "TM": 0.34687628844126805,
+    "CAS": 0.7192495549703578
+  },
+  "binary_missed_attack_fraction": {
+    "TM": 0.0126953125,
+    "CAS": 0.0897216796875
+  },
+  "methodology_sha256": "0a70be859e9872fe838a0b88c0c7b203979f5c6594ced631a98dc5c538a14fe3",
+  "methodology_unchanged": true
+}

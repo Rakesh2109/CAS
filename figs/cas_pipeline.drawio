@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" agent="claude-code" version="24.0">
+  <diagram name="CAS Pipeline" id="cas-pipeline">
+    <mxGraphModel dx="900" dy="620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="420" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Row 1: input through clause activations -->
+        <mxCell id="box1" value="CICIoMT2024 flows&#10;22 numeric features" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="box2" value="Quantile binarization&#10;thermometer bits" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="box3" value="Weighted TM&#10;6 x 400 clauses" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="box4" value="Clause activations&#10;Z in {0,1}^(n x 2400)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="640" y="40" width="170" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" style="endArrow=block;html=1;rounded=0;fontSize=12;" edge="1" parent="1" source="box1" target="box2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="endArrow=block;html=1;rounded=0;fontSize=12;" edge="1" parent="1" source="box2" target="box3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="endArrow=block;html=1;rounded=0;fontSize=12;" edge="1" parent="1" source="box3" target="box4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Row 2: CPSS, signed signatures, attribution (right to left) -->
+        <mxCell id="box7" value="CPSS per family&#10;pi-hat_j &gt;= pi_thr, sign split" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="640" y="190" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="box6" value="Signed signatures&#10;S+ (for) / S- (against)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="280" y="190" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="box5" value="Attribution&#10;y-hat = argmax_l s_l(x)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="190" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e4" style="endArrow=block;html=1;rounded=0;fontSize=12;" edge="1" parent="1" source="box4" target="box7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="endArrow=block;html=1;rounded=0;fontSize=12;" edge="1" parent="1" source="box7" target="box6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="endArrow=block;html=1;rounded=0;fontSize=12;" edge="1" parent="1" source="box6" target="box5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Certificates bar -->
+        <mxCell id="certs" value="Certificates: Shah-Samworth E[V] bound (error control)   *   t-disjunct identifiability (mixture decoding)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="330" width="770" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="endArrow=block;html=1;dashed=1;rounded=0;" edge="1" parent="1" source="box7" target="certs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="endArrow=block;html=1;dashed=1;rounded=0;" edge="1" parent="1" source="box6" target="certs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

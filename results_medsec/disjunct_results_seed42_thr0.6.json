@@ -1,0 +1,45 @@
+{
+  "dataset": "medsec",
+  "seed": 42,
+  "signature_sizes": {
+    "Benign": 39,
+    "Reconnaissance": 16,
+    "Initial access": 37,
+    "Lateral movement": 27,
+    "Exfiltration": 34
+  },
+  "t_hat_raw": 4,
+  "covers_raw": {
+    "Benign": 5,
+    "Reconnaissance": 5,
+    "Initial access": 5,
+    "Lateral movement": 5,
+    "Exfiltration": 5
+  },
+  "t_hat_reduced": 4,
+  "covers_reduced": {
+    "Benign": 5,
+    "Reconnaissance": 5,
+    "Initial access": 5,
+    "Lateral movement": 5,
+    "Exfiltration": 5
+  },
+  "n_clauses_removed": 4,
+  "reduced_signature_sizes": {
+    "Benign": 37,
+    "Reconnaissance": 16,
+    "Initial access": 37,
+    "Lateral movement": 23,
+    "Exfiltration": 32
+  },
+  "mixture_decode_acc_t2_raw_noise0.0_thr1.0": 1.0,
+  "mixture_decode_acc_t2_raw_noise0.05_thr1.0": 0.066,
+  "mixture_decode_acc_t2_raw_noise0.05_thr0.9": 0.756,
+  "mixture_decode_acc_t2_raw_noise0.05_thr0.8": 0.996,
+  "mixture_decode_acc_t2_raw_noise0.15_thr0.8": 0.67,
+  "mixture_decode_acc_t2_reduced_noise0.0_thr1.0": 1.0,
+  "mixture_decode_acc_t2_reduced_noise0.05_thr1.0": 0.082,
+  "mixture_decode_acc_t2_reduced_noise0.05_thr0.9": 0.782,
+  "mixture_decode_acc_t2_reduced_noise0.05_thr0.8": 0.998,
+  "mixture_decode_acc_t2_reduced_noise0.15_thr0.8": 0.674
+}

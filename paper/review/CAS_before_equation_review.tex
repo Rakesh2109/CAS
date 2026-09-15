@@ -1,0 +1,595 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\graphicspath{{../figs/}}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.9}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.9}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.166em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{Clause-Activation Signatures (CAS) for Attack-Family Attribution in IoMT}
+
+\author{Rakesh Reddy Yakkati, Per-Arne Andersen, Lei Jiao, Ole-Christoffer Granmo, and Rishad Shafik
+\thanks{This work was supported by the \textit{SecureIoTM---Ultra-low-energy IoT Intrusion Detection Systems using Logic-based Tsetlin Machines} project (Grant Number 342167), funded by the Research Council of Norway under the TEKNOLOGIKONVER programme. The authors acknowledge the support from the Centre of Artificial Intelligence Research at the University of Agder, Sørlandet Hospital Trust, and Newcastle University for their collaboration in this interdisciplinary research initiative.}% <-this % stops a space
+\thanks{Rakesh Reddy Yakkati, Lei Jiao, and Ole-Christoffer Granmo are with the Department of ICT, University of Agder, Grimstad 4879, Norway (emails rakeshry@uia.no, lei.jiao@uia.no, and ole.granmo@uia.no).}
+\thanks{Per-Arne Andersen is with the Department of Information Systems, University of Agder, Kristiansand 4630 (email per.andersen@uia.no).}
+\thanks{Rishad Shafik is with the Department of Microelectronic Systems, Newcastle University, Newcastle upon Tyne, UK (email rishad.shafik@newcastle.ac.uk).}}
+
+\maketitle
+
+\begin{abstract}
+When an intrusion detector flags traffic in the Internet of Medical Things
+(IoMT), a label alone is not enough --- the analyst must also know
+\emph{which} attack family is at play and \emph{why}. This paper introduces
+Clause-Activation Signatures (CAS), a method that turns the clauses of a
+trained weighted Tsetlin Machine (TM) into a compact, auditable signature
+for each attack family, so that attribution becomes signature matching
+rather than an opaque vote. Each signature is extracted with
+complementary-pairs stability selection (CPSS) over clause activations,
+split by coefficient sign into inculpatory and exculpatory evidence, and
+certified by a Shah--Samworth bound on spurious inclusions. Evaluated on
+CICIoMT2024 (WiFi/MQTT, family level) across three seeded TMs under a
+leak-free fit/selection/report split of the test set, CAS improves over
+the raw weighted-vote TM it is extracted from: macro-F1
+rises from $0.692 \pm 0.004$ to $0.765 \pm 0.029$, using only 28--53
+sign-positive clauses per family from a 2{,}400-clause pool. Sorting
+clauses by weight and discarding the weakest $84\%$ beforehand costs the
+base detector nothing, lifts CAS to $0.787 \pm 0.023$, and removes its
+sensitivity to the stability threshold. The six signatures provably form a
+maximally 5-disjunct code on every seed, so any mixture of up to five
+families decodes exactly; under 5\% bit-flip noise a thresholded decoder
+still recovers 99.8\%--100\%. A binary normal-versus-attack reduction
+lifts AUROC from 0.817 to 0.938. Two negative results are reported: weak
+open-set novelty detection under correct conformal false-flag control, and
+signature identity that does not survive retraining. CAS is a certified
+attribution layer that denoises a mediocre base detector, not a
+replacement for one.
+\end{abstract}
+
+\begin{IEEEkeywords}
+attack attribution, disjunct codes, intrusion detection, interpretable
+machine learning, IoMT, open-set recognition, stability selection,
+Tsetlin Machine
+\end{IEEEkeywords}
+
+\section{Introduction and Related Work}
+An IoMT intrusion detector must both raise a correct alarm and name the
+attack family behind it in a form an analyst can audit, since containment
+and clinical risk differ by family. Post-hoc explainers such as SHAP, LIME
+and Anchors~\cite{xaiids2025} serve only the first: they explain one
+prediction at a time with no stability guarantee. A per-family
+\emph{signature} --- interpretable by design, stability-vetted,
+attached to a family rather than a flow --- is absent from the
+literature.
+
+The Tsetlin Machine (TM)~\cite{granmo2018} is a natural substrate: its
+unit of computation is a conjunctive clause over Boolean literals that
+stays human-readable after training, and the weighted
+TM~\cite{phoulady2020} adds an integer vote weight per clause. TM-based
+intrusion detection is established --- rules on
+NSL-KDD~\cite{abeyrathna2020}, TMs on CICIoMT2024 and
+MedSec-25~\cite{jaiswal2026iomt,jaiswal2026medsec} --- but these explain single
+predictions through whichever clauses fired, without error control. Clause-Activation Signatures (CAS) close that gap: per family,
+complementary-pairs stability selection
+(CPSS)~\cite{meinshausen2010,shah2013} over clause activations keeps the
+stably predictive clauses, splits them by coefficient sign into
+inculpatory and exculpatory evidence, and carries a Shah--Samworth
+certificate on spurious inclusions. Identifiability under simultaneous families follows from
+$t$-disjunct matrices~\cite{du1993}. We evaluate on
+CICIoMT2024~\cite{dadkhah2024}, the only peer-reviewed multi-protocol IoMT
+benchmark meeting standard validity
+criteria~\cite{sommer2010,engelen2021,arp2022}; its schema carries no IP or
+port fields.
+
+Contributions: a seed-reproducible CAS implementation on TMU~\cite{tmu}
+clause activations with a load-bearing sign filter
+(\S\ref{sec:cpss}, \S\ref{sec:validation}); three-seed
+$\pi_{\mathrm{thr}}$/$B$/$\kappa$ sensitivity maps (\S\ref{sec:sweep});
+certified per-family evidence
+lists (\S\ref{sec:signatures}); a clause-pruning program that discards
+$84\%$ of the pool and improves CAS (\S\ref{sec:prune},
+\S\ref{sec:pruned}); a maximal disjunct-code certificate
+(\S\ref{sec:disjunct}); a binary reduction (\S\ref{sec:binary}); and two
+negative results (\S\ref{sec:taskb}, \S\ref{sec:stability}).
+
+\section{Method: Clause-Activation Signatures}
+\subsection{Overview}
+Fig.~\ref{fig:cpss} shows the pipeline. Raw flows are first binarised with
+the standard thermometer binariser of the TMU library, and a weighted TM
+is trained on the resulting Boolean vectors. Everything afterwards works
+on the trained model's learned rules: passing flows through the TM yields
+clause activations, and CPSS extracts a stable signature per class from
+them. Two guarantees accompany the signatures: a statistical
+error-control bound on spurious inclusions (\S\ref{sec:cert}) and a
+combinatorial identifiability guarantee for mixtures
+(\S\ref{sec:disjunct}).
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_cpss_protocol.pdf}
+\caption{CAS extraction and evaluation under the three-way protocol.
+The training partition determines the binarizer and weighted TM.
+Optional weight pruning precedes CPSS on the fit half; the selection
+quarter determines $k^*$, $B$, and $\pi_{\mathrm{thr}}$ (dashed arrows).
+Each complementary half contributes one selection vote per clause,
+using the union over the six-point $\kappa$ grid. Both inculpatory
+$S_\ell^+$ and exculpatory $S_\ell^-$ evidence must pass the stability
+threshold; mean coefficient sign separates them. The report quarter
+uses the fixed pool, signatures, and normalized score of~\eqref{eq:score}.
+If the positive-weight denominator is zero, the implementation assigns
+$s_\ell(x)=0$.}
+\label{fig:cpss}
+\end{figure*}
+
+\subsection{Dataset Description}
+We use CICIoMT2024~\cite{dadkhah2024}, WiFi/MQTT branch, with family-level
+labels. The dataset was collected on a testbed of 40 healthcare devices
+(25 real, 15 simulated) communicating over Wi-Fi, MQTT, and BLE. It
+contains 18 attack types grouped into five attack families, and each flow is
+described by 22 numeric CIC-extracted flow features. With benign traffic
+there are six classes in all:
+Benign, distributed denial-of-service (DDoS),
+denial-of-service (DoS), attacks on the Message Queuing Telemetry Transport
+protocol (MQTT), reconnaissance (Recon), and Spoofing.
+\subsection{Booleanisation and Base Detector}
+\label{sec:bool}
+Each numeric flow feature is discretised into 10 quantile bins. We use
+scikit-learn's KBinsDiscretizer with bin edges fit on the training
+partition only. Features such as \texttt{Rate} contain $+\infty$ values
+from division by near-zero flow duration upstream; we clip them to the
+finite training maximum before binning, otherwise the quantile edges
+collapse to a single degenerate bin (\S\ref{sec:validation}). The bins are
+encoded as cumulative thermometer bits of the
+form ``feature $\ge$ bin $k$''. TMU handles literal negation internally.
+\subsection{Weighted TM}
+\label{sec:wtm}
+We train a weighted multiclass TM on the six
+classes with $K = 400$ clauses per class, $T=320$, $s=8.0$, and 25 epochs.
+Passing flows through the trained TM yields
+the clause-activation matrix $Z \in \{0,1\}^{n \times CK}$ with $n$ flows
+and $CK = 2{,}400$ clauses. Here
+$Z[x,j]=1$ if and only if clause $j$ fires on input $x$.
+
+\subsection{Clause-Pool Pruning}
+\label{sec:prune}
+Not every clause in the pool is worth carrying into signature extraction,
+and which ones to drop can be posed exactly. Write $w_{c,j}$ for the
+learned weight of clause $j$ of class $c$ and $z_{c,j}(x) \in \{0,1\}$ for
+its activation, so the class sum is $f_c(x)=\sum_j w_{c,j} z_{c,j}(x)$ and
+$\hat{y}(x)=\arg\max_c f_c(x)$. A keep-mask
+$m \in \{0,1\}^{C \times K}$ with deletion sets $D_c=\{j: m_{c,j}=0\}$
+gives $f_c(x;m)=\sum_j m_{c,j} w_{c,j} z_{c,j}(x)$, and we seek the
+smallest pool that preserves accuracy:
+\begin{equation}
+\min_{m \in \{0,1\}^{C \times K}} \lVert m \rVert_0
+\quad\text{s.t.}\quad
+\mathrm{F_1}\!\left(\hat{y}(\cdot\,;m)\right) \ \ge\
+\mathrm{F_1}\!\left(\hat{y}(\cdot\,;\mathbf{1})\right) - \varepsilon .
+\label{eq:prune}
+\end{equation}
+This is a search over $2^{CK}$ masks ($2^{2400}$ here) whose constraint is
+non-decomposable, macro-F1 sitting behind an $\arg\max$. We therefore
+optimise the perturbation it induces,
+$R(D_c) := \sum_{j \in D_c} |w_{c,j}|$, which controls~\eqref{eq:prune} through the
+decision margin.
+
+\begin{proposition}[Certificate]
+\label{prop:cert}
+Let $R = \max_c R(D_c)$ and let
+$\gamma(x)=f_{\hat{y}(x)}(x)-\max_{c \neq \hat{y}(x)} f_c(x)$ be the
+full-pool margin. If $\gamma(x) > 2R$ then $\hat{y}(x;m)=\hat{y}(x)$.
+\end{proposition}
+\begin{proof}
+Since $z_{c,j}(x) \in \{0,1\}$,
+$|f_c(x)-f_c(x;m)| = |\sum_{j \in D_c} w_{c,j} z_{c,j}(x)| \le R(D_c) \le R$
+for every $c$. Writing $a=\hat{y}(x)$, for any $c \neq a$,
+$f_a(x;m)-f_c(x;m) \ge \bigl(f_a(x)-R\bigr)-\bigl(f_c(x)+R\bigr)
+\ge \gamma(x)-2R > 0$, so $a$ remains the maximiser.
+\end{proof}
+
+\begin{proposition}[Exact greedy]
+\label{prop:greedy}
+For a budget $|D_c| = k$, $\min_{D_c} R(D_c)$ is attained by the $k$
+clauses of smallest $|w_{c,j}|$.
+\end{proposition}
+\begin{proof}
+$R(D_c)$ is a sum of $k$ non-negative terms selected without replacement.
+If $D_c$ contains $j$ while excluding $j'$ with $|w_{c,j'}| < |w_{c,j}|$,
+swapping them strictly decreases $R$; no such swap exists precisely when
+$D_c$ holds the $k$ smallest magnitudes.
+\end{proof}
+
+Magnitude ranking is therefore optimal for the surrogate rather than a
+heuristic, and by Proposition~\ref{prop:cert} it carries a per-input
+guarantee, at cost $O(CK\log K)$ against the $2^{CK}$ of~\eqref{eq:prune}. Sweeping
+$k$ in steps of five and taking the largest $k$ that meets the constraint
+gives the operating budget used in \S\ref{sec:pruned}; CAS is then
+extracted from the surviving pool exactly as below, with nothing else
+changed.
+
+\subsection{CPSS Signature Extraction and Sign Filtering}
+\label{sec:cpss}
+CAS works entirely
+in clause-activation space, where a flow is represented by the rules that
+match it. We build one one-versus-rest problem
+per family $\ell$. CPSS then repeats the following $B$ times: split the
+fit half of the test set ($\mathrm{fit}$, \S\ref{sec:setup})
+into two complementary halves, and on
+each half fit an $\ell_1$-regularised logistic model from the columns of
+$Z$ to the one-versus-rest label of family $\ell$ --- $2B$ half-fits per
+family in all.
+
+Two knobs control this stage: $\kappa$, the
+inverse-regularisation strength of the logistic model inside each
+half-fit, and $\pi_{\mathrm{thr}}$, the stability threshold applied after
+all fits are done. A small $\kappa$ forces most coefficients to exactly
+zero, so only a few clauses survive a single half-fit. We do not fix one
+$\kappa$ but sweep it over a geometric
+grid of 6 points from 0.001 to 0.1. A clause counts as selected by a
+half-fit if any grid point selects it. This union-over-grid rule
+follows~\cite{shah2013}.
+
+Each half-fit casts one vote per clause. The stability score
+$\hat{\pi}_j$ is the fraction of the $2B$ half-fits that select clause $j$.
+The signature keeps the clauses that win enough votes:
+$S_\ell = \{j : \hat{\pi}_j \ge \pi_{\mathrm{thr}}\}$. The knobs are not
+independent: $\kappa$ sets which clauses can collect votes at all, and
+$\pi_{\mathrm{thr}}$ then cuts the resulting vote distribution, so the
+signature size at a given threshold depends on the grid. We restrict
+$\kappa$ to the range that keeps each half-fit sparse on this
+2{,}400-clause pool. A wider grid would inflate $q_\Lambda$ and make the
+certificate vacuous.
+
+One further step is needed. CPSS selects on $|$coefficient$|>0$, which is
+correct for the error-control bound but wrong for attribution: a stably
+negative coefficient is evidence \emph{against} $\ell$, not for it. We
+therefore track the mean signed coefficient
+$\overline{\mathrm{coef}}_j$ of each clause across fits and split the
+signature into
+$S_\ell^{+} = \{j \in S_\ell : \overline{\mathrm{coef}}_j > 0\}$
+and $S_\ell^{-}$. The positive part is inculpatory evidence, the negative
+part exculpatory. The certificate still applies to the full
+sign-agnostic $S_\ell$; we state this scoping gap openly.
+\S\ref{sec:validation} shows that this split is not cosmetic.
+
+The attribution score is
+\begin{equation}
+s_\ell(x) = \frac{\sum_{j \in S_\ell^{+}} \hat{\pi}_j z_j(x) - \sum_{j \in S_\ell^{-}} \hat{\pi}_j z_j(x)}{\sum_{j \in S_\ell^{+}} \hat{\pi}_j},
+\label{eq:score}
+\end{equation}
+and the prediction is $\hat{y} = \arg\max_\ell s_\ell(x)$. Matches to
+inculpatory clauses add weight. Matches to exculpatory clauses subtract
+weight. Normalisation by the inculpatory weight is required. Without it
+scores scale with signature size instead of match quality.
+
+\subsection{Error-Control Certificate}
+\label{sec:cert}
+With $q_\Lambda$ estimated as $\mathrm{mean}(\hat{\pi}) \cdot p$, the
+Shah--Samworth bound gives
+$E[V] \le q_\Lambda^2 / ((2\pi_{\mathrm{thr}} - 1) p)$ with $p = 2400$. We
+report these bounds as loose wherever they are loose
+(\S\ref{sec:signatures}): they certify that most of each signature is
+likely genuine, not that it is near-noise-free.
+
+\section{Experimental Setup}
+\label{sec:setup}
+Stratified caps are applied for tractability: at most 40{,}000 training
+and 15{,}000 test rows per family, Benign (19{,}291) and Spoofing
+(16{,}047) in full, giving 195{,}338 training and 80{,}868 test rows. The
+distribution is heavily imbalanced (DDoS and DoS about 95.7\% of
+flows~\cite{dadkhah2024}), so we report macro-F1 and per-class metrics.
+The test set is permuted once and split three ways: CPSS half-fits use
+$\mathrm{fit}$ ($40{,}434$ rows), every free choice --- the pruning budget
+$k^{\star}$, the number of pairs $B$, and $\pi_{\mathrm{thr}}$ --- is made
+on a disjoint selection quarter $\mathrm{sel}$ ($20{,}217$), and the report
+quarter $\mathrm{rep}$ ($20{,}217$) is read exactly once, at the end. No
+number we report was used to choose anything, which the closed-world
+critiques of IDS evaluation ask
+for~\cite{sommer2010,engelen2021,arp2022}. Multi-seed results use three
+independently trained TMs (seeds 42, 7, 123) and fully seeded CPSS.
+
+\section{Results}
+
+\subsection{Validation of the Construction}
+\label{sec:validation}
+Three checks precede the headline. The infinite-value clipping of
+\S\ref{sec:bool} is essential: without it macro-F1 collapses from 0.72
+to 0.54. The sign split (\S\ref{sec:cpss}) is not cosmetic: the naive
+sign-agnostic scorer --- a $\hat{\pi}$-weighted sum over the whole
+selected support $S_\ell$ --- collapses to macro-F1 below $0.01$ on every
+seed, while the signed scorer of~\eqref{eq:score} reaches $0.765$. And
+$\pi_{\mathrm{thr}}{=}0.6$ is unstable as well as weak
+($0.687 \pm 0.033$, one seed at $0.642$, against $0.743 \pm 0.016$ at
+$\pi_{\mathrm{thr}}{=}0.7$), so we do not hand-pick a threshold: the
+operating point is selected on $\mathrm{sel}$ and reported once on
+$\mathrm{rep}$ (\S\ref{sec:setup}).
+
+\subsection{Task A: Closed-Set Family Attribution}
+\label{sec:taska}
+At the operating point selected on $\mathrm{sel}$ ($B{=}15$,
+$\pi_{\mathrm{thr}}{=}0.8$) CAS beats its base detector on every seed
+(Table~\ref{tab:headline}); raising $B$ further adds nothing ($0.766$ at
+$B{=}15$ against $0.751$ at $B{=}25$ on $\mathrm{sel}$). The gains land
+where the base is weakest --- Benign recall rises from $0.26$ to $0.79$,
+Spoofing precision from $0.43$ to $0.59$ --- while DDoS and DoS stay
+mutually confused under both methods, a documented dataset
+property~\cite{domenech2025}.
+
+\begin{table}[!htb]
+\centering
+\caption{Task A: three-seed macro-F1 on the report quarter of
+CICIoMT2024. The operating point $(B, \pi_{\mathrm{thr}})$ is selected on
+the disjoint selection quarter; the pruned pool is \S\ref{sec:pruned}.}
+\label{tab:headline}
+\footnotesize
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Method & $(B, \pi_{\mathrm{thr}})$ & macro-F1 \\
+\midrule
+Weighted-TM argmax (base) & --- & $0.692 \pm 0.004$ \\
+\textbf{CAS, full pool} & $(15, 0.8)$ & $\mathbf{0.765 \pm 0.029}$ \\
+\textbf{CAS, pruned pool} & $(10, 0.9)$ & $\mathbf{0.787 \pm 0.023}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Sensitivity to $\pi_{\mathrm{thr}}$, $B$, and $\kappa$}
+\label{sec:sweep}
+Fig.~\ref{fig:sweep} sweeps both knobs on the report quarter after
+pruning to $390$ clauses ($65$ per class). At $B{=}15$, varying
+$\pi_{\mathrm{thr}}$ from $0.5$ to $0.9$ leaves macro-F1 within
+$0.777$--$0.779$ and accuracy within $0.792$--$0.794$. At
+$\pi_{\mathrm{thr}}{=}0.8$, varying $B$ from $5$ to $25$ leaves
+macro-F1 within $0.776$--$0.778$ and accuracy within $0.790$--$0.793$.
+Both metrics remain above the pruned weighted-TM baselines
+($0.688$ macro-F1 and $0.720$ accuracy). These sensitivity slices
+retain the original fixed settings for comparison; the pruned-pool
+operating point selected on the selection quarter remains
+$(B,\pi_{\mathrm{thr}})=(10,0.9)$.
+The separate $\kappa$ sweep uses the full $2{,}400$-clause pool
+(Table~\ref{tab:grid}): across
+$[10^{-3}, 4\times10^{-2}]$ the mean stays within $0.724$--$0.763$,
+degrading only at $\kappa{=}0.1$. This justifies the union-over-grid rule:
+at the selected threshold the union ($0.765$) matches or exceeds every
+single-$\kappa$ row (best $0.763$).
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.88\columnwidth]{fig_sweep_pruned.pdf}
+\caption{Sensitivity after pruning to $390$ clauses ($65$ per class),
+on the report quarter, three-seed mean$\pm$sd.
+(a)~CAS macro-F1 and accuracy versus $\pi_{\mathrm{thr}}$ at $B{=}15$;
+dotted lines are the pruned weighted-TM baselines. (b)~versus the number of
+complementary pairs $B$ at $\pi_{\mathrm{thr}}{=}0.8$.}
+\label{fig:sweep}
+\end{figure}
+
+\begin{table}[!htb]
+\centering
+\caption{$\kappa \times \pi_{\mathrm{thr}}$: three-seed mean CAS macro-F1
+on the report quarter, $B{=}15$.
+The bottom row is the union-over-grid rule actually used, which matches or
+exceeds every single $\kappa$ at the selected $\pi_{\mathrm{thr}}{=}0.8$.}
+\label{tab:grid}
+\footnotesize
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+$\kappa \backslash\ \pi_{\mathrm{thr}}$ & 0.5 & 0.6 & 0.7 & 0.8 & 0.9 \\
+\midrule
+$1.0\!\times\!10^{-3}$ & 0.728 & 0.725 & 0.724 & 0.724 & 0.727 \\
+$2.5\!\times\!10^{-3}$ & 0.748 & 0.745 & 0.739 & 0.741 & 0.746 \\
+$6.3\!\times\!10^{-3}$ & 0.751 & 0.746 & 0.737 & 0.740 & 0.763 \\
+$1.6\!\times\!10^{-2}$ & 0.748 & 0.742 & 0.752 & 0.752 & 0.745 \\
+$4.0\!\times\!10^{-2}$ & 0.743 & 0.752 & 0.747 & 0.742 & 0.755 \\
+$1.0\!\times\!10^{-1}$ & 0.673 & 0.693 & 0.718 & 0.722 & 0.694 \\
+\midrule
+union grid (method) & 0.708 & 0.687 & 0.743 & $\mathbf{0.765}$ & 0.762 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Binary Reduction: The Attack Signature}
+\label{sec:binary}
+Collapsing the five attack families into one \textsc{attack} class and
+training a dedicated two-class TM yields a binary CAS on the same
+booleanisation. The base TM
+over-predicts attack, catching almost everything (recall 0.987) but crying
+wolf often (precision 0.844). The attack signature ($B{=}25$,
+$\pi_{\mathrm{thr}}{=}0.9$, selected on $\mathrm{sel}$) rebalances the
+operating point (recall 0.910, precision 0.946) and ranks flows far
+better, lifting AUROC from 0.817 to 0.938 (Table~\ref{tab:binary}).
+
+\begin{table}[!htb]
+\centering
+\caption{Binary attack detection on the report quarter, three seeds
+(mean).}
+\label{tab:binary}
+\footnotesize
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Method & attack F1 & R / P & AUROC \\
+\midrule
+Binary TM argmax & $0.910 \pm 0.000$ & 0.987 / 0.844 & $0.817 \pm 0.045$ \\
+\textbf{CAS signature} & $\mathbf{0.928 \pm 0.008}$ & 0.910 / 0.946 & $\mathbf{0.938 \pm 0.006}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Signature Content and Certificates}
+\label{sec:signatures}
+At $\pi_{\mathrm{thr}}{=}0.6$, $|S|$ ranges 115--311, $|S^{+}|$ 29--58,
+and $E[V]$ ${\le}72$--${\le}250$. At the selected point
+$\pi_{\mathrm{thr}}{=}0.8$
+(Table~\ref{tab:reduction}, left) each family shrinks to 28--53
+sign-positive clauses while F1 \emph{improves}. The decoded DDoS signature
+is the classic flooding profile (\texttt{Rate} $\ge$ 31.5k packets/s,
+short headers, ICMP tests), while exculpatory lists are long low-rate
+conjunctions resembling benign chatter.
+
+
+\subsection{Clause-Pool Pruning and CAS on the Pruned Pool}
+\label{sec:pruned}
+Solving the pruning program of \S\ref{sec:prune},
+Fig.~\ref{fig:pruning} traces macro-F1 on the selection quarter as $k$
+grows in steps of five: flat
+until $335$ of the $400$ clauses per class ($84\%$) are gone, so
+$\varepsilon = 0.01$ gives $k^{\star} = 335$ without touching any
+evaluation data. The surrogate certifies but
+does not solve~\eqref{eq:prune}: a global knapsack on $\sum_c R(D_c)$, or
+the minimax rule equalising $\max_c R(D_c)$, changes macro-F1 by less than
+the cross-seed spread ($0.689$, $0.678$, $0.683$ at $390$ clauses).
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.48\columnwidth]{clause_pruning.png}
+\caption{Clause-weight pruning on the trained weighted TMs, three-seed
+mean$\pm$sd on the report quarter. Clauses are removed per class in order
+of increasing $|$weight$|$, five at a time. Macro-F1 and accuracy are flat
+until $84\%$ of the pool has been deleted.}
+\label{fig:pruning}
+\end{figure}
+
+If $84\%$ of the pool is redundant for the base detector, is it also
+diluting the stability vote? Keeping only the top $65$ clauses per class
+--- the knee of Fig.~\ref{fig:pruning} --- and re-running the identical
+pipeline on the $390$-clause pool answers yes (Fig.~\ref{fig:prunedcas}). Pruning costs the base detector nothing
+($0.688 \pm 0.008$ vs.\ $0.692 \pm 0.004$), but CAS reaches
+$0.787 \pm 0.023$ at its selected point ($B{=}10$,
+$\pi_{\mathrm{thr}}{=}0.9$), above the $0.765 \pm 0.029$ from the full pool. More
+useful is the effect on the threshold: the full-pool sweep swings from
+$0.687$ to $0.765$ with $\pi_{\mathrm{thr}}$, whereas the pruned pool is
+flat at $0.775$--$0.787$ throughout, so the instability of
+\S\ref{sec:validation} is a property of the diluted pool, not of CPSS.
+Signatures compact correspondingly (Table~\ref{tab:reduction}, right):
+cores of 22--42 clauses from a six-times-smaller pool, $E[V]$ tightening to
+${\le}27$--${\le}50$.
+
+
+\begin{table}[!htb]
+\centering
+\caption{Signature compaction at $\pi_{\mathrm{thr}}{=}0.8$ (seed 42) on
+the full $2{,}400$-clause pool and on the weight-pruned $390$-clause pool.}
+\label{tab:reduction}
+\footnotesize
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+& \multicolumn{2}{c}{full pool ($2{,}400$)} & \multicolumn{2}{c}{pruned ($390$)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Family & $|S|$ & $|S^{+}|$ & $|S|$ & $|S^{+}|$ \\
+\midrule
+Benign   & 184 & 41 & 63 & 30 \\
+DDoS     &  63 & 29 & 66 & 36 \\
+DoS      & 247 & 33 & 83 & 42 \\
+MQTT     & 145 & 53 & 64 & 26 \\
+Recon    &  66 & 28 & 58 & 22 \\
+Spoofing & 194 & 50 & 76 & 28 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.48\columnwidth]{pruned_vs_full.png}
+\caption{CAS macro-F1 versus $\pi_{\mathrm{thr}}$ on the full and
+weight-pruned clause pools, three-seed mean$\pm$sd on the report quarter
+at $B{=}15$. Pruning lifts the
+curve and flattens it: on the pruned pool the stability threshold no
+longer changes the result.}
+\label{fig:prunedcas}
+\end{figure}
+
+\subsection{Open-Set Novelty}
+\label{sec:taskb}
+Leave-one-family-out with split-conformal thresholds ($\epsilon{=}0.05$,
+two folds) is negative: the false-flag guarantee holds (FPR 0.035 Spoofing,
+0.027 MQTT, both under target) but power is weak (Spoofing AUROC 0.275,
+below chance; MQTT 0.622) --- ARP-spoofing closely resembles legitimate ARP
+discovery in this feature space, a measured blind spot.
+
+\subsection{Mixture Identifiability}
+\label{sec:disjunct}
+With the six
+inculpatory signatures as columns of a binary clause-by-family table, the
+largest $t$ for which no column is covered by the union of any $t$ others
+is $\hat{t}{=}5$ --- the maximum for six families --- on every seed and
+threshold, so any noiseless mixture of up to five families decodes exactly. Under $5\%$ noise (500 trials) strict COMP collapses to
+$0.2\%$--$1.8\%$, while a partial-match decoder restores $99.8\%$--$100\%$
+at threshold 0.8 and $68\%$--$76\%$ at $15\%$ noise.
+
+\subsection{Cross-Seed Signature Stability}
+\label{sec:stability}
+The pairwise Kuncheva index on clause-index overlap across seeds
+is near zero for every family ($-0.015$ to $0.111$): CAS stabilises
+selection \emph{within} a trained TM --- what attribution relies on ---
+but signature identity does not survive retraining.
+
+\section{Discussion and Conclusion}
+\label{sec:discussion}
+CAS turns a trained TM's clause pool into compact signed evidence lists
+per family, with a bound on spurious inclusions and exact mixture
+identifiability. On CICIoMT2024 it beats its base detector (macro-F1 0.765
+vs.\ 0.692; binary AUROC 0.938), and discarding $84\%$ of the pool by
+weight first raises this to 0.787 and removes the threshold sensitivity.
+All operating points are chosen on a disjoint selection quarter
+(\S\ref{sec:setup}), so no reported number was used to choose anything.
+Limitations: no post-hoc XAI baseline, loose $E[V]$ bounds,
+near-chance cross-seed identity, single-dataset scope.
+
+\begin{thebibliography}{15}
+\bibitem{granmo2018} O.-C. Granmo, ``The Tsetlin Machine --- a
+game-theoretic bandit-driven approach to optimal pattern recognition with
+propositional logic,'' \emph{arXiv:1804.01508}, 2018.
+\bibitem{phoulady2020} O.-C. Granmo and S. Phoulady, ``The Weighted Tsetlin
+Machine,'' \emph{arXiv:2002.01245}, 2020.
+\bibitem{jaiswal2026iomt} R. Jaiswal, P.-A. Andersen, L. R. Cenkeramaddi,
+L. Jiao, and O.-C. Granmo, ``A Tsetlin Machine-driven Intrusion Detection
+System for Next-Generation IoMT Security,'' \emph{IEEE SVCC} /
+\emph{arXiv:2604.03205}, 2026.
+\bibitem{shah2013} R. Shah and R. Samworth, ``Variable selection with error
+control: another look at stability selection,'' \emph{JRSS-B}, vol. 75,
+no. 1, pp. 55--80, 2013.
+\bibitem{tmu} O.-C. Granmo et al., ``TMU: Tsetlin Machine Unified,''
+github.com/cair/tmu.
+\bibitem{abeyrathna2020} K. D. Abeyrathna et al., ``Intrusion Detection
+with Interpretable Rules Generated using the Tsetlin Machine,'' \emph{IEEE
+SSCI}, 2020.
+\bibitem{jaiswal2026medsec} R. Jaiswal et al., ``On-Device Interpretable
+Tsetlin Machine-Based Intrusion Detection for Secure IoMT,''
+\emph{arXiv:2605.16707}, 2026.
+\bibitem{meinshausen2010} N. Meinshausen and P. B\"uhlmann, ``Stability
+selection,'' \emph{JRSS-B}, vol. 72, no. 4, pp. 417--473, 2010.
+\bibitem{sommer2010} R. Sommer and V. Paxson, ``Outside the Closed World: On
+Using Machine Learning for Network Intrusion Detection,'' \emph{IEEE S\&P},
+2010.
+\bibitem{engelen2021} G. Engelen, V. Rimmer, and W. Joosen,
+``Troubleshooting an Intrusion Detection Dataset: the CICIDS2017 Case
+Study,'' \emph{IEEE SPW}, 2021.
+\bibitem{arp2022} D. Arp et al., ``Dos and Don'ts of Machine Learning in
+Computer Security,'' \emph{USENIX Security}, 2022.
+\bibitem{dadkhah2024} S. Dadkhah et al., ``CICIoMT2024: A benchmark dataset
+for multi-protocol security assessment in IoMT,'' \emph{Internet of Things},
+vol. 28, art. 101351, 2024.
+\bibitem{domenech2025} J. Dom\'enech Fons, ``Evaluating and enhancing
+intrusion detection systems in IoMT: The importance of domain-specific
+datasets,'' \emph{Internet of Things}, 2025.
+\bibitem{xaiids2025} ``Explainable AI for Interpreting ML-based IDS using
+LIME and SHAP,'' \emph{Applied Sciences}, vol. 15, no. 13, 2025.
+\bibitem{du1993} D.-Z. Du and F. K. Hwang, \emph{Combinatorial Group Testing
+and Its Applications}, World Scientific, 1993.
+\end{thebibliography}
+
+\end{document}

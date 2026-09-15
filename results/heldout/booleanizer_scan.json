@@ -1,0 +1,134 @@
+[
+  {
+    "strategy": "quantile",
+    "n_bins": 3,
+    "bits": 44,
+    "patterns_train": 226,
+    "patterns_test": 225,
+    "ceiling_acc": 0.7554780630162734,
+    "ceiling_f1": 0.7186147819973511,
+    "dt_f1": 0.6673558889655263,
+    "rf_f1": 0.6673806183159504
+  },
+  {
+    "strategy": "quantile",
+    "n_bins": 5,
+    "bits": 78,
+    "patterns_train": 651,
+    "patterns_test": 536,
+    "ceiling_acc": 0.8112108621457189,
+    "ceiling_f1": 0.7684875390500308,
+    "dt_f1": 0.6894823224965282,
+    "rf_f1": 0.7064363148505626
+  },
+  {
+    "strategy": "quantile",
+    "n_bins": 10,
+    "bits": 154,
+    "patterns_train": 4901,
+    "patterns_test": 3592,
+    "ceiling_acc": 0.8689469258544789,
+    "ceiling_f1": 0.8578496891815376,
+    "dt_f1": 0.6604594072972704,
+    "rf_f1": 0.7261242724737279
+  },
+  {
+    "strategy": "quantile",
+    "n_bins": 15,
+    "bits": 226,
+    "patterns_train": 12871,
+    "patterns_test": 7759,
+    "ceiling_acc": 0.8831428995399911,
+    "ceiling_f1": 0.8733055704224891,
+    "dt_f1": 0.6585433141065901,
+    "rf_f1": 0.7336156009306359
+  },
+  {
+    "strategy": "quantile",
+    "n_bins": 20,
+    "bits": 292,
+    "patterns_train": 19538,
+    "patterns_test": 10099,
+    "ceiling_acc": 0.8917124202403918,
+    "ceiling_f1": 0.8825674965410985,
+    "dt_f1": 0.6615895722530124,
+    "rf_f1": 0.7346975462641417
+  },
+  {
+    "strategy": "quantile",
+    "n_bins": 30,
+    "bits": 420,
+    "patterns_train": 36418,
+    "patterns_test": 13118,
+    "ceiling_acc": 0.9064648563090468,
+    "ceiling_f1": 0.8973464290844019,
+    "dt_f1": 0.6566006063219618,
+    "rf_f1": 0.7368152048303768
+  },
+  {
+    "strategy": "uniform",
+    "n_bins": 3,
+    "bits": 44,
+    "patterns_train": 408,
+    "patterns_test": 469,
+    "ceiling_acc": 0.7018969184349805,
+    "ceiling_f1": 0.6903117550508279,
+    "dt_f1": 0.6103428921908342,
+    "rf_f1": 0.5816132007069127
+  },
+  {
+    "strategy": "uniform",
+    "n_bins": 5,
+    "bits": 78,
+    "patterns_train": 1634,
+    "patterns_test": 1974,
+    "ceiling_acc": 0.7584458623930356,
+    "ceiling_f1": 0.7532776109770105,
+    "dt_f1": 0.6044306525206583,
+    "rf_f1": 0.6079961335225073
+  },
+  {
+    "strategy": "uniform",
+    "n_bins": 10,
+    "bits": 154,
+    "patterns_train": 5785,
+    "patterns_test": 5405,
+    "ceiling_acc": 0.7734456150764208,
+    "ceiling_f1": 0.7718985945706435,
+    "dt_f1": 0.5796494914780322,
+    "rf_f1": 0.6906922912281622
+  },
+  {
+    "strategy": "uniform",
+    "n_bins": 15,
+    "bits": 226,
+    "patterns_train": 10984,
+    "patterns_test": 7607,
+    "ceiling_acc": 0.7765123410990751,
+    "ceiling_f1": 0.7758146989833898,
+    "dt_f1": 0.6497976268636692,
+    "rf_f1": 0.630735767775612
+  },
+  {
+    "strategy": "uniform",
+    "n_bins": 20,
+    "bits": 292,
+    "patterns_train": 18272,
+    "patterns_test": 8305,
+    "ceiling_acc": 0.777897314141564,
+    "ceiling_f1": 0.7769426121493077,
+    "dt_f1": 0.5266731532814163,
+    "rf_f1": 0.6376976671211144
+  },
+  {
+    "strategy": "uniform",
+    "n_bins": 30,
+    "bits": 420,
+    "patterns_train": 29786,
+    "patterns_test": 9253,
+    "ceiling_acc": 0.7800984320126626,
+    "ceiling_f1": 0.7793593181443078,
+    "dt_f1": 0.5065843973293025,
+    "rf_f1": 0.6355316727791221
+  }
+]

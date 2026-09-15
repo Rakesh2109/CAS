@@ -1,0 +1,248 @@
+{
+  "42": {
+    "thr0.6": {
+      "pi_thr": 0.6,
+      "signature_sizes": {
+        "Benign": 47,
+        "DDoS": 57,
+        "DoS": 43,
+        "MQTT": 59,
+        "Recon": 29,
+        "Spoofing": 56
+      },
+      "t_hat_raw": 5,
+      "covers_raw": {
+        "Benign": 6,
+        "DDoS": 6,
+        "DoS": 6,
+        "MQTT": 6,
+        "Recon": 6,
+        "Spoofing": 6
+      },
+      "t_hat_reduced": 5,
+      "covers_reduced": {
+        "Benign": 6,
+        "DDoS": 6,
+        "DoS": 6,
+        "MQTT": 6,
+        "Recon": 6,
+        "Spoofing": 6
+      },
+      "n_clauses_removed": 18,
+      "mixture_acc_raw_noise0.0_thr1.0": 1.0,
+      "mixture_acc_raw_noise0.05_thr1.0": 0.008,
+      "mixture_acc_raw_noise0.05_thr0.9": 0.85,
+      "mixture_acc_raw_noise0.05_thr0.8": 1.0,
+      "mixture_acc_raw_noise0.15_thr0.8": 0.69,
+      "mixture_acc_reduced_noise0.0_thr1.0": 1.0,
+      "mixture_acc_reduced_noise0.05_thr1.0": 0.018,
+      "mixture_acc_reduced_noise0.05_thr0.9": 0.866,
+      "mixture_acc_reduced_noise0.05_thr0.8": 1.0,
+      "mixture_acc_reduced_noise0.15_thr0.8": 0.668
+    },
+    "thr0.8": {
+      "pi_thr": 0.8,
+      "signature_sizes": {
+        "Benign": 42,
+        "DDoS": 40,
+        "DoS": 32,
+        "MQTT": 43,
+        "Recon": 28,
+        "Spoofing": 50
+      },
+      "t_hat_raw": 5,
+      "covers_raw": {
+        "Benign": 6,
+        "DDoS": 6,
+        "DoS": 6,
+        "MQTT": 6,
+        "Recon": 6,
+        "Spoofing": 6
+      },
+      "t_hat_reduced": 5,
+      "covers_reduced": {
+        "Benign": 6,
+        "DDoS": 6,
+        "DoS": 6,
+        "MQTT": 6,
+        "Recon": 6,
+        "Spoofing": 6
+      },
+      "n_clauses_removed": 12,
+      "mixture_acc_raw_noise0.0_thr1.0": 1.0,
+      "mixture_acc_raw_noise0.05_thr1.0": 0.018,
+      "mixture_acc_raw_noise0.05_thr0.9": 0.862,
+      "mixture_acc_raw_noise0.05_thr0.8": 1.0,
+      "mixture_acc_raw_noise0.15_thr0.8": 0.68,
+      "mixture_acc_reduced_noise0.0_thr1.0": 1.0,
+      "mixture_acc_reduced_noise0.05_thr1.0": 0.028,
+      "mixture_acc_reduced_noise0.05_thr0.9": 0.784,
+      "mixture_acc_reduced_noise0.05_thr0.8": 1.0,
+      "mixture_acc_reduced_noise0.15_thr0.8": 0.664
+    }
+  },
+  "7": {
+    "thr0.6": {
+      "pi_thr": 0.6,
+      "signature_sizes": {
+        "Benign": 37,
+        "DDoS": 50,
+        "DoS": 43,
+        "MQTT": 107,
+        "Recon": 31,
+        "Spoofing": 59
+      },
+      "t_hat_raw": 5,
+      "covers_raw": {
+        "Benign": 6,
+        "DDoS": 6,
+        "DoS": 6,
+        "MQTT": 6,
+        "Recon": 6,
+        "Spoofing": 6
+      },
+      "t_hat_reduced": 5,
+      "covers_reduced": {
+        "Benign": 6,
+        "DDoS": 6,
+        "DoS": 6,
+        "MQTT": 6,
+        "Recon": 6,
+        "Spoofing": 6
+      },
+      "n_clauses_removed": 15,
+      "mixture_acc_raw_noise0.0_thr1.0": 1.0,
+      "mixture_acc_raw_noise0.05_thr1.0": 0.012,
+      "mixture_acc_raw_noise0.05_thr0.9": 0.86,
+      "mixture_acc_raw_noise0.05_thr0.8": 1.0,
+      "mixture_acc_raw_noise0.15_thr0.8": 0.738,
+      "mixture_acc_reduced_noise0.0_thr1.0": 1.0,
+      "mixture_acc_reduced_noise0.05_thr1.0": 0.02,
+      "mixture_acc_reduced_noise0.05_thr0.9": 0.822,
+      "mixture_acc_reduced_noise0.05_thr0.8": 1.0,
+      "mixture_acc_reduced_noise0.15_thr0.8": 0.67
+    },
+    "thr0.8": {
+      "pi_thr": 0.8,
+      "signature_sizes": {
+        "Benign": 31,
+        "DDoS": 36,
+        "DoS": 37,
+        "MQTT": 82,
+        "Recon": 21,
+        "Spoofing": 50
+      },
+      "t_hat_raw": 5,
+      "covers_raw": {
+        "Benign": 6,
+        "DDoS": 6,
+        "DoS": 6,
+        "MQTT": 6,
+        "Recon": 6,
+        "Spoofing": 6
+      },
+      "t_hat_reduced": 5,
+      "covers_reduced": {
+        "Benign": 6,
+        "DDoS": 6,
+        "DoS": 6,
+        "MQTT": 6,
+        "Recon": 6,
+        "Spoofing": 6
+      },
+      "n_clauses_removed": 11,
+      "mixture_acc_raw_noise0.0_thr1.0": 1.0,
+      "mixture_acc_raw_noise0.05_thr1.0": 0.018,
+      "mixture_acc_raw_noise0.05_thr0.9": 0.848,
+      "mixture_acc_raw_noise0.05_thr0.8": 0.998,
+      "mixture_acc_raw_noise0.15_thr0.8": 0.714,
+      "mixture_acc_reduced_noise0.0_thr1.0": 1.0,
+      "mixture_acc_reduced_noise0.05_thr1.0": 0.026,
+      "mixture_acc_reduced_noise0.05_thr0.9": 0.776,
+      "mixture_acc_reduced_noise0.05_thr0.8": 0.998,
+      "mixture_acc_reduced_noise0.15_thr0.8": 0.662
+    }
+  },
+  "123": {
+    "thr0.6": {
+      "pi_thr": 0.6,
+      "signature_sizes": {
+        "Benign": 54,
+        "DDoS": 46,
+        "DoS": 36,
+        "MQTT": 124,
+        "Recon": 46,
+        "Spoofing": 66
+      },
+      "t_hat_raw": 5,
+      "covers_raw": {
+        "Benign": 6,
+        "DDoS": 6,
+        "DoS": 6,
+        "MQTT": 6,
+        "Recon": 6,
+        "Spoofing": 6
+      },
+      "t_hat_reduced": 5,
+      "covers_reduced": {
+        "Benign": 6,
+        "DDoS": 6,
+        "DoS": 6,
+        "MQTT": 6,
+        "Recon": 6,
+        "Spoofing": 6
+      },
+      "n_clauses_removed": 22,
+      "mixture_acc_raw_noise0.0_thr1.0": 1.0,
+      "mixture_acc_raw_noise0.05_thr1.0": 0.002,
+      "mixture_acc_raw_noise0.05_thr0.9": 0.894,
+      "mixture_acc_raw_noise0.05_thr0.8": 1.0,
+      "mixture_acc_raw_noise0.15_thr0.8": 0.764,
+      "mixture_acc_reduced_noise0.0_thr1.0": 1.0,
+      "mixture_acc_reduced_noise0.05_thr1.0": 0.008,
+      "mixture_acc_reduced_noise0.05_thr0.9": 0.8,
+      "mixture_acc_reduced_noise0.05_thr0.8": 1.0,
+      "mixture_acc_reduced_noise0.15_thr0.8": 0.662
+    },
+    "thr0.8": {
+      "pi_thr": 0.8,
+      "signature_sizes": {
+        "Benign": 31,
+        "DDoS": 42,
+        "DoS": 27,
+        "MQTT": 101,
+        "Recon": 31,
+        "Spoofing": 50
+      },
+      "t_hat_raw": 5,
+      "covers_raw": {
+        "Benign": 6,
+        "DDoS": 6,
+        "DoS": 6,
+        "MQTT": 6,
+        "Recon": 6,
+        "Spoofing": 6
+      },
+      "t_hat_reduced": 5,
+      "covers_reduced": {
+        "Benign": 6,
+        "DDoS": 6,
+        "DoS": 6,
+        "MQTT": 6,
+        "Recon": 6,
+        "Spoofing": 6
+      },
+      "n_clauses_removed": 16,
+      "mixture_acc_raw_noise0.0_thr1.0": 1.0,
+      "mixture_acc_raw_noise0.05_thr1.0": 0.016,
+      "mixture_acc_raw_noise0.05_thr0.9": 0.896,
+      "mixture_acc_raw_noise0.05_thr0.8": 1.0,
+      "mixture_acc_raw_noise0.15_thr0.8": 0.734,
+      "mixture_acc_reduced_noise0.0_thr1.0": 1.0,
+      "mixture_acc_reduced_noise0.05_thr1.0": 0.03,
+      "mixture_acc_reduced_noise0.05_thr0.9": 0.816,
+      "mixture_acc_reduced_noise0.05_thr0.8": 1.0,
+      "mixture_acc_reduced_noise0.15_thr0.8": 0.694
+    }
+  }
+}

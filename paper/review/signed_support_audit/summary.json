@@ -1,0 +1,239 @@
+{
+  "5|0.8": {
+    "per_seed": [
+      {
+        "seed": 42,
+        "positive": [
+          24,
+          22,
+          27,
+          15,
+          23,
+          34
+        ],
+        "negative": [
+          31,
+          33,
+          32,
+          18,
+          42,
+          35
+        ],
+        "positive_sum": 145,
+        "negative_sum": 191,
+        "signed_sum": 336,
+        "distinct_signed": 214
+      },
+      {
+        "seed": 7,
+        "positive": [
+          23,
+          23,
+          29,
+          17,
+          24,
+          35
+        ],
+        "negative": [
+          34,
+          36,
+          40,
+          20,
+          42,
+          35
+        ],
+        "positive_sum": 151,
+        "negative_sum": 207,
+        "signed_sum": 358,
+        "distinct_signed": 205
+      },
+      {
+        "seed": 123,
+        "positive": [
+          24,
+          23,
+          35,
+          19,
+          19,
+          32
+        ],
+        "negative": [
+          38,
+          29,
+          38,
+          20,
+          36,
+          39
+        ],
+        "positive_sum": 152,
+        "negative_sum": 200,
+        "signed_sum": 352,
+        "distinct_signed": 229
+      }
+    ],
+    "means": {
+      "positive_sum": 149.33333333333334,
+      "negative_sum": 199.33333333333334,
+      "signed_sum": 348.6666666666667,
+      "distinct_signed": 216.0
+    }
+  },
+  "10|0.9": {
+    "per_seed": [
+      {
+        "seed": 42,
+        "positive": [
+          18,
+          17,
+          22,
+          14,
+          18,
+          27
+        ],
+        "negative": [
+          24,
+          28,
+          25,
+          16,
+          39,
+          31
+        ],
+        "positive_sum": 116,
+        "negative_sum": 163,
+        "signed_sum": 279,
+        "distinct_signed": 189
+      },
+      {
+        "seed": 7,
+        "positive": [
+          22,
+          19,
+          24,
+          14,
+          24,
+          27
+        ],
+        "negative": [
+          26,
+          35,
+          38,
+          18,
+          38,
+          32
+        ],
+        "positive_sum": 130,
+        "negative_sum": 187,
+        "signed_sum": 317,
+        "distinct_signed": 187
+      },
+      {
+        "seed": 123,
+        "positive": [
+          20,
+          15,
+          33,
+          18,
+          15,
+          30
+        ],
+        "negative": [
+          34,
+          20,
+          35,
+          15,
+          34,
+          31
+        ],
+        "positive_sum": 131,
+        "negative_sum": 169,
+        "signed_sum": 300,
+        "distinct_signed": 204
+      }
+    ],
+    "means": {
+      "positive_sum": 125.66666666666667,
+      "negative_sum": 173.0,
+      "signed_sum": 298.6666666666667,
+      "distinct_signed": 193.33333333333334
+    }
+  },
+  "10|0.5": {
+    "per_seed": [
+      {
+        "seed": 42,
+        "positive": [
+          35,
+          29,
+          38,
+          17,
+          27,
+          39
+        ],
+        "negative": [
+          37,
+          39,
+          40,
+          20,
+          54,
+          43
+        ],
+        "positive_sum": 185,
+        "negative_sum": 233,
+        "signed_sum": 418,
+        "distinct_signed": 253
+      },
+      {
+        "seed": 7,
+        "positive": [
+          28,
+          35,
+          37,
+          23,
+          28,
+          45
+        ],
+        "negative": [
+          52,
+          44,
+          49,
+          27,
+          60,
+          43
+        ],
+        "positive_sum": 196,
+        "negative_sum": 275,
+        "signed_sum": 471,
+        "distinct_signed": 243
+      },
+      {
+        "seed": 123,
+        "positive": [
+          31,
+          30,
+          45,
+          21,
+          22,
+          41
+        ],
+        "negative": [
+          47,
+          36,
+          47,
+          30,
+          47,
+          56
+        ],
+        "positive_sum": 190,
+        "negative_sum": 263,
+        "signed_sum": 453,
+        "distinct_signed": 258
+      }
+    ],
+    "means": {
+      "positive_sum": 190.33333333333334,
+      "negative_sum": 257.0,
+      "signed_sum": 447.3333333333333,
+      "distinct_signed": 251.33333333333334
+    }
+  }
+}

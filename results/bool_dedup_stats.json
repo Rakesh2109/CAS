@@ -1,0 +1,26 @@
+{
+  "source": "dedup_bool_nbins10.npz",
+  "train_rows_in": 1605583,
+  "train_rows_out": 16822,
+  "test_rows_in": 599382,
+  "test_rows_out": 4904,
+  "test_codes_before_leak_drop": 11393,
+  "test_codes_dropped_as_train_leak": 6489,
+  "test_feature_pattern_overlap_with_train": 0.1442,
+  "train_class_counts": {
+    "Benign": 119,
+    "DDoS": 5243,
+    "DoS": 5214,
+    "MQTT": 4517,
+    "Recon": 1400,
+    "Spoofing": 329
+  },
+  "test_class_counts": {
+    "Benign": 265,
+    "DDoS": 336,
+    "DoS": 279,
+    "MQTT": 3641,
+    "Recon": 174,
+    "Spoofing": 209
+  }
+}

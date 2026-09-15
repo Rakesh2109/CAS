@@ -1,0 +1,98 @@
+{
+  "representation": "numeric",
+  "model": "rf",
+  "n_features": 22,
+  "training_rows": 175803,
+  "selection_rows": 19535,
+  "test_rows": 80868,
+  "seeds": [
+    42,
+    7,
+    123
+  ],
+  "split_seed": 0,
+  "smote": false,
+  "l1_standardized": false,
+  "sklearn_version": "1.8.0",
+  "per_seed": [
+    {
+      "seed": 42,
+      "hp": 20,
+      "selection_macro_f1": 0.9137012747491431,
+      "test_f1": 0.6743524209302514,
+      "test_acc": 0.7257135084334966,
+      "prediction_sha256": "7da57161376e11707c537c80db2b9bf13bc8c7b21dc9e08faa69949e1c018f44",
+      "trials": [
+        {
+          "hp": null,
+          "selection_macro_f1": 0.8868391900897842,
+          "seconds": 13.512686967849731
+        },
+        {
+          "hp": 12,
+          "selection_macro_f1": 0.9123816912477672,
+          "seconds": 8.344350814819336
+        },
+        {
+          "hp": 20,
+          "selection_macro_f1": 0.9137012747491431,
+          "seconds": 10.564842700958252
+        }
+      ]
+    },
+    {
+      "seed": 7,
+      "hp": 20,
+      "selection_macro_f1": 0.9143888843171948,
+      "test_f1": 0.6747990400181947,
+      "test_acc": 0.7265420190928427,
+      "prediction_sha256": "216c5a5370dcbb1da2ad900450c41dd8a00db686499a2674cfc33d28c2552826",
+      "trials": [
+        {
+          "hp": null,
+          "selection_macro_f1": 0.8872500922760388,
+          "seconds": 13.43921446800232
+        },
+        {
+          "hp": 12,
+          "selection_macro_f1": 0.91167578644508,
+          "seconds": 8.696922302246094
+        },
+        {
+          "hp": 20,
+          "selection_macro_f1": 0.9143888843171948,
+          "seconds": 10.90363621711731
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "hp": 20,
+      "selection_macro_f1": 0.9138082288968814,
+      "test_f1": 0.6706763756523239,
+      "test_acc": 0.7231166839788297,
+      "prediction_sha256": "61db5e0ac552c61a4bb3c024172c9101c818c2e356a6b86fa976b01c080f144a",
+      "trials": [
+        {
+          "hp": null,
+          "selection_macro_f1": 0.8869869572583996,
+          "seconds": 13.723093509674072
+        },
+        {
+          "hp": 12,
+          "selection_macro_f1": 0.9123508426859681,
+          "seconds": 8.634944915771484
+        },
+        {
+          "hp": 20,
+          "selection_macro_f1": 0.9138082288968814,
+          "seconds": 10.600853443145752
+        }
+      ]
+    }
+  ],
+  "test_f1_mean": 0.6732759455335899,
+  "test_f1_sd": 0.0018471942377776252,
+  "test_acc_mean": 0.7251240705017229,
+  "test_acc_sd": 0.0014591796707700228
+}

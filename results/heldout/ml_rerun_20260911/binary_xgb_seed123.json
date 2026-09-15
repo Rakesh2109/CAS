@@ -1,0 +1,44 @@
+{
+  "representation": "binary",
+  "model": "xgb",
+  "n_features": 154,
+  "training_rows": 175803,
+  "selection_rows": 19535,
+  "test_rows": 80868,
+  "seeds": [
+    42,
+    7,
+    123
+  ],
+  "split_seed": 0,
+  "smote": false,
+  "l1_standardized": false,
+  "sklearn_version": "1.8.0",
+  "per_seed": [
+    {
+      "seed": 123,
+      "hp": [
+        4,
+        200
+      ],
+      "selection_macro_f1": 0.869014086311012,
+      "test_f1": 0.6770510244647969,
+      "test_acc": 0.7112331206410447,
+      "prediction_sha256": "1d5083eec8f7d8659b6f59a59ea8f52a1e0842de504d0e27304f7b0bf2b32b26",
+      "trials": [
+        {
+          "hp": [
+            4,
+            200
+          ],
+          "selection_macro_f1": 0.869014086311012,
+          "seconds": 33.050814390182495
+        }
+      ]
+    }
+  ],
+  "test_f1_mean": 0.6770510244647969,
+  "test_f1_sd": 0.0,
+  "test_acc_mean": 0.7112331206410447,
+  "test_acc_sd": 0.0
+}

@@ -1,0 +1,95 @@
+{
+  "n_features_raw": 39,
+  "dropped_time": [
+    "IAT"
+  ],
+  "dropped_correlated": [
+    [
+      "fin_count",
+      "fin_flag_number",
+      0.9952
+    ],
+    [
+      "IPv",
+      "ARP",
+      -1.0
+    ],
+    [
+      "LLC",
+      "ARP",
+      -1.0
+    ],
+    [
+      "Tot size",
+      "AVG",
+      1.0
+    ],
+    [
+      "Variance",
+      "Std",
+      0.9546
+    ]
+  ],
+  "corr_threshold": 0.95,
+  "kept_features": [
+    "Header_Length",
+    "Protocol Type",
+    "Time_To_Live",
+    "Rate",
+    "fin_flag_number",
+    "syn_flag_number",
+    "rst_flag_number",
+    "psh_flag_number",
+    "ack_flag_number",
+    "ece_flag_number",
+    "cwr_flag_number",
+    "ack_count",
+    "syn_count",
+    "rst_count",
+    "HTTP",
+    "HTTPS",
+    "DNS",
+    "Telnet",
+    "SMTP",
+    "SSH",
+    "IRC",
+    "TCP",
+    "UDP",
+    "DHCP",
+    "ARP",
+    "ICMP",
+    "IGMP",
+    "Tot sum",
+    "Min",
+    "Max",
+    "AVG",
+    "Std",
+    "Number"
+  ],
+  "n_kept": 33,
+  "train_shape": [
+    195338,
+    33
+  ],
+  "test_shape": [
+    80868,
+    33
+  ],
+  "train_class_counts": {
+    "Benign": 19291,
+    "DDoS": 40000,
+    "DoS": 40000,
+    "MQTT": 40000,
+    "Recon": 40000,
+    "Spoofing": 16047
+  },
+  "test_class_counts": {
+    "Benign": 15000,
+    "DDoS": 15000,
+    "DoS": 15000,
+    "MQTT": 15000,
+    "Recon": 15000,
+    "Spoofing": 5868
+  },
+  "note": "no IP or port fields exist in the CICIoMT2024 WiFi/MQTT schema"
+}

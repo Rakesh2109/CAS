@@ -1,0 +1,49 @@
+{
+  "dataset": "iotm",
+  "seed": 42,
+  "signature_sizes": {
+    "Benign": 48,
+    "DDoS": 55,
+    "DoS": 42,
+    "MQTT": 58,
+    "Recon": 29,
+    "Spoofing": 56
+  },
+  "t_hat_raw": 5,
+  "covers_raw": {
+    "Benign": 6,
+    "DDoS": 6,
+    "DoS": 6,
+    "MQTT": 6,
+    "Recon": 6,
+    "Spoofing": 6
+  },
+  "t_hat_reduced": 5,
+  "covers_reduced": {
+    "Benign": 6,
+    "DDoS": 6,
+    "DoS": 6,
+    "MQTT": 6,
+    "Recon": 6,
+    "Spoofing": 6
+  },
+  "n_clauses_removed": 16,
+  "reduced_signature_sizes": {
+    "Benign": 42,
+    "DDoS": 50,
+    "DoS": 34,
+    "MQTT": 52,
+    "Recon": 25,
+    "Spoofing": 51
+  },
+  "mixture_decode_acc_t2_raw_noise0.0_thr1.0": 1.0,
+  "mixture_decode_acc_t2_raw_noise0.05_thr1.0": 0.008,
+  "mixture_decode_acc_t2_raw_noise0.05_thr0.9": 0.854,
+  "mixture_decode_acc_t2_raw_noise0.05_thr0.8": 1.0,
+  "mixture_decode_acc_t2_raw_noise0.15_thr0.8": 0.696,
+  "mixture_decode_acc_t2_reduced_noise0.0_thr1.0": 1.0,
+  "mixture_decode_acc_t2_reduced_noise0.05_thr1.0": 0.012,
+  "mixture_decode_acc_t2_reduced_noise0.05_thr0.9": 0.878,
+  "mixture_decode_acc_t2_reduced_noise0.05_thr0.8": 1.0,
+  "mixture_decode_acc_t2_reduced_noise0.15_thr0.8": 0.706
+}

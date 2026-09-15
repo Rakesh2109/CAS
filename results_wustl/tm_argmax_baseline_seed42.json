@@ -1,0 +1,63 @@
+{
+  "macro_f1": 0.6352045445606826,
+  "per_class_report": {
+    "normal": {
+      "precision": 0.9244299674267101,
+      "recall": 0.9943938332165382,
+      "f1-score": 0.9581363943281567,
+      "support": 2854.0
+    },
+    "Spoofing": {
+      "precision": 0.5,
+      "recall": 0.0044444444444444444,
+      "f1-score": 0.00881057268722467,
+      "support": 225.0
+    },
+    "Data Alteration": {
+      "precision": 0.9214659685863874,
+      "recall": 0.9565217391304348,
+      "f1-score": 0.9386666666666666,
+      "support": 184.0
+    },
+    "accuracy": 0.9239963224026969,
+    "macro avg": {
+      "precision": 0.7819653120043659,
+      "recall": 0.6517866722638058,
+      "f1-score": 0.6352045445606826,
+      "support": 3263.0
+    },
+    "weighted avg": {
+      "precision": 0.8949962811080986,
+      "recall": 0.9239963224026969,
+      "f1-score": 0.8915777857596847,
+      "support": 3263.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      2838,
+      1,
+      15
+    ],
+    [
+      224,
+      1,
+      0
+    ],
+    [
+      8,
+      0,
+      176
+    ]
+  ],
+  "hyperparams": {
+    "clauses": 200,
+    "T": 160,
+    "s": 8.0,
+    "epochs": 40,
+    "seed": 42
+  },
+  "train_time_s": 32.28383994102478,
+  "n_train": 13055,
+  "n_test": 3263
+}

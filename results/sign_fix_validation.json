@@ -1,0 +1,22 @@
+[
+  {
+    "seed": 42,
+    "pi_thr": 0.6,
+    "B": 15,
+    "n_eval": 40434,
+    "tm_argmax_macro_f1": 0.6863746167541224,
+    "sign_agnostic_macro_f1": 0.6415786291965535,
+    "signed_macro_f1": 0.7757322948598627,
+    "transform_s": 3.3
+  },
+  {
+    "seed": 42,
+    "pi_thr": 0.8,
+    "B": 15,
+    "n_eval": 40434,
+    "tm_argmax_macro_f1": 0.6863746167541224,
+    "sign_agnostic_macro_f1": 0.6663445551471641,
+    "signed_macro_f1": 0.7188818745340662,
+    "transform_s": 3.2
+  }
+]

@@ -1,0 +1,5521 @@
+{
+  "normal": {
+    "inculpatory": [
+      {
+        "clause_id": 93,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.7168,
+        "n_literals": 13,
+        "literals": [
+          "Header_Length>=bin5",
+          "psh_flag_number>=bin3",
+          "NOT(Rate>=bin8)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(rst_flag_number>=bin1)",
+          "NOT(rst_flag_number>=bin4)",
+          "NOT(psh_flag_number>=bin7)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(rst_count>=bin8)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin1)",
+          "NOT(DHCP>=bin5)"
+        ]
+      },
+      {
+        "clause_id": 103,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1696,
+        "n_literals": 49,
+        "literals": [
+          "Header_Length>=bin2",
+          "Protocol Type>=bin1",
+          "ack_flag_number>=bin1",
+          "ack_flag_number>=bin2",
+          "ack_flag_number>=bin3",
+          "HTTPS>=bin1",
+          "NOT(Header_Length>=bin6)",
+          "NOT(Rate>=bin1)",
+          "NOT(Rate>=bin2)",
+          "NOT(Rate>=bin3)",
+          "NOT(Rate>=bin4)",
+          "NOT(fin_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin9)",
+          "NOT(rst_flag_number>=bin3)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(psh_flag_number>=bin6)",
+          "NOT(psh_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin8)",
+          "NOT(HTTPS>=bin2)",
+          "NOT(HTTPS>=bin3)",
+          "NOT(DNS>=bin1)",
+          "NOT(DNS>=bin2)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin5)",
+          "NOT(DNS>=bin6)",
+          "NOT(DNS>=bin8)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin5)",
+          "NOT(DHCP>=bin1)",
+          "NOT(DHCP>=bin3)",
+          "NOT(DHCP>=bin5)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin1)",
+          "NOT(ARP>=bin4)",
+          "NOT(ARP>=bin8)",
+          "NOT(ICMP>=bin1)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin4)",
+          "NOT(ICMP>=bin6)",
+          "NOT(ICMP>=bin7)",
+          "NOT(IGMP>=bin2)",
+          "NOT(IGMP>=bin5)"
+        ]
+      },
+      {
+        "clause_id": 132,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.2352,
+        "n_literals": 25,
+        "literals": [
+          "Header_Length>=bin4",
+          "NOT(Header_Length>=bin6)",
+          "NOT(Header_Length>=bin9)",
+          "NOT(Rate>=bin1)",
+          "NOT(Rate>=bin9)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(syn_flag_number>=bin1)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin4)",
+          "NOT(rst_count>=bin8)",
+          "NOT(rst_count>=bin9)",
+          "NOT(HTTP>=bin8)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(HTTPS>=bin7)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(DNS>=bin5)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SSH>=bin2)",
+          "NOT(SSH>=bin4)",
+          "NOT(ARP>=bin9)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin5)",
+          "NOT(IGMP>=bin5)"
+        ]
+      },
+      {
+        "clause_id": 173,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1555,
+        "n_literals": 4,
+        "literals": [
+          "Header_Length>=bin5",
+          "ack_flag_number>=bin4",
+          "HTTPS>=bin1",
+          "NOT(Rate>=bin2)"
+        ]
+      },
+      {
+        "clause_id": 200,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.2012,
+        "n_literals": 82,
+        "literals": [
+          "Header_Length>=bin2",
+          "psh_flag_number>=bin1",
+          "ack_flag_number>=bin1",
+          "NOT(Header_Length>=bin8)",
+          "NOT(Header_Length>=bin9)",
+          "NOT(Protocol Type>=bin2)",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(Rate>=bin2)",
+          "NOT(Rate>=bin5)",
+          "NOT(Rate>=bin6)",
+          "NOT(Rate>=bin9)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin5)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin2)",
+          "NOT(rst_flag_number>=bin3)",
+          "NOT(rst_flag_number>=bin4)",
+          "NOT(rst_flag_number>=bin6)",
+          "NOT(rst_flag_number>=bin8)",
+          "NOT(psh_flag_number>=bin3)",
+          "NOT(psh_flag_number>=bin4)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin4)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(ece_flag_number>=bin1)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(cwr_flag_number>=bin2)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin4)",
+          "NOT(HTTP>=bin1)",
+          "NOT(HTTP>=bin6)",
+          "NOT(HTTP>=bin7)",
+          "NOT(HTTP>=bin9)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin6)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin1)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin4)",
+          "NOT(DNS>=bin5)",
+          "NOT(DNS>=bin6)",
+          "NOT(DNS>=bin8)",
+          "NOT(Telnet>=bin1)",
+          "NOT(Telnet>=bin2)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SSH>=bin1)",
+          "NOT(SSH>=bin4)",
+          "NOT(SSH>=bin5)",
+          "NOT(IRC>=bin1)",
+          "NOT(IRC>=bin2)",
+          "NOT(DHCP>=bin1)",
+          "NOT(DHCP>=bin3)",
+          "NOT(DHCP>=bin4)",
+          "NOT(DHCP>=bin5)",
+          "NOT(DHCP>=bin7)",
+          "NOT(DHCP>=bin8)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin1)",
+          "NOT(ARP>=bin3)",
+          "NOT(ARP>=bin5)",
+          "NOT(ARP>=bin8)",
+          "NOT(ARP>=bin9)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin3)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin7)",
+          "NOT(ICMP>=bin8)",
+          "NOT(ICMP>=bin9)",
+          "NOT(IGMP>=bin1)",
+          "NOT(IGMP>=bin2)",
+          "NOT(IGMP>=bin4)",
+          "NOT(IGMP>=bin5)",
+          "NOT(IGMP>=bin6)"
+        ]
+      },
+      {
+        "clause_id": 205,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.2429,
+        "n_literals": 5,
+        "literals": [
+          "Header_Length>=bin6",
+          "Header_Length>=bin7",
+          "psh_flag_number>=bin3",
+          "NOT(HTTPS>=bin4)",
+          "NOT(DNS>=bin3)"
+        ]
+      },
+      {
+        "clause_id": 281,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.4961,
+        "n_literals": 22,
+        "literals": [
+          "Header_Length>=bin3",
+          "Rate>=bin3",
+          "ack_flag_number>=bin1",
+          "NOT(Protocol Type>=bin2)",
+          "NOT(fin_flag_number>=bin3)",
+          "NOT(fin_flag_number>=bin6)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(rst_count>=bin5)",
+          "NOT(HTTP>=bin3)",
+          "NOT(HTTP>=bin4)",
+          "NOT(HTTP>=bin6)",
+          "NOT(DNS>=bin4)",
+          "NOT(SSH>=bin2)",
+          "NOT(SSH>=bin4)",
+          "NOT(DHCP>=bin6)",
+          "NOT(DHCP>=bin8)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin5)",
+          "NOT(IGMP>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 299,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.2636,
+        "n_literals": 1,
+        "literals": [
+          "NOT(Rate>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 335,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.4222,
+        "n_literals": 1,
+        "literals": [
+          "NOT(Rate>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 346,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.2299,
+        "n_literals": 123,
+        "literals": [
+          "Header_Length>=bin1",
+          "Rate>=bin1",
+          "NOT(Header_Length>=bin5)",
+          "NOT(Header_Length>=bin6)",
+          "NOT(Header_Length>=bin7)",
+          "NOT(Header_Length>=bin8)",
+          "NOT(Header_Length>=bin9)",
+          "NOT(Protocol Type>=bin2)",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(Rate>=bin2)",
+          "NOT(Rate>=bin3)",
+          "NOT(Rate>=bin4)",
+          "NOT(Rate>=bin5)",
+          "NOT(Rate>=bin6)",
+          "NOT(Rate>=bin7)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin2)",
+          "NOT(fin_flag_number>=bin3)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(fin_flag_number>=bin6)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(fin_flag_number>=bin9)",
+          "NOT(syn_flag_number>=bin1)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(syn_flag_number>=bin3)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin5)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(syn_flag_number>=bin9)",
+          "NOT(rst_flag_number>=bin1)",
+          "NOT(rst_flag_number>=bin2)",
+          "NOT(rst_flag_number>=bin3)",
+          "NOT(rst_flag_number>=bin5)",
+          "NOT(rst_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin8)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(psh_flag_number>=bin3)",
+          "NOT(psh_flag_number>=bin4)",
+          "NOT(psh_flag_number>=bin5)",
+          "NOT(psh_flag_number>=bin6)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(psh_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin2)",
+          "NOT(ack_flag_number>=bin3)",
+          "NOT(ack_flag_number>=bin6)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(ack_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(ece_flag_number>=bin1)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(ece_flag_number>=bin3)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(cwr_flag_number>=bin2)",
+          "NOT(rst_count>=bin1)",
+          "NOT(rst_count>=bin2)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin4)",
+          "NOT(rst_count>=bin5)",
+          "NOT(rst_count>=bin6)",
+          "NOT(rst_count>=bin7)",
+          "NOT(rst_count>=bin8)",
+          "NOT(rst_count>=bin9)",
+          "NOT(HTTP>=bin1)",
+          "NOT(HTTP>=bin3)",
+          "NOT(HTTP>=bin6)",
+          "NOT(HTTP>=bin7)",
+          "NOT(HTTP>=bin8)",
+          "NOT(HTTP>=bin9)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(HTTPS>=bin2)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(HTTPS>=bin7)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin2)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin4)",
+          "NOT(DNS>=bin5)",
+          "NOT(DNS>=bin6)",
+          "NOT(DNS>=bin7)",
+          "NOT(DNS>=bin8)",
+          "NOT(DNS>=bin9)",
+          "NOT(Telnet>=bin1)",
+          "NOT(Telnet>=bin2)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin1)",
+          "NOT(SSH>=bin2)",
+          "NOT(SSH>=bin4)",
+          "NOT(IRC>=bin1)",
+          "NOT(IRC>=bin2)",
+          "NOT(DHCP>=bin1)",
+          "NOT(DHCP>=bin2)",
+          "NOT(DHCP>=bin3)",
+          "NOT(DHCP>=bin4)",
+          "NOT(DHCP>=bin6)",
+          "NOT(DHCP>=bin7)",
+          "NOT(DHCP>=bin8)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin1)",
+          "NOT(ARP>=bin2)",
+          "NOT(ARP>=bin6)",
+          "NOT(ARP>=bin7)",
+          "NOT(ARP>=bin8)",
+          "NOT(ARP>=bin9)",
+          "NOT(ICMP>=bin1)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin3)",
+          "NOT(ICMP>=bin4)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin6)",
+          "NOT(ICMP>=bin7)",
+          "NOT(ICMP>=bin8)",
+          "NOT(IGMP>=bin1)",
+          "NOT(IGMP>=bin2)",
+          "NOT(IGMP>=bin3)",
+          "NOT(IGMP>=bin4)",
+          "NOT(IGMP>=bin5)",
+          "NOT(IGMP>=bin6)",
+          "NOT(IGMP>=bin7)",
+          "NOT(IGMP>=bin8)",
+          "NOT(IGMP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 348,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.3279,
+        "n_literals": 1,
+        "literals": [
+          "NOT(Rate>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 391,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1642,
+        "n_literals": 7,
+        "literals": [
+          "NOT(Header_Length>=bin2)",
+          "NOT(Rate>=bin2)",
+          "NOT(ack_flag_number>=bin1)",
+          "NOT(rst_count>=bin6)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(SSH>=bin4)",
+          "NOT(DHCP>=bin8)"
+        ]
+      },
+      {
+        "clause_id": 403,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.2097,
+        "n_literals": 13,
+        "literals": [
+          "Rate>=bin1",
+          "psh_flag_number>=bin1",
+          "NOT(Header_Length>=bin6)",
+          "NOT(Header_Length>=bin7)",
+          "NOT(psh_flag_number>=bin5)",
+          "NOT(cwr_flag_number>=bin2)",
+          "NOT(DNS>=bin6)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SMTP>=bin2)",
+          "NOT(IRC>=bin1)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin8)",
+          "NOT(IGMP>=bin6)"
+        ]
+      },
+      {
+        "clause_id": 440,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0475,
+        "n_literals": 80,
+        "literals": [
+          "Header_Length>=bin1",
+          "Protocol Type>=bin1",
+          "Rate>=bin2",
+          "Rate>=bin3",
+          "NOT(Header_Length>=bin8)",
+          "NOT(Protocol Type>=bin2)",
+          "NOT(Rate>=bin7)",
+          "NOT(Rate>=bin8)",
+          "NOT(Rate>=bin9)",
+          "NOT(fin_flag_number>=bin2)",
+          "NOT(fin_flag_number>=bin3)",
+          "NOT(fin_flag_number>=bin4)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(syn_flag_number>=bin3)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin5)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(rst_flag_number>=bin1)",
+          "NOT(rst_flag_number>=bin4)",
+          "NOT(rst_flag_number>=bin5)",
+          "NOT(rst_flag_number>=bin6)",
+          "NOT(rst_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(psh_flag_number>=bin6)",
+          "NOT(psh_flag_number>=bin7)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(psh_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin5)",
+          "NOT(ack_flag_number>=bin6)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(ece_flag_number>=bin3)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(rst_count>=bin1)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin4)",
+          "NOT(rst_count>=bin5)",
+          "NOT(rst_count>=bin8)",
+          "NOT(rst_count>=bin9)",
+          "NOT(HTTP>=bin1)",
+          "NOT(HTTP>=bin2)",
+          "NOT(HTTP>=bin3)",
+          "NOT(HTTP>=bin4)",
+          "NOT(HTTP>=bin5)",
+          "NOT(HTTP>=bin6)",
+          "NOT(HTTP>=bin8)",
+          "NOT(HTTP>=bin9)",
+          "NOT(HTTPS>=bin2)",
+          "NOT(HTTPS>=bin3)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(DNS>=bin1)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin5)",
+          "NOT(DNS>=bin7)",
+          "NOT(DNS>=bin8)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin3)",
+          "NOT(SSH>=bin4)",
+          "NOT(SSH>=bin5)",
+          "NOT(IRC>=bin2)",
+          "NOT(DHCP>=bin5)",
+          "NOT(DHCP>=bin6)",
+          "NOT(DHCP>=bin7)",
+          "NOT(DHCP>=bin8)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin1)",
+          "NOT(ARP>=bin2)",
+          "NOT(ARP>=bin4)",
+          "NOT(ARP>=bin7)",
+          "NOT(ARP>=bin8)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin4)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin6)",
+          "NOT(ICMP>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 477,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.4596,
+        "n_literals": 143,
+        "literals": [
+          "Header_Length>=bin1",
+          "Header_Length>=bin2",
+          "Header_Length>=bin3",
+          "Header_Length>=bin4",
+          "Protocol Type>=bin1",
+          "psh_flag_number>=bin1",
+          "psh_flag_number>=bin2",
+          "ack_flag_number>=bin1",
+          "ack_flag_number>=bin2",
+          "NOT(Header_Length>=bin6)",
+          "NOT(Header_Length>=bin7)",
+          "NOT(Header_Length>=bin8)",
+          "NOT(Header_Length>=bin9)",
+          "NOT(Protocol Type>=bin2)",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(Rate>=bin4)",
+          "NOT(Rate>=bin5)",
+          "NOT(Rate>=bin6)",
+          "NOT(Rate>=bin7)",
+          "NOT(Rate>=bin8)",
+          "NOT(Rate>=bin9)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin2)",
+          "NOT(fin_flag_number>=bin3)",
+          "NOT(fin_flag_number>=bin4)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(fin_flag_number>=bin6)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(fin_flag_number>=bin9)",
+          "NOT(syn_flag_number>=bin1)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(syn_flag_number>=bin3)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin5)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(syn_flag_number>=bin9)",
+          "NOT(rst_flag_number>=bin2)",
+          "NOT(rst_flag_number>=bin3)",
+          "NOT(rst_flag_number>=bin4)",
+          "NOT(rst_flag_number>=bin5)",
+          "NOT(rst_flag_number>=bin6)",
+          "NOT(rst_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin8)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(psh_flag_number>=bin4)",
+          "NOT(psh_flag_number>=bin5)",
+          "NOT(psh_flag_number>=bin6)",
+          "NOT(psh_flag_number>=bin7)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(psh_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin4)",
+          "NOT(ack_flag_number>=bin5)",
+          "NOT(ack_flag_number>=bin6)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(ack_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(ece_flag_number>=bin1)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(ece_flag_number>=bin3)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(cwr_flag_number>=bin2)",
+          "NOT(rst_count>=bin2)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin4)",
+          "NOT(rst_count>=bin5)",
+          "NOT(rst_count>=bin6)",
+          "NOT(rst_count>=bin7)",
+          "NOT(rst_count>=bin8)",
+          "NOT(rst_count>=bin9)",
+          "NOT(HTTP>=bin1)",
+          "NOT(HTTP>=bin2)",
+          "NOT(HTTP>=bin3)",
+          "NOT(HTTP>=bin4)",
+          "NOT(HTTP>=bin5)",
+          "NOT(HTTP>=bin6)",
+          "NOT(HTTP>=bin7)",
+          "NOT(HTTP>=bin8)",
+          "NOT(HTTP>=bin9)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(HTTPS>=bin2)",
+          "NOT(HTTPS>=bin3)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(HTTPS>=bin6)",
+          "NOT(HTTPS>=bin7)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin1)",
+          "NOT(DNS>=bin2)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin4)",
+          "NOT(DNS>=bin5)",
+          "NOT(DNS>=bin6)",
+          "NOT(DNS>=bin7)",
+          "NOT(DNS>=bin8)",
+          "NOT(DNS>=bin9)",
+          "NOT(Telnet>=bin1)",
+          "NOT(Telnet>=bin2)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin1)",
+          "NOT(SSH>=bin2)",
+          "NOT(SSH>=bin3)",
+          "NOT(SSH>=bin4)",
+          "NOT(SSH>=bin5)",
+          "NOT(IRC>=bin1)",
+          "NOT(IRC>=bin2)",
+          "NOT(DHCP>=bin1)",
+          "NOT(DHCP>=bin2)",
+          "NOT(DHCP>=bin3)",
+          "NOT(DHCP>=bin4)",
+          "NOT(DHCP>=bin5)",
+          "NOT(DHCP>=bin6)",
+          "NOT(DHCP>=bin8)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin1)",
+          "NOT(ARP>=bin2)",
+          "NOT(ARP>=bin3)",
+          "NOT(ARP>=bin4)",
+          "NOT(ARP>=bin5)",
+          "NOT(ARP>=bin6)",
+          "NOT(ARP>=bin7)",
+          "NOT(ARP>=bin8)",
+          "NOT(ICMP>=bin1)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin3)",
+          "NOT(ICMP>=bin4)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin6)",
+          "NOT(ICMP>=bin7)",
+          "NOT(ICMP>=bin8)",
+          "NOT(ICMP>=bin9)",
+          "NOT(IGMP>=bin1)",
+          "NOT(IGMP>=bin2)",
+          "NOT(IGMP>=bin3)",
+          "NOT(IGMP>=bin4)",
+          "NOT(IGMP>=bin5)",
+          "NOT(IGMP>=bin7)",
+          "NOT(IGMP>=bin8)",
+          "NOT(IGMP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 494,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.4794,
+        "n_literals": 7,
+        "literals": [
+          "Header_Length>=bin7",
+          "Rate>=bin3",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(HTTPS>=bin6)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin5)",
+          "NOT(ARP>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 501,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0909,
+        "n_literals": 12,
+        "literals": [
+          "psh_flag_number>=bin1",
+          "psh_flag_number>=bin2",
+          "NOT(Header_Length>=bin6)",
+          "NOT(Header_Length>=bin7)",
+          "NOT(Rate>=bin4)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(rst_flag_number>=bin5)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(ece_flag_number>=bin1)",
+          "NOT(DHCP>=bin4)",
+          "NOT(DHCP>=bin7)",
+          "NOT(ARP>=bin8)"
+        ]
+      },
+      {
+        "clause_id": 538,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0622,
+        "n_literals": 143,
+        "literals": [
+          "Header_Length>=bin1",
+          "Header_Length>=bin2",
+          "Header_Length>=bin3",
+          "Header_Length>=bin4",
+          "Protocol Type>=bin1",
+          "psh_flag_number>=bin1",
+          "psh_flag_number>=bin2",
+          "ack_flag_number>=bin1",
+          "ack_flag_number>=bin2",
+          "ack_flag_number>=bin3",
+          "NOT(Header_Length>=bin8)",
+          "NOT(Header_Length>=bin9)",
+          "NOT(Protocol Type>=bin2)",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(Rate>=bin3)",
+          "NOT(Rate>=bin4)",
+          "NOT(Rate>=bin5)",
+          "NOT(Rate>=bin7)",
+          "NOT(Rate>=bin8)",
+          "NOT(Rate>=bin9)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin2)",
+          "NOT(fin_flag_number>=bin3)",
+          "NOT(fin_flag_number>=bin4)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(fin_flag_number>=bin6)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(fin_flag_number>=bin9)",
+          "NOT(syn_flag_number>=bin1)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(syn_flag_number>=bin3)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin5)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(syn_flag_number>=bin9)",
+          "NOT(rst_flag_number>=bin2)",
+          "NOT(rst_flag_number>=bin3)",
+          "NOT(rst_flag_number>=bin4)",
+          "NOT(rst_flag_number>=bin5)",
+          "NOT(rst_flag_number>=bin6)",
+          "NOT(rst_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin8)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(psh_flag_number>=bin4)",
+          "NOT(psh_flag_number>=bin5)",
+          "NOT(psh_flag_number>=bin6)",
+          "NOT(psh_flag_number>=bin7)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(psh_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin5)",
+          "NOT(ack_flag_number>=bin6)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(ack_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(ece_flag_number>=bin1)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(ece_flag_number>=bin3)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(cwr_flag_number>=bin2)",
+          "NOT(rst_count>=bin2)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin4)",
+          "NOT(rst_count>=bin5)",
+          "NOT(rst_count>=bin6)",
+          "NOT(rst_count>=bin7)",
+          "NOT(rst_count>=bin8)",
+          "NOT(rst_count>=bin9)",
+          "NOT(HTTP>=bin1)",
+          "NOT(HTTP>=bin3)",
+          "NOT(HTTP>=bin4)",
+          "NOT(HTTP>=bin5)",
+          "NOT(HTTP>=bin6)",
+          "NOT(HTTP>=bin7)",
+          "NOT(HTTP>=bin8)",
+          "NOT(HTTP>=bin9)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(HTTPS>=bin2)",
+          "NOT(HTTPS>=bin3)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(HTTPS>=bin6)",
+          "NOT(HTTPS>=bin7)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin1)",
+          "NOT(DNS>=bin2)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin4)",
+          "NOT(DNS>=bin5)",
+          "NOT(DNS>=bin6)",
+          "NOT(DNS>=bin7)",
+          "NOT(DNS>=bin8)",
+          "NOT(DNS>=bin9)",
+          "NOT(Telnet>=bin1)",
+          "NOT(Telnet>=bin2)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin1)",
+          "NOT(SSH>=bin2)",
+          "NOT(SSH>=bin3)",
+          "NOT(SSH>=bin4)",
+          "NOT(SSH>=bin5)",
+          "NOT(IRC>=bin1)",
+          "NOT(IRC>=bin2)",
+          "NOT(DHCP>=bin1)",
+          "NOT(DHCP>=bin2)",
+          "NOT(DHCP>=bin3)",
+          "NOT(DHCP>=bin4)",
+          "NOT(DHCP>=bin5)",
+          "NOT(DHCP>=bin6)",
+          "NOT(DHCP>=bin7)",
+          "NOT(DHCP>=bin8)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin1)",
+          "NOT(ARP>=bin2)",
+          "NOT(ARP>=bin3)",
+          "NOT(ARP>=bin4)",
+          "NOT(ARP>=bin5)",
+          "NOT(ARP>=bin6)",
+          "NOT(ARP>=bin7)",
+          "NOT(ARP>=bin8)",
+          "NOT(ARP>=bin9)",
+          "NOT(ICMP>=bin1)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin3)",
+          "NOT(ICMP>=bin4)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin6)",
+          "NOT(ICMP>=bin7)",
+          "NOT(ICMP>=bin8)",
+          "NOT(ICMP>=bin9)",
+          "NOT(IGMP>=bin1)",
+          "NOT(IGMP>=bin2)",
+          "NOT(IGMP>=bin3)",
+          "NOT(IGMP>=bin4)",
+          "NOT(IGMP>=bin5)",
+          "NOT(IGMP>=bin6)",
+          "NOT(IGMP>=bin7)",
+          "NOT(IGMP>=bin8)",
+          "NOT(IGMP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 582,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.4552,
+        "n_literals": 19,
+        "literals": [
+          "NOT(Protocol Type>=bin2)",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(Rate>=bin1)",
+          "NOT(Rate>=bin5)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(fin_flag_number>=bin9)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(ece_flag_number>=bin3)",
+          "NOT(rst_count>=bin1)",
+          "NOT(HTTP>=bin2)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(HTTPS>=bin7)",
+          "NOT(ARP>=bin2)",
+          "NOT(IGMP>=bin3)",
+          "NOT(IGMP>=bin4)",
+          "NOT(IGMP>=bin6)",
+          "NOT(IGMP>=bin8)",
+          "NOT(IGMP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 615,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1018,
+        "n_literals": 30,
+        "literals": [
+          "Header_Length>=bin3",
+          "Header_Length>=bin7",
+          "Rate>=bin2",
+          "psh_flag_number>=bin1",
+          "NOT(Rate>=bin5)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin2)",
+          "NOT(fin_flag_number>=bin4)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(syn_flag_number>=bin1)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(psh_flag_number>=bin4)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(ece_flag_number>=bin3)",
+          "NOT(rst_count>=bin1)",
+          "NOT(rst_count>=bin4)",
+          "NOT(rst_count>=bin5)",
+          "NOT(HTTP>=bin5)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(DNS>=bin2)",
+          "NOT(SSH>=bin5)",
+          "NOT(IRC>=bin2)",
+          "NOT(DHCP>=bin1)",
+          "NOT(DHCP>=bin6)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin6)",
+          "NOT(ICMP>=bin3)",
+          "NOT(IGMP>=bin3)",
+          "NOT(IGMP>=bin5)"
+        ]
+      },
+      {
+        "clause_id": 651,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.5343,
+        "n_literals": 2,
+        "literals": [
+          "Header_Length>=bin6",
+          "ack_flag_number>=bin4"
+        ]
+      },
+      {
+        "clause_id": 50,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": 0.0561,
+        "n_literals": 8,
+        "literals": [
+          "Header_Length>=bin3",
+          "psh_flag_number>=bin2",
+          "ack_flag_number>=bin2",
+          "NOT(Header_Length>=bin5)",
+          "NOT(Rate>=bin1)",
+          "NOT(Rate>=bin6)",
+          "NOT(DNS>=bin5)",
+          "NOT(ICMP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 114,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": 0.0691,
+        "n_literals": 2,
+        "literals": [
+          "Header_Length>=bin5",
+          "NOT(Header_Length>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 314,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.967,
+        "mean_coef": 0.0431,
+        "n_literals": 2,
+        "literals": [
+          "Rate>=bin2",
+          "psh_flag_number>=bin3"
+        ]
+      },
+      {
+        "clause_id": 608,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.967,
+        "mean_coef": 0.0738,
+        "n_literals": 92,
+        "literals": [
+          "Header_Length>=bin1",
+          "Header_Length>=bin2",
+          "Protocol Type>=bin1",
+          "psh_flag_number>=bin1",
+          "psh_flag_number>=bin2",
+          "ack_flag_number>=bin1",
+          "ack_flag_number>=bin2",
+          "ack_flag_number>=bin3",
+          "NOT(Header_Length>=bin9)",
+          "NOT(Rate>=bin1)",
+          "NOT(Rate>=bin2)",
+          "NOT(Rate>=bin3)",
+          "NOT(Rate>=bin4)",
+          "NOT(Rate>=bin5)",
+          "NOT(Rate>=bin8)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin4)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(fin_flag_number>=bin6)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(fin_flag_number>=bin9)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(syn_flag_number>=bin3)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(rst_flag_number>=bin3)",
+          "NOT(rst_flag_number>=bin4)",
+          "NOT(rst_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin8)",
+          "NOT(psh_flag_number>=bin3)",
+          "NOT(psh_flag_number>=bin5)",
+          "NOT(psh_flag_number>=bin6)",
+          "NOT(psh_flag_number>=bin7)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(psh_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin5)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(ack_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(ece_flag_number>=bin1)",
+          "NOT(ece_flag_number>=bin3)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(cwr_flag_number>=bin2)",
+          "NOT(rst_count>=bin2)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin4)",
+          "NOT(rst_count>=bin5)",
+          "NOT(rst_count>=bin6)",
+          "NOT(rst_count>=bin7)",
+          "NOT(rst_count>=bin9)",
+          "NOT(HTTP>=bin2)",
+          "NOT(HTTP>=bin3)",
+          "NOT(HTTP>=bin5)",
+          "NOT(HTTPS>=bin3)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin1)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin6)",
+          "NOT(DNS>=bin7)",
+          "NOT(DNS>=bin8)",
+          "NOT(DNS>=bin9)",
+          "NOT(Telnet>=bin1)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin2)",
+          "NOT(SSH>=bin3)",
+          "NOT(SSH>=bin4)",
+          "NOT(SSH>=bin5)",
+          "NOT(IRC>=bin1)",
+          "NOT(DHCP>=bin1)",
+          "NOT(DHCP>=bin2)",
+          "NOT(DHCP>=bin5)",
+          "NOT(DHCP>=bin6)",
+          "NOT(DHCP>=bin7)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin1)",
+          "NOT(ARP>=bin2)",
+          "NOT(ARP>=bin3)",
+          "NOT(ARP>=bin5)",
+          "NOT(ICMP>=bin1)",
+          "NOT(ICMP>=bin3)",
+          "NOT(ICMP>=bin4)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin7)",
+          "NOT(ICMP>=bin8)",
+          "NOT(IGMP>=bin3)",
+          "NOT(IGMP>=bin5)",
+          "NOT(IGMP>=bin6)",
+          "NOT(IGMP>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 220,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.933,
+        "mean_coef": 0.1104,
+        "n_literals": 5,
+        "literals": [
+          "NOT(Header_Length>=bin3)",
+          "NOT(Rate>=bin2)",
+          "NOT(rst_flag_number>=bin1)",
+          "NOT(psh_flag_number>=bin3)",
+          "NOT(ack_flag_number>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 442,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.933,
+        "mean_coef": 0.0445,
+        "n_literals": 2,
+        "literals": [
+          "Rate>=bin2",
+          "psh_flag_number>=bin3"
+        ]
+      },
+      {
+        "clause_id": 556,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.933,
+        "mean_coef": 0.0386,
+        "n_literals": 2,
+        "literals": [
+          "Rate>=bin2",
+          "psh_flag_number>=bin3"
+        ]
+      },
+      {
+        "clause_id": 604,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.867,
+        "mean_coef": 0.1176,
+        "n_literals": 20,
+        "literals": [
+          "Header_Length>=bin5",
+          "psh_flag_number>=bin1",
+          "ack_flag_number>=bin3",
+          "HTTPS>=bin1",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(Rate>=bin1)",
+          "NOT(Rate>=bin3)",
+          "NOT(Rate>=bin9)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin3)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin6)",
+          "NOT(rst_count>=bin2)",
+          "NOT(rst_count>=bin4)",
+          "NOT(HTTP>=bin7)",
+          "NOT(HTTPS>=bin3)",
+          "NOT(DHCP>=bin3)",
+          "NOT(DHCP>=bin4)",
+          "NOT(DHCP>=bin6)",
+          "NOT(ARP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 518,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.833,
+        "mean_coef": 0.0836,
+        "n_literals": 38,
+        "literals": [
+          "NOT(Header_Length>=bin7)",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(Rate>=bin2)",
+          "NOT(Rate>=bin6)",
+          "NOT(Rate>=bin7)",
+          "NOT(fin_flag_number>=bin3)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(rst_flag_number>=bin1)",
+          "NOT(rst_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(psh_flag_number>=bin1)",
+          "NOT(psh_flag_number>=bin6)",
+          "NOT(ack_flag_number>=bin3)",
+          "NOT(ack_flag_number>=bin4)",
+          "NOT(ack_flag_number>=bin8)",
+          "NOT(rst_count>=bin6)",
+          "NOT(rst_count>=bin9)",
+          "NOT(HTTP>=bin1)",
+          "NOT(HTTP>=bin3)",
+          "NOT(HTTP>=bin7)",
+          "NOT(HTTP>=bin8)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(HTTPS>=bin6)",
+          "NOT(HTTPS>=bin7)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin5)",
+          "NOT(DNS>=bin8)",
+          "NOT(IRC>=bin1)",
+          "NOT(DHCP>=bin6)",
+          "NOT(ICMP>=bin3)",
+          "NOT(ICMP>=bin4)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin7)",
+          "NOT(IGMP>=bin5)",
+          "NOT(IGMP>=bin6)"
+        ]
+      },
+      {
+        "clause_id": 573,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.767,
+        "mean_coef": 0.1377,
+        "n_literals": 9,
+        "literals": [
+          "NOT(Rate>=bin1)",
+          "NOT(ack_flag_number>=bin5)",
+          "NOT(rst_count>=bin7)",
+          "NOT(HTTP>=bin9)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(DNS>=bin3)",
+          "NOT(SSH>=bin2)",
+          "NOT(DHCP>=bin8)",
+          "NOT(ICMP>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 333,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.733,
+        "mean_coef": 0.0265,
+        "n_literals": 9,
+        "literals": [
+          "Header_Length>=bin6",
+          "Header_Length>=bin7",
+          "NOT(psh_flag_number>=bin1)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(DNS>=bin1)",
+          "NOT(SSH>=bin1)",
+          "NOT(DHCP>=bin7)",
+          "NOT(DHCP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 225,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.7,
+        "mean_coef": 0.0398,
+        "n_literals": 47,
+        "literals": [
+          "psh_flag_number>=bin1",
+          "ack_flag_number>=bin1",
+          "NOT(Header_Length>=bin5)",
+          "NOT(Protocol Type>=bin2)",
+          "NOT(Rate>=bin6)",
+          "NOT(Rate>=bin7)",
+          "NOT(Rate>=bin8)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin2)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(fin_flag_number>=bin9)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(syn_flag_number>=bin5)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(rst_flag_number>=bin6)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(psh_flag_number>=bin7)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin4)",
+          "NOT(HTTP>=bin1)",
+          "NOT(HTTP>=bin2)",
+          "NOT(HTTP>=bin7)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(HTTPS>=bin2)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin6)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin1)",
+          "NOT(DNS>=bin5)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin3)",
+          "NOT(IRC>=bin2)",
+          "NOT(DHCP>=bin3)",
+          "NOT(DHCP>=bin7)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin5)",
+          "NOT(ICMP>=bin1)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin8)",
+          "NOT(IGMP>=bin2)"
+        ]
+      },
+      {
+        "clause_id": 653,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.667,
+        "mean_coef": 0.0029,
+        "n_literals": 2,
+        "literals": [
+          "rst_flag_number>=bin1",
+          "HTTPS>=bin1"
+        ]
+      },
+      {
+        "clause_id": 1,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.6,
+        "mean_coef": 0.002,
+        "n_literals": 2,
+        "literals": [
+          "rst_flag_number>=bin1",
+          "HTTPS>=bin1"
+        ]
+      }
+    ],
+    "exculpatory": [
+      {
+        "clause_id": 209,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1116,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 212,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0155,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 214,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0759,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 221,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0282,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 226,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0546,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 227,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.6181,
+        "n_literals": 2,
+        "literals": [
+          "Rate>=bin2",
+          "NOT(Header_Length>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 237,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0138,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 238,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.029,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 244,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0553,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 245,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0094,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 247,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0495,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 253,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0914,
+        "n_literals": 1,
+        "literals": [
+          "NOT(Header_Length>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 256,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0049,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 259,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1411,
+        "n_literals": 7,
+        "literals": [
+          "Rate>=bin2",
+          "ack_flag_number>=bin4",
+          "NOT(Rate>=bin3)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(rst_flag_number>=bin6)",
+          "NOT(SMTP>=bin1)",
+          "NOT(ARP>=bin6)"
+        ]
+      },
+      {
+        "clause_id": 262,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.311,
+        "n_literals": 3,
+        "literals": [
+          "Rate>=bin2",
+          "psh_flag_number>=bin2",
+          "NOT(Rate>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 263,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0407,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 264,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0376,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 265,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0287,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 266,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.182,
+        "n_literals": 2,
+        "literals": [
+          "rst_flag_number>=bin1",
+          "NOT(HTTPS>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 268,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0091,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 271,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0504,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 272,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.016,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 276,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0109,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 283,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0255,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 288,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0145,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 289,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0582,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 290,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0115,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 291,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0249,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 293,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0511,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 298,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0319,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 302,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0361,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 304,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1413,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 307,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.064,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin3"
+        ]
+      },
+      {
+        "clause_id": 308,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0083,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 309,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.2218,
+        "n_literals": 19,
+        "literals": [
+          "Header_Length>=bin4",
+          "Header_Length>=bin7",
+          "HTTPS>=bin1",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin4)",
+          "NOT(fin_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin6)",
+          "NOT(rst_count>=bin1)",
+          "NOT(rst_count>=bin7)",
+          "NOT(rst_count>=bin8)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin3)",
+          "NOT(Telnet>=bin2)",
+          "NOT(SSH>=bin4)",
+          "NOT(SSH>=bin5)",
+          "NOT(IRC>=bin2)",
+          "NOT(IGMP>=bin8)"
+        ]
+      },
+      {
+        "clause_id": 317,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0492,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 318,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.141,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin5"
+        ]
+      },
+      {
+        "clause_id": 319,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0163,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 330,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1152,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 340,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.062,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 347,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0083,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 354,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0147,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 359,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0115,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 362,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0172,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 367,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0603,
+        "n_literals": 2,
+        "literals": [
+          "Rate>=bin1",
+          "Rate>=bin3"
+        ]
+      },
+      {
+        "clause_id": 369,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1785,
+        "n_literals": 2,
+        "literals": [
+          "rst_count>=bin1",
+          "NOT(HTTPS>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 371,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0104,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 380,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0625,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin3"
+        ]
+      },
+      {
+        "clause_id": 382,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1564,
+        "n_literals": 2,
+        "literals": [
+          "rst_count>=bin1",
+          "NOT(HTTPS>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 383,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0261,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 385,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1488,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 389,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.8493,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 393,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0177,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 394,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.2221,
+        "n_literals": 2,
+        "literals": [
+          "rst_flag_number>=bin1",
+          "NOT(HTTPS>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 413,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0126,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 425,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0133,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 426,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0638,
+        "n_literals": 15,
+        "literals": [
+          "Rate>=bin3",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin5)",
+          "NOT(rst_count>=bin5)",
+          "NOT(HTTPS>=bin2)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(DNS>=bin2)",
+          "NOT(DNS>=bin9)",
+          "NOT(SMTP>=bin1)",
+          "NOT(DHCP>=bin1)",
+          "NOT(ICMP>=bin6)",
+          "NOT(IGMP>=bin4)",
+          "NOT(IGMP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 427,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0089,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 435,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0808,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 441,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0063,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 444,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0407,
+        "n_literals": 3,
+        "literals": [
+          "Rate>=bin3",
+          "NOT(rst_count>=bin3)",
+          "NOT(SMTP>=bin2)"
+        ]
+      },
+      {
+        "clause_id": 446,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0137,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 451,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0301,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 454,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0129,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 455,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.063,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 456,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0202,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 459,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1161,
+        "n_literals": 5,
+        "literals": [
+          "ack_flag_number>=bin1",
+          "HTTPS>=bin1",
+          "NOT(Header_Length>=bin7)",
+          "NOT(DHCP>=bin2)",
+          "NOT(IGMP>=bin2)"
+        ]
+      },
+      {
+        "clause_id": 461,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0681,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 464,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0075,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 470,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0852,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 473,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.8271,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin9"
+        ]
+      },
+      {
+        "clause_id": 482,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0368,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 484,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0473,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 485,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0077,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 487,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0654,
+        "n_literals": 2,
+        "literals": [
+          "Rate>=bin3",
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 491,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0322,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 497,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0503,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 503,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0049,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 505,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0053,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 510,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.7021,
+        "n_literals": 2,
+        "literals": [
+          "Rate>=bin2",
+          "NOT(Header_Length>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 511,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0051,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 517,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0511,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 521,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0052,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 523,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0611,
+        "n_literals": 4,
+        "literals": [
+          "Rate>=bin3",
+          "NOT(HTTP>=bin7)",
+          "NOT(DNS>=bin3)",
+          "NOT(IGMP>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 530,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0111,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 534,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0062,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 535,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1042,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 537,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0077,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 539,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0072,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 545,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0326,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 553,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0087,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 557,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0141,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 560,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0526,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 561,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0071,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 562,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0066,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 565,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.5889,
+        "n_literals": 3,
+        "literals": [
+          "Rate>=bin2",
+          "NOT(Header_Length>=bin7)",
+          "NOT(psh_flag_number>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 566,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0095,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 568,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0065,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 575,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1063,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 581,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0744,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 593,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0076,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 596,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0569,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 796,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.2419,
+        "n_literals": 3,
+        "literals": [
+          "Header_Length>=bin6",
+          "Rate>=bin1",
+          "NOT(Rate>=bin2)"
+        ]
+      },
+      {
+        "clause_id": 583,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": -0.1025,
+        "n_literals": 2,
+        "literals": [
+          "Header_Length>=bin3",
+          "NOT(Header_Length>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 526,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.833,
+        "mean_coef": -0.0315,
+        "n_literals": 2,
+        "literals": [
+          "NOT(ack_flag_number>=bin1)",
+          "NOT(HTTPS>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 110,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.767,
+        "mean_coef": -0.0444,
+        "n_literals": 1,
+        "literals": [
+          "ICMP>=bin1"
+        ]
+      },
+      {
+        "clause_id": 285,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.7,
+        "mean_coef": -0.011,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin2"
+        ]
+      },
+      {
+        "clause_id": 422,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.7,
+        "mean_coef": -0.0127,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin2"
+        ]
+      },
+      {
+        "clause_id": 248,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.667,
+        "mean_coef": -0.0091,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin2"
+        ]
+      },
+      {
+        "clause_id": 341,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.667,
+        "mean_coef": -0.0236,
+        "n_literals": 10,
+        "literals": [
+          "NOT(Header_Length>=bin6)",
+          "NOT(syn_flag_number>=bin5)",
+          "NOT(rst_flag_number>=bin7)",
+          "NOT(psh_flag_number>=bin1)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin1)",
+          "NOT(rst_count>=bin4)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(ICMP>=bin9)",
+          "NOT(IGMP>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 392,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.667,
+        "mean_coef": -0.005,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin2"
+        ]
+      },
+      {
+        "clause_id": 457,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.667,
+        "mean_coef": -0.0108,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin2"
+        ]
+      },
+      {
+        "clause_id": 525,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.667,
+        "mean_coef": -0.0247,
+        "n_literals": 4,
+        "literals": [
+          "Header_Length>=bin2",
+          "Rate>=bin1",
+          "ack_flag_number>=bin2",
+          "NOT(Header_Length>=bin6)"
+        ]
+      },
+      {
+        "clause_id": 234,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.633,
+        "mean_coef": -0.028,
+        "n_literals": 6,
+        "literals": [
+          "Rate>=bin1",
+          "ack_flag_number>=bin4",
+          "NOT(Rate>=bin2)",
+          "NOT(Rate>=bin9)",
+          "NOT(psh_flag_number>=bin3)",
+          "NOT(IGMP>=bin5)"
+        ]
+      },
+      {
+        "clause_id": 303,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.6,
+        "mean_coef": -0.0002,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin5"
+        ]
+      }
+    ]
+  },
+  "attack": {
+    "inculpatory": [
+      {
+        "clause_id": 209,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1089,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 212,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0173,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 214,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0802,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 221,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0353,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 226,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0516,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 227,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.5944,
+        "n_literals": 2,
+        "literals": [
+          "Rate>=bin2",
+          "NOT(Header_Length>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 237,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.01,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 238,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0348,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 244,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0538,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 245,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0078,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 247,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0406,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 253,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0938,
+        "n_literals": 1,
+        "literals": [
+          "NOT(Header_Length>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 256,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0057,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 259,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1376,
+        "n_literals": 7,
+        "literals": [
+          "Rate>=bin2",
+          "ack_flag_number>=bin4",
+          "NOT(Rate>=bin3)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(rst_flag_number>=bin6)",
+          "NOT(SMTP>=bin1)",
+          "NOT(ARP>=bin6)"
+        ]
+      },
+      {
+        "clause_id": 262,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.3157,
+        "n_literals": 3,
+        "literals": [
+          "Rate>=bin2",
+          "psh_flag_number>=bin2",
+          "NOT(Rate>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 263,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0375,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 264,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0353,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 265,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0262,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 266,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.2064,
+        "n_literals": 2,
+        "literals": [
+          "rst_flag_number>=bin1",
+          "NOT(HTTPS>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 268,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0072,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 271,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0362,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 272,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0359,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 276,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0082,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 283,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0339,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 288,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0117,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 289,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0759,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 290,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0109,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 291,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0222,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 293,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0626,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 298,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0194,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 302,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0521,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 304,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1328,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 307,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0646,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin3"
+        ]
+      },
+      {
+        "clause_id": 308,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0057,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 309,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.2218,
+        "n_literals": 19,
+        "literals": [
+          "Header_Length>=bin4",
+          "Header_Length>=bin7",
+          "HTTPS>=bin1",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin4)",
+          "NOT(fin_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin6)",
+          "NOT(rst_count>=bin1)",
+          "NOT(rst_count>=bin7)",
+          "NOT(rst_count>=bin8)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin3)",
+          "NOT(Telnet>=bin2)",
+          "NOT(SSH>=bin4)",
+          "NOT(SSH>=bin5)",
+          "NOT(IRC>=bin2)",
+          "NOT(IGMP>=bin8)"
+        ]
+      },
+      {
+        "clause_id": 317,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0591,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 318,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1414,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin5"
+        ]
+      },
+      {
+        "clause_id": 319,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0106,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 330,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1271,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 340,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0615,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 347,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0127,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 354,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0102,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 359,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0198,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 362,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0105,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 367,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0585,
+        "n_literals": 2,
+        "literals": [
+          "Rate>=bin1",
+          "Rate>=bin3"
+        ]
+      },
+      {
+        "clause_id": 369,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1623,
+        "n_literals": 2,
+        "literals": [
+          "rst_count>=bin1",
+          "NOT(HTTPS>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 371,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0103,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 380,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0623,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin3"
+        ]
+      },
+      {
+        "clause_id": 382,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1831,
+        "n_literals": 2,
+        "literals": [
+          "rst_count>=bin1",
+          "NOT(HTTPS>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 383,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0264,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 385,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1361,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 389,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.8204,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 393,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0187,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 394,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1897,
+        "n_literals": 2,
+        "literals": [
+          "rst_flag_number>=bin1",
+          "NOT(HTTPS>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 413,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0164,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 425,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0075,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 426,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0615,
+        "n_literals": 15,
+        "literals": [
+          "Rate>=bin3",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin5)",
+          "NOT(rst_count>=bin5)",
+          "NOT(HTTPS>=bin2)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(DNS>=bin2)",
+          "NOT(DNS>=bin9)",
+          "NOT(SMTP>=bin1)",
+          "NOT(DHCP>=bin1)",
+          "NOT(ICMP>=bin6)",
+          "NOT(IGMP>=bin4)",
+          "NOT(IGMP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 427,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0064,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 435,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0908,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 441,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0069,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 444,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0431,
+        "n_literals": 3,
+        "literals": [
+          "Rate>=bin3",
+          "NOT(rst_count>=bin3)",
+          "NOT(SMTP>=bin2)"
+        ]
+      },
+      {
+        "clause_id": 446,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0067,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 451,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0282,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 454,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0108,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 455,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0582,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 456,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0286,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 459,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1144,
+        "n_literals": 5,
+        "literals": [
+          "ack_flag_number>=bin1",
+          "HTTPS>=bin1",
+          "NOT(Header_Length>=bin7)",
+          "NOT(DHCP>=bin2)",
+          "NOT(IGMP>=bin2)"
+        ]
+      },
+      {
+        "clause_id": 461,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0761,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 464,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0163,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 470,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0914,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 473,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.8306,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin9"
+        ]
+      },
+      {
+        "clause_id": 482,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0356,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 484,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0644,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 485,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.009,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 487,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.059,
+        "n_literals": 2,
+        "literals": [
+          "Rate>=bin3",
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 491,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0319,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 497,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0602,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 503,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0081,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 505,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0041,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 510,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.7016,
+        "n_literals": 2,
+        "literals": [
+          "Rate>=bin2",
+          "NOT(Header_Length>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 511,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0081,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 517,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0334,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 521,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0092,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 523,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0623,
+        "n_literals": 4,
+        "literals": [
+          "Rate>=bin3",
+          "NOT(HTTP>=bin7)",
+          "NOT(DNS>=bin3)",
+          "NOT(IGMP>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 530,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0102,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 534,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0097,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 535,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0975,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 537,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0097,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 539,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0092,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 545,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.026,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 553,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.012,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 560,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0495,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 561,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0093,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 562,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0082,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 565,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.6123,
+        "n_literals": 3,
+        "literals": [
+          "Rate>=bin2",
+          "NOT(Header_Length>=bin7)",
+          "NOT(psh_flag_number>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 566,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0063,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 568,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0061,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 575,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1109,
+        "n_literals": 1,
+        "literals": [
+          "fin_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 581,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0528,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 583,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.1046,
+        "n_literals": 2,
+        "literals": [
+          "Header_Length>=bin3",
+          "NOT(Header_Length>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 593,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0115,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 596,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0554,
+        "n_literals": 1,
+        "literals": [
+          "Rate>=bin4"
+        ]
+      },
+      {
+        "clause_id": 796,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.2436,
+        "n_literals": 3,
+        "literals": [
+          "Header_Length>=bin6",
+          "Rate>=bin1",
+          "NOT(Rate>=bin2)"
+        ]
+      },
+      {
+        "clause_id": 557,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": 0.006,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin1"
+        ]
+      },
+      {
+        "clause_id": 110,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.767,
+        "mean_coef": 0.0459,
+        "n_literals": 1,
+        "literals": [
+          "ICMP>=bin1"
+        ]
+      },
+      {
+        "clause_id": 341,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.733,
+        "mean_coef": 0.0263,
+        "n_literals": 10,
+        "literals": [
+          "NOT(Header_Length>=bin6)",
+          "NOT(syn_flag_number>=bin5)",
+          "NOT(rst_flag_number>=bin7)",
+          "NOT(psh_flag_number>=bin1)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin1)",
+          "NOT(rst_count>=bin4)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(ICMP>=bin9)",
+          "NOT(IGMP>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 234,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.7,
+        "mean_coef": 0.0236,
+        "n_literals": 6,
+        "literals": [
+          "Rate>=bin1",
+          "ack_flag_number>=bin4",
+          "NOT(Rate>=bin2)",
+          "NOT(Rate>=bin9)",
+          "NOT(psh_flag_number>=bin3)",
+          "NOT(IGMP>=bin5)"
+        ]
+      },
+      {
+        "clause_id": 502,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.633,
+        "mean_coef": 0.0054,
+        "n_literals": 2,
+        "literals": [
+          "psh_flag_number>=bin3",
+          "NOT(Rate>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 525,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.633,
+        "mean_coef": 0.0278,
+        "n_literals": 4,
+        "literals": [
+          "Header_Length>=bin2",
+          "Rate>=bin1",
+          "ack_flag_number>=bin2",
+          "NOT(Header_Length>=bin6)"
+        ]
+      },
+      {
+        "clause_id": 526,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.633,
+        "mean_coef": 0.0256,
+        "n_literals": 2,
+        "literals": [
+          "NOT(ack_flag_number>=bin1)",
+          "NOT(HTTPS>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 248,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.6,
+        "mean_coef": 0.0061,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin2"
+        ]
+      },
+      {
+        "clause_id": 285,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.6,
+        "mean_coef": 0.0117,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin2"
+        ]
+      },
+      {
+        "clause_id": 392,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.6,
+        "mean_coef": 0.0101,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin2"
+        ]
+      },
+      {
+        "clause_id": 422,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.6,
+        "mean_coef": 0.0137,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin2"
+        ]
+      },
+      {
+        "clause_id": 457,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.6,
+        "mean_coef": 0.0079,
+        "n_literals": 1,
+        "literals": [
+          "syn_flag_number>=bin2"
+        ]
+      },
+      {
+        "clause_id": 554,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.6,
+        "mean_coef": 0.0058,
+        "n_literals": 14,
+        "literals": [
+          "psh_flag_number>=bin3",
+          "NOT(Rate>=bin4)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(rst_count>=bin6)",
+          "NOT(rst_count>=bin7)",
+          "NOT(HTTPS>=bin6)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin2)",
+          "NOT(DHCP>=bin1)",
+          "NOT(ARP>=bin5)",
+          "NOT(IGMP>=bin1)",
+          "NOT(IGMP>=bin3)",
+          "NOT(IGMP>=bin4)",
+          "NOT(IGMP>=bin9)"
+        ]
+      }
+    ],
+    "exculpatory": [
+      {
+        "clause_id": 93,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.7169,
+        "n_literals": 13,
+        "literals": [
+          "Header_Length>=bin5",
+          "psh_flag_number>=bin3",
+          "NOT(Rate>=bin8)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(rst_flag_number>=bin1)",
+          "NOT(rst_flag_number>=bin4)",
+          "NOT(psh_flag_number>=bin7)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(rst_count>=bin8)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin1)",
+          "NOT(DHCP>=bin5)"
+        ]
+      },
+      {
+        "clause_id": 103,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1695,
+        "n_literals": 49,
+        "literals": [
+          "Header_Length>=bin2",
+          "Protocol Type>=bin1",
+          "ack_flag_number>=bin1",
+          "ack_flag_number>=bin2",
+          "ack_flag_number>=bin3",
+          "HTTPS>=bin1",
+          "NOT(Header_Length>=bin6)",
+          "NOT(Rate>=bin1)",
+          "NOT(Rate>=bin2)",
+          "NOT(Rate>=bin3)",
+          "NOT(Rate>=bin4)",
+          "NOT(fin_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin9)",
+          "NOT(rst_flag_number>=bin3)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(psh_flag_number>=bin6)",
+          "NOT(psh_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin8)",
+          "NOT(HTTPS>=bin2)",
+          "NOT(HTTPS>=bin3)",
+          "NOT(DNS>=bin1)",
+          "NOT(DNS>=bin2)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin5)",
+          "NOT(DNS>=bin6)",
+          "NOT(DNS>=bin8)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin5)",
+          "NOT(DHCP>=bin1)",
+          "NOT(DHCP>=bin3)",
+          "NOT(DHCP>=bin5)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin1)",
+          "NOT(ARP>=bin4)",
+          "NOT(ARP>=bin8)",
+          "NOT(ICMP>=bin1)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin4)",
+          "NOT(ICMP>=bin6)",
+          "NOT(ICMP>=bin7)",
+          "NOT(IGMP>=bin2)",
+          "NOT(IGMP>=bin5)"
+        ]
+      },
+      {
+        "clause_id": 132,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.2315,
+        "n_literals": 25,
+        "literals": [
+          "Header_Length>=bin4",
+          "NOT(Header_Length>=bin6)",
+          "NOT(Header_Length>=bin9)",
+          "NOT(Rate>=bin1)",
+          "NOT(Rate>=bin9)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(syn_flag_number>=bin1)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin4)",
+          "NOT(rst_count>=bin8)",
+          "NOT(rst_count>=bin9)",
+          "NOT(HTTP>=bin8)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(HTTPS>=bin7)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(DNS>=bin5)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SSH>=bin2)",
+          "NOT(SSH>=bin4)",
+          "NOT(ARP>=bin9)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin5)",
+          "NOT(IGMP>=bin5)"
+        ]
+      },
+      {
+        "clause_id": 173,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1577,
+        "n_literals": 4,
+        "literals": [
+          "Header_Length>=bin5",
+          "ack_flag_number>=bin4",
+          "HTTPS>=bin1",
+          "NOT(Rate>=bin2)"
+        ]
+      },
+      {
+        "clause_id": 200,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.2095,
+        "n_literals": 82,
+        "literals": [
+          "Header_Length>=bin2",
+          "psh_flag_number>=bin1",
+          "ack_flag_number>=bin1",
+          "NOT(Header_Length>=bin8)",
+          "NOT(Header_Length>=bin9)",
+          "NOT(Protocol Type>=bin2)",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(Rate>=bin2)",
+          "NOT(Rate>=bin5)",
+          "NOT(Rate>=bin6)",
+          "NOT(Rate>=bin9)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin5)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin2)",
+          "NOT(rst_flag_number>=bin3)",
+          "NOT(rst_flag_number>=bin4)",
+          "NOT(rst_flag_number>=bin6)",
+          "NOT(rst_flag_number>=bin8)",
+          "NOT(psh_flag_number>=bin3)",
+          "NOT(psh_flag_number>=bin4)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin4)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(ece_flag_number>=bin1)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(cwr_flag_number>=bin2)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin4)",
+          "NOT(HTTP>=bin1)",
+          "NOT(HTTP>=bin6)",
+          "NOT(HTTP>=bin7)",
+          "NOT(HTTP>=bin9)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin6)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin1)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin4)",
+          "NOT(DNS>=bin5)",
+          "NOT(DNS>=bin6)",
+          "NOT(DNS>=bin8)",
+          "NOT(Telnet>=bin1)",
+          "NOT(Telnet>=bin2)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SSH>=bin1)",
+          "NOT(SSH>=bin4)",
+          "NOT(SSH>=bin5)",
+          "NOT(IRC>=bin1)",
+          "NOT(IRC>=bin2)",
+          "NOT(DHCP>=bin1)",
+          "NOT(DHCP>=bin3)",
+          "NOT(DHCP>=bin4)",
+          "NOT(DHCP>=bin5)",
+          "NOT(DHCP>=bin7)",
+          "NOT(DHCP>=bin8)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin1)",
+          "NOT(ARP>=bin3)",
+          "NOT(ARP>=bin5)",
+          "NOT(ARP>=bin8)",
+          "NOT(ARP>=bin9)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin3)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin7)",
+          "NOT(ICMP>=bin8)",
+          "NOT(ICMP>=bin9)",
+          "NOT(IGMP>=bin1)",
+          "NOT(IGMP>=bin2)",
+          "NOT(IGMP>=bin4)",
+          "NOT(IGMP>=bin5)",
+          "NOT(IGMP>=bin6)"
+        ]
+      },
+      {
+        "clause_id": 205,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.2449,
+        "n_literals": 5,
+        "literals": [
+          "Header_Length>=bin6",
+          "Header_Length>=bin7",
+          "psh_flag_number>=bin3",
+          "NOT(HTTPS>=bin4)",
+          "NOT(DNS>=bin3)"
+        ]
+      },
+      {
+        "clause_id": 281,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.4988,
+        "n_literals": 22,
+        "literals": [
+          "Header_Length>=bin3",
+          "Rate>=bin3",
+          "ack_flag_number>=bin1",
+          "NOT(Protocol Type>=bin2)",
+          "NOT(fin_flag_number>=bin3)",
+          "NOT(fin_flag_number>=bin6)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(rst_count>=bin5)",
+          "NOT(HTTP>=bin3)",
+          "NOT(HTTP>=bin4)",
+          "NOT(HTTP>=bin6)",
+          "NOT(DNS>=bin4)",
+          "NOT(SSH>=bin2)",
+          "NOT(SSH>=bin4)",
+          "NOT(DHCP>=bin6)",
+          "NOT(DHCP>=bin8)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin5)",
+          "NOT(IGMP>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 299,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.2875,
+        "n_literals": 1,
+        "literals": [
+          "NOT(Rate>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 314,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0411,
+        "n_literals": 2,
+        "literals": [
+          "Rate>=bin2",
+          "psh_flag_number>=bin3"
+        ]
+      },
+      {
+        "clause_id": 335,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.4029,
+        "n_literals": 1,
+        "literals": [
+          "NOT(Rate>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 346,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.235,
+        "n_literals": 123,
+        "literals": [
+          "Header_Length>=bin1",
+          "Rate>=bin1",
+          "NOT(Header_Length>=bin5)",
+          "NOT(Header_Length>=bin6)",
+          "NOT(Header_Length>=bin7)",
+          "NOT(Header_Length>=bin8)",
+          "NOT(Header_Length>=bin9)",
+          "NOT(Protocol Type>=bin2)",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(Rate>=bin2)",
+          "NOT(Rate>=bin3)",
+          "NOT(Rate>=bin4)",
+          "NOT(Rate>=bin5)",
+          "NOT(Rate>=bin6)",
+          "NOT(Rate>=bin7)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin2)",
+          "NOT(fin_flag_number>=bin3)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(fin_flag_number>=bin6)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(fin_flag_number>=bin9)",
+          "NOT(syn_flag_number>=bin1)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(syn_flag_number>=bin3)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin5)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(syn_flag_number>=bin9)",
+          "NOT(rst_flag_number>=bin1)",
+          "NOT(rst_flag_number>=bin2)",
+          "NOT(rst_flag_number>=bin3)",
+          "NOT(rst_flag_number>=bin5)",
+          "NOT(rst_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin8)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(psh_flag_number>=bin3)",
+          "NOT(psh_flag_number>=bin4)",
+          "NOT(psh_flag_number>=bin5)",
+          "NOT(psh_flag_number>=bin6)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(psh_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin2)",
+          "NOT(ack_flag_number>=bin3)",
+          "NOT(ack_flag_number>=bin6)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(ack_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(ece_flag_number>=bin1)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(ece_flag_number>=bin3)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(cwr_flag_number>=bin2)",
+          "NOT(rst_count>=bin1)",
+          "NOT(rst_count>=bin2)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin4)",
+          "NOT(rst_count>=bin5)",
+          "NOT(rst_count>=bin6)",
+          "NOT(rst_count>=bin7)",
+          "NOT(rst_count>=bin8)",
+          "NOT(rst_count>=bin9)",
+          "NOT(HTTP>=bin1)",
+          "NOT(HTTP>=bin3)",
+          "NOT(HTTP>=bin6)",
+          "NOT(HTTP>=bin7)",
+          "NOT(HTTP>=bin8)",
+          "NOT(HTTP>=bin9)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(HTTPS>=bin2)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(HTTPS>=bin7)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin2)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin4)",
+          "NOT(DNS>=bin5)",
+          "NOT(DNS>=bin6)",
+          "NOT(DNS>=bin7)",
+          "NOT(DNS>=bin8)",
+          "NOT(DNS>=bin9)",
+          "NOT(Telnet>=bin1)",
+          "NOT(Telnet>=bin2)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin1)",
+          "NOT(SSH>=bin2)",
+          "NOT(SSH>=bin4)",
+          "NOT(IRC>=bin1)",
+          "NOT(IRC>=bin2)",
+          "NOT(DHCP>=bin1)",
+          "NOT(DHCP>=bin2)",
+          "NOT(DHCP>=bin3)",
+          "NOT(DHCP>=bin4)",
+          "NOT(DHCP>=bin6)",
+          "NOT(DHCP>=bin7)",
+          "NOT(DHCP>=bin8)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin1)",
+          "NOT(ARP>=bin2)",
+          "NOT(ARP>=bin6)",
+          "NOT(ARP>=bin7)",
+          "NOT(ARP>=bin8)",
+          "NOT(ARP>=bin9)",
+          "NOT(ICMP>=bin1)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin3)",
+          "NOT(ICMP>=bin4)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin6)",
+          "NOT(ICMP>=bin7)",
+          "NOT(ICMP>=bin8)",
+          "NOT(IGMP>=bin1)",
+          "NOT(IGMP>=bin2)",
+          "NOT(IGMP>=bin3)",
+          "NOT(IGMP>=bin4)",
+          "NOT(IGMP>=bin5)",
+          "NOT(IGMP>=bin6)",
+          "NOT(IGMP>=bin7)",
+          "NOT(IGMP>=bin8)",
+          "NOT(IGMP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 348,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.3263,
+        "n_literals": 1,
+        "literals": [
+          "NOT(Rate>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 391,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1761,
+        "n_literals": 7,
+        "literals": [
+          "NOT(Header_Length>=bin2)",
+          "NOT(Rate>=bin2)",
+          "NOT(ack_flag_number>=bin1)",
+          "NOT(rst_count>=bin6)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(SSH>=bin4)",
+          "NOT(DHCP>=bin8)"
+        ]
+      },
+      {
+        "clause_id": 403,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.2055,
+        "n_literals": 13,
+        "literals": [
+          "Rate>=bin1",
+          "psh_flag_number>=bin1",
+          "NOT(Header_Length>=bin6)",
+          "NOT(Header_Length>=bin7)",
+          "NOT(psh_flag_number>=bin5)",
+          "NOT(cwr_flag_number>=bin2)",
+          "NOT(DNS>=bin6)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SMTP>=bin2)",
+          "NOT(IRC>=bin1)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin8)",
+          "NOT(IGMP>=bin6)"
+        ]
+      },
+      {
+        "clause_id": 440,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.047,
+        "n_literals": 80,
+        "literals": [
+          "Header_Length>=bin1",
+          "Protocol Type>=bin1",
+          "Rate>=bin2",
+          "Rate>=bin3",
+          "NOT(Header_Length>=bin8)",
+          "NOT(Protocol Type>=bin2)",
+          "NOT(Rate>=bin7)",
+          "NOT(Rate>=bin8)",
+          "NOT(Rate>=bin9)",
+          "NOT(fin_flag_number>=bin2)",
+          "NOT(fin_flag_number>=bin3)",
+          "NOT(fin_flag_number>=bin4)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(syn_flag_number>=bin3)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin5)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(rst_flag_number>=bin1)",
+          "NOT(rst_flag_number>=bin4)",
+          "NOT(rst_flag_number>=bin5)",
+          "NOT(rst_flag_number>=bin6)",
+          "NOT(rst_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(psh_flag_number>=bin6)",
+          "NOT(psh_flag_number>=bin7)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(psh_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin5)",
+          "NOT(ack_flag_number>=bin6)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(ece_flag_number>=bin3)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(rst_count>=bin1)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin4)",
+          "NOT(rst_count>=bin5)",
+          "NOT(rst_count>=bin8)",
+          "NOT(rst_count>=bin9)",
+          "NOT(HTTP>=bin1)",
+          "NOT(HTTP>=bin2)",
+          "NOT(HTTP>=bin3)",
+          "NOT(HTTP>=bin4)",
+          "NOT(HTTP>=bin5)",
+          "NOT(HTTP>=bin6)",
+          "NOT(HTTP>=bin8)",
+          "NOT(HTTP>=bin9)",
+          "NOT(HTTPS>=bin2)",
+          "NOT(HTTPS>=bin3)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(DNS>=bin1)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin5)",
+          "NOT(DNS>=bin7)",
+          "NOT(DNS>=bin8)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin3)",
+          "NOT(SSH>=bin4)",
+          "NOT(SSH>=bin5)",
+          "NOT(IRC>=bin2)",
+          "NOT(DHCP>=bin5)",
+          "NOT(DHCP>=bin6)",
+          "NOT(DHCP>=bin7)",
+          "NOT(DHCP>=bin8)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin1)",
+          "NOT(ARP>=bin2)",
+          "NOT(ARP>=bin4)",
+          "NOT(ARP>=bin7)",
+          "NOT(ARP>=bin8)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin4)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin6)",
+          "NOT(ICMP>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 477,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.4618,
+        "n_literals": 143,
+        "literals": [
+          "Header_Length>=bin1",
+          "Header_Length>=bin2",
+          "Header_Length>=bin3",
+          "Header_Length>=bin4",
+          "Protocol Type>=bin1",
+          "psh_flag_number>=bin1",
+          "psh_flag_number>=bin2",
+          "ack_flag_number>=bin1",
+          "ack_flag_number>=bin2",
+          "NOT(Header_Length>=bin6)",
+          "NOT(Header_Length>=bin7)",
+          "NOT(Header_Length>=bin8)",
+          "NOT(Header_Length>=bin9)",
+          "NOT(Protocol Type>=bin2)",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(Rate>=bin4)",
+          "NOT(Rate>=bin5)",
+          "NOT(Rate>=bin6)",
+          "NOT(Rate>=bin7)",
+          "NOT(Rate>=bin8)",
+          "NOT(Rate>=bin9)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin2)",
+          "NOT(fin_flag_number>=bin3)",
+          "NOT(fin_flag_number>=bin4)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(fin_flag_number>=bin6)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(fin_flag_number>=bin9)",
+          "NOT(syn_flag_number>=bin1)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(syn_flag_number>=bin3)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin5)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(syn_flag_number>=bin9)",
+          "NOT(rst_flag_number>=bin2)",
+          "NOT(rst_flag_number>=bin3)",
+          "NOT(rst_flag_number>=bin4)",
+          "NOT(rst_flag_number>=bin5)",
+          "NOT(rst_flag_number>=bin6)",
+          "NOT(rst_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin8)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(psh_flag_number>=bin4)",
+          "NOT(psh_flag_number>=bin5)",
+          "NOT(psh_flag_number>=bin6)",
+          "NOT(psh_flag_number>=bin7)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(psh_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin4)",
+          "NOT(ack_flag_number>=bin5)",
+          "NOT(ack_flag_number>=bin6)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(ack_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(ece_flag_number>=bin1)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(ece_flag_number>=bin3)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(cwr_flag_number>=bin2)",
+          "NOT(rst_count>=bin2)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin4)",
+          "NOT(rst_count>=bin5)",
+          "NOT(rst_count>=bin6)",
+          "NOT(rst_count>=bin7)",
+          "NOT(rst_count>=bin8)",
+          "NOT(rst_count>=bin9)",
+          "NOT(HTTP>=bin1)",
+          "NOT(HTTP>=bin2)",
+          "NOT(HTTP>=bin3)",
+          "NOT(HTTP>=bin4)",
+          "NOT(HTTP>=bin5)",
+          "NOT(HTTP>=bin6)",
+          "NOT(HTTP>=bin7)",
+          "NOT(HTTP>=bin8)",
+          "NOT(HTTP>=bin9)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(HTTPS>=bin2)",
+          "NOT(HTTPS>=bin3)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(HTTPS>=bin6)",
+          "NOT(HTTPS>=bin7)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin1)",
+          "NOT(DNS>=bin2)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin4)",
+          "NOT(DNS>=bin5)",
+          "NOT(DNS>=bin6)",
+          "NOT(DNS>=bin7)",
+          "NOT(DNS>=bin8)",
+          "NOT(DNS>=bin9)",
+          "NOT(Telnet>=bin1)",
+          "NOT(Telnet>=bin2)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin1)",
+          "NOT(SSH>=bin2)",
+          "NOT(SSH>=bin3)",
+          "NOT(SSH>=bin4)",
+          "NOT(SSH>=bin5)",
+          "NOT(IRC>=bin1)",
+          "NOT(IRC>=bin2)",
+          "NOT(DHCP>=bin1)",
+          "NOT(DHCP>=bin2)",
+          "NOT(DHCP>=bin3)",
+          "NOT(DHCP>=bin4)",
+          "NOT(DHCP>=bin5)",
+          "NOT(DHCP>=bin6)",
+          "NOT(DHCP>=bin8)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin1)",
+          "NOT(ARP>=bin2)",
+          "NOT(ARP>=bin3)",
+          "NOT(ARP>=bin4)",
+          "NOT(ARP>=bin5)",
+          "NOT(ARP>=bin6)",
+          "NOT(ARP>=bin7)",
+          "NOT(ARP>=bin8)",
+          "NOT(ICMP>=bin1)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin3)",
+          "NOT(ICMP>=bin4)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin6)",
+          "NOT(ICMP>=bin7)",
+          "NOT(ICMP>=bin8)",
+          "NOT(ICMP>=bin9)",
+          "NOT(IGMP>=bin1)",
+          "NOT(IGMP>=bin2)",
+          "NOT(IGMP>=bin3)",
+          "NOT(IGMP>=bin4)",
+          "NOT(IGMP>=bin5)",
+          "NOT(IGMP>=bin7)",
+          "NOT(IGMP>=bin8)",
+          "NOT(IGMP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 494,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.4791,
+        "n_literals": 7,
+        "literals": [
+          "Header_Length>=bin7",
+          "Rate>=bin3",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(HTTPS>=bin6)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin5)",
+          "NOT(ARP>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 501,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0838,
+        "n_literals": 12,
+        "literals": [
+          "psh_flag_number>=bin1",
+          "psh_flag_number>=bin2",
+          "NOT(Header_Length>=bin6)",
+          "NOT(Header_Length>=bin7)",
+          "NOT(Rate>=bin4)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(rst_flag_number>=bin5)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(ece_flag_number>=bin1)",
+          "NOT(DHCP>=bin4)",
+          "NOT(DHCP>=bin7)",
+          "NOT(ARP>=bin8)"
+        ]
+      },
+      {
+        "clause_id": 556,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.0364,
+        "n_literals": 2,
+        "literals": [
+          "Rate>=bin2",
+          "psh_flag_number>=bin3"
+        ]
+      },
+      {
+        "clause_id": 582,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 1.0,
+        "mean_coef": -0.4614,
+        "n_literals": 19,
+        "literals": [
+          "NOT(Protocol Type>=bin2)",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(Rate>=bin1)",
+          "NOT(Rate>=bin5)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(fin_flag_number>=bin9)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(ece_flag_number>=bin3)",
+          "NOT(rst_count>=bin1)",
+          "NOT(HTTP>=bin2)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(HTTPS>=bin7)",
+          "NOT(ARP>=bin2)",
+          "NOT(IGMP>=bin3)",
+          "NOT(IGMP>=bin4)",
+          "NOT(IGMP>=bin6)",
+          "NOT(IGMP>=bin8)",
+          "NOT(IGMP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 615,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1029,
+        "n_literals": 30,
+        "literals": [
+          "Header_Length>=bin3",
+          "Header_Length>=bin7",
+          "Rate>=bin2",
+          "psh_flag_number>=bin1",
+          "NOT(Rate>=bin5)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin2)",
+          "NOT(fin_flag_number>=bin4)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(syn_flag_number>=bin1)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(psh_flag_number>=bin4)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(ece_flag_number>=bin3)",
+          "NOT(rst_count>=bin1)",
+          "NOT(rst_count>=bin4)",
+          "NOT(rst_count>=bin5)",
+          "NOT(HTTP>=bin5)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(DNS>=bin2)",
+          "NOT(SSH>=bin5)",
+          "NOT(IRC>=bin2)",
+          "NOT(DHCP>=bin1)",
+          "NOT(DHCP>=bin6)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin6)",
+          "NOT(ICMP>=bin3)",
+          "NOT(IGMP>=bin3)",
+          "NOT(IGMP>=bin5)"
+        ]
+      },
+      {
+        "clause_id": 651,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.5345,
+        "n_literals": 2,
+        "literals": [
+          "Header_Length>=bin6",
+          "ack_flag_number>=bin4"
+        ]
+      },
+      {
+        "clause_id": 220,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.967,
+        "mean_coef": -0.0931,
+        "n_literals": 5,
+        "literals": [
+          "NOT(Header_Length>=bin3)",
+          "NOT(Rate>=bin2)",
+          "NOT(rst_flag_number>=bin1)",
+          "NOT(psh_flag_number>=bin3)",
+          "NOT(ack_flag_number>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 442,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": -0.0464,
+        "n_literals": 2,
+        "literals": [
+          "Rate>=bin2",
+          "psh_flag_number>=bin3"
+        ]
+      },
+      {
+        "clause_id": 538,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": -0.0622,
+        "n_literals": 143,
+        "literals": [
+          "Header_Length>=bin1",
+          "Header_Length>=bin2",
+          "Header_Length>=bin3",
+          "Header_Length>=bin4",
+          "Protocol Type>=bin1",
+          "psh_flag_number>=bin1",
+          "psh_flag_number>=bin2",
+          "ack_flag_number>=bin1",
+          "ack_flag_number>=bin2",
+          "ack_flag_number>=bin3",
+          "NOT(Header_Length>=bin8)",
+          "NOT(Header_Length>=bin9)",
+          "NOT(Protocol Type>=bin2)",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(Rate>=bin3)",
+          "NOT(Rate>=bin4)",
+          "NOT(Rate>=bin5)",
+          "NOT(Rate>=bin7)",
+          "NOT(Rate>=bin8)",
+          "NOT(Rate>=bin9)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin2)",
+          "NOT(fin_flag_number>=bin3)",
+          "NOT(fin_flag_number>=bin4)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(fin_flag_number>=bin6)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(fin_flag_number>=bin9)",
+          "NOT(syn_flag_number>=bin1)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(syn_flag_number>=bin3)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin5)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(syn_flag_number>=bin9)",
+          "NOT(rst_flag_number>=bin2)",
+          "NOT(rst_flag_number>=bin3)",
+          "NOT(rst_flag_number>=bin4)",
+          "NOT(rst_flag_number>=bin5)",
+          "NOT(rst_flag_number>=bin6)",
+          "NOT(rst_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin8)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(psh_flag_number>=bin4)",
+          "NOT(psh_flag_number>=bin5)",
+          "NOT(psh_flag_number>=bin6)",
+          "NOT(psh_flag_number>=bin7)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(psh_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin5)",
+          "NOT(ack_flag_number>=bin6)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(ack_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(ece_flag_number>=bin1)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(ece_flag_number>=bin3)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(cwr_flag_number>=bin2)",
+          "NOT(rst_count>=bin2)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin4)",
+          "NOT(rst_count>=bin5)",
+          "NOT(rst_count>=bin6)",
+          "NOT(rst_count>=bin7)",
+          "NOT(rst_count>=bin8)",
+          "NOT(rst_count>=bin9)",
+          "NOT(HTTP>=bin1)",
+          "NOT(HTTP>=bin3)",
+          "NOT(HTTP>=bin4)",
+          "NOT(HTTP>=bin5)",
+          "NOT(HTTP>=bin6)",
+          "NOT(HTTP>=bin7)",
+          "NOT(HTTP>=bin8)",
+          "NOT(HTTP>=bin9)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(HTTPS>=bin2)",
+          "NOT(HTTPS>=bin3)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(HTTPS>=bin6)",
+          "NOT(HTTPS>=bin7)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin1)",
+          "NOT(DNS>=bin2)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin4)",
+          "NOT(DNS>=bin5)",
+          "NOT(DNS>=bin6)",
+          "NOT(DNS>=bin7)",
+          "NOT(DNS>=bin8)",
+          "NOT(DNS>=bin9)",
+          "NOT(Telnet>=bin1)",
+          "NOT(Telnet>=bin2)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin1)",
+          "NOT(SSH>=bin2)",
+          "NOT(SSH>=bin3)",
+          "NOT(SSH>=bin4)",
+          "NOT(SSH>=bin5)",
+          "NOT(IRC>=bin1)",
+          "NOT(IRC>=bin2)",
+          "NOT(DHCP>=bin1)",
+          "NOT(DHCP>=bin2)",
+          "NOT(DHCP>=bin3)",
+          "NOT(DHCP>=bin4)",
+          "NOT(DHCP>=bin5)",
+          "NOT(DHCP>=bin6)",
+          "NOT(DHCP>=bin7)",
+          "NOT(DHCP>=bin8)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin1)",
+          "NOT(ARP>=bin2)",
+          "NOT(ARP>=bin3)",
+          "NOT(ARP>=bin4)",
+          "NOT(ARP>=bin5)",
+          "NOT(ARP>=bin6)",
+          "NOT(ARP>=bin7)",
+          "NOT(ARP>=bin8)",
+          "NOT(ARP>=bin9)",
+          "NOT(ICMP>=bin1)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin3)",
+          "NOT(ICMP>=bin4)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin6)",
+          "NOT(ICMP>=bin7)",
+          "NOT(ICMP>=bin8)",
+          "NOT(ICMP>=bin9)",
+          "NOT(IGMP>=bin1)",
+          "NOT(IGMP>=bin2)",
+          "NOT(IGMP>=bin3)",
+          "NOT(IGMP>=bin4)",
+          "NOT(IGMP>=bin5)",
+          "NOT(IGMP>=bin6)",
+          "NOT(IGMP>=bin7)",
+          "NOT(IGMP>=bin8)",
+          "NOT(IGMP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 50,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.933,
+        "mean_coef": -0.0451,
+        "n_literals": 8,
+        "literals": [
+          "Header_Length>=bin3",
+          "psh_flag_number>=bin2",
+          "ack_flag_number>=bin2",
+          "NOT(Header_Length>=bin5)",
+          "NOT(Rate>=bin1)",
+          "NOT(Rate>=bin6)",
+          "NOT(DNS>=bin5)",
+          "NOT(ICMP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 518,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.933,
+        "mean_coef": -0.081,
+        "n_literals": 38,
+        "literals": [
+          "NOT(Header_Length>=bin7)",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(Rate>=bin2)",
+          "NOT(Rate>=bin6)",
+          "NOT(Rate>=bin7)",
+          "NOT(fin_flag_number>=bin3)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(rst_flag_number>=bin1)",
+          "NOT(rst_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(psh_flag_number>=bin1)",
+          "NOT(psh_flag_number>=bin6)",
+          "NOT(ack_flag_number>=bin3)",
+          "NOT(ack_flag_number>=bin4)",
+          "NOT(ack_flag_number>=bin8)",
+          "NOT(rst_count>=bin6)",
+          "NOT(rst_count>=bin9)",
+          "NOT(HTTP>=bin1)",
+          "NOT(HTTP>=bin3)",
+          "NOT(HTTP>=bin7)",
+          "NOT(HTTP>=bin8)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(HTTPS>=bin6)",
+          "NOT(HTTPS>=bin7)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin5)",
+          "NOT(DNS>=bin8)",
+          "NOT(IRC>=bin1)",
+          "NOT(DHCP>=bin6)",
+          "NOT(ICMP>=bin3)",
+          "NOT(ICMP>=bin4)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin7)",
+          "NOT(IGMP>=bin5)",
+          "NOT(IGMP>=bin6)"
+        ]
+      },
+      {
+        "clause_id": 114,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.9,
+        "mean_coef": -0.0772,
+        "n_literals": 2,
+        "literals": [
+          "Header_Length>=bin5",
+          "NOT(Header_Length>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 604,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.9,
+        "mean_coef": -0.111,
+        "n_literals": 20,
+        "literals": [
+          "Header_Length>=bin5",
+          "psh_flag_number>=bin1",
+          "ack_flag_number>=bin3",
+          "HTTPS>=bin1",
+          "NOT(Protocol Type>=bin3)",
+          "NOT(Rate>=bin1)",
+          "NOT(Rate>=bin3)",
+          "NOT(Rate>=bin9)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin3)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin6)",
+          "NOT(rst_count>=bin2)",
+          "NOT(rst_count>=bin4)",
+          "NOT(HTTP>=bin7)",
+          "NOT(HTTPS>=bin3)",
+          "NOT(DHCP>=bin3)",
+          "NOT(DHCP>=bin4)",
+          "NOT(DHCP>=bin6)",
+          "NOT(ARP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 333,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.867,
+        "mean_coef": -0.0286,
+        "n_literals": 9,
+        "literals": [
+          "Header_Length>=bin6",
+          "Header_Length>=bin7",
+          "NOT(psh_flag_number>=bin1)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(DNS>=bin1)",
+          "NOT(SSH>=bin1)",
+          "NOT(DHCP>=bin7)",
+          "NOT(DHCP>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 608,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.867,
+        "mean_coef": -0.0779,
+        "n_literals": 92,
+        "literals": [
+          "Header_Length>=bin1",
+          "Header_Length>=bin2",
+          "Protocol Type>=bin1",
+          "psh_flag_number>=bin1",
+          "psh_flag_number>=bin2",
+          "ack_flag_number>=bin1",
+          "ack_flag_number>=bin2",
+          "ack_flag_number>=bin3",
+          "NOT(Header_Length>=bin9)",
+          "NOT(Rate>=bin1)",
+          "NOT(Rate>=bin2)",
+          "NOT(Rate>=bin3)",
+          "NOT(Rate>=bin4)",
+          "NOT(Rate>=bin5)",
+          "NOT(Rate>=bin8)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin4)",
+          "NOT(fin_flag_number>=bin5)",
+          "NOT(fin_flag_number>=bin6)",
+          "NOT(fin_flag_number>=bin8)",
+          "NOT(fin_flag_number>=bin9)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(syn_flag_number>=bin3)",
+          "NOT(syn_flag_number>=bin4)",
+          "NOT(syn_flag_number>=bin6)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(rst_flag_number>=bin3)",
+          "NOT(rst_flag_number>=bin4)",
+          "NOT(rst_flag_number>=bin7)",
+          "NOT(rst_flag_number>=bin8)",
+          "NOT(psh_flag_number>=bin3)",
+          "NOT(psh_flag_number>=bin5)",
+          "NOT(psh_flag_number>=bin6)",
+          "NOT(psh_flag_number>=bin7)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(psh_flag_number>=bin9)",
+          "NOT(ack_flag_number>=bin5)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(ack_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(ece_flag_number>=bin1)",
+          "NOT(ece_flag_number>=bin3)",
+          "NOT(cwr_flag_number>=bin1)",
+          "NOT(cwr_flag_number>=bin2)",
+          "NOT(rst_count>=bin2)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin4)",
+          "NOT(rst_count>=bin5)",
+          "NOT(rst_count>=bin6)",
+          "NOT(rst_count>=bin7)",
+          "NOT(rst_count>=bin9)",
+          "NOT(HTTP>=bin2)",
+          "NOT(HTTP>=bin3)",
+          "NOT(HTTP>=bin5)",
+          "NOT(HTTPS>=bin3)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin5)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin1)",
+          "NOT(DNS>=bin3)",
+          "NOT(DNS>=bin6)",
+          "NOT(DNS>=bin7)",
+          "NOT(DNS>=bin8)",
+          "NOT(DNS>=bin9)",
+          "NOT(Telnet>=bin1)",
+          "NOT(SMTP>=bin1)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin2)",
+          "NOT(SSH>=bin3)",
+          "NOT(SSH>=bin4)",
+          "NOT(SSH>=bin5)",
+          "NOT(IRC>=bin1)",
+          "NOT(DHCP>=bin1)",
+          "NOT(DHCP>=bin2)",
+          "NOT(DHCP>=bin5)",
+          "NOT(DHCP>=bin6)",
+          "NOT(DHCP>=bin7)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin1)",
+          "NOT(ARP>=bin2)",
+          "NOT(ARP>=bin3)",
+          "NOT(ARP>=bin5)",
+          "NOT(ICMP>=bin1)",
+          "NOT(ICMP>=bin3)",
+          "NOT(ICMP>=bin4)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin7)",
+          "NOT(ICMP>=bin8)",
+          "NOT(IGMP>=bin3)",
+          "NOT(IGMP>=bin5)",
+          "NOT(IGMP>=bin6)",
+          "NOT(IGMP>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 573,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.8,
+        "mean_coef": -0.1297,
+        "n_literals": 9,
+        "literals": [
+          "NOT(Rate>=bin1)",
+          "NOT(ack_flag_number>=bin5)",
+          "NOT(rst_count>=bin7)",
+          "NOT(HTTP>=bin9)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(DNS>=bin3)",
+          "NOT(SSH>=bin2)",
+          "NOT(DHCP>=bin8)",
+          "NOT(ICMP>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 603,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.733,
+        "mean_coef": -0.0115,
+        "n_literals": 2,
+        "literals": [
+          "rst_count>=bin1",
+          "HTTPS>=bin1"
+        ]
+      },
+      {
+        "clause_id": 225,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.7,
+        "mean_coef": -0.0389,
+        "n_literals": 47,
+        "literals": [
+          "psh_flag_number>=bin1",
+          "ack_flag_number>=bin1",
+          "NOT(Header_Length>=bin5)",
+          "NOT(Protocol Type>=bin2)",
+          "NOT(Rate>=bin6)",
+          "NOT(Rate>=bin7)",
+          "NOT(Rate>=bin8)",
+          "NOT(fin_flag_number>=bin1)",
+          "NOT(fin_flag_number>=bin2)",
+          "NOT(fin_flag_number>=bin7)",
+          "NOT(fin_flag_number>=bin9)",
+          "NOT(syn_flag_number>=bin2)",
+          "NOT(syn_flag_number>=bin5)",
+          "NOT(syn_flag_number>=bin7)",
+          "NOT(syn_flag_number>=bin8)",
+          "NOT(rst_flag_number>=bin6)",
+          "NOT(rst_flag_number>=bin9)",
+          "NOT(psh_flag_number>=bin7)",
+          "NOT(psh_flag_number>=bin8)",
+          "NOT(ack_flag_number>=bin7)",
+          "NOT(ack_flag_number>=bin9)",
+          "NOT(ece_flag_number>=bin2)",
+          "NOT(rst_count>=bin3)",
+          "NOT(rst_count>=bin4)",
+          "NOT(HTTP>=bin1)",
+          "NOT(HTTP>=bin2)",
+          "NOT(HTTP>=bin7)",
+          "NOT(HTTPS>=bin1)",
+          "NOT(HTTPS>=bin2)",
+          "NOT(HTTPS>=bin4)",
+          "NOT(HTTPS>=bin6)",
+          "NOT(HTTPS>=bin8)",
+          "NOT(HTTPS>=bin9)",
+          "NOT(DNS>=bin1)",
+          "NOT(DNS>=bin5)",
+          "NOT(SMTP>=bin2)",
+          "NOT(SSH>=bin3)",
+          "NOT(IRC>=bin2)",
+          "NOT(DHCP>=bin3)",
+          "NOT(DHCP>=bin7)",
+          "NOT(DHCP>=bin9)",
+          "NOT(ARP>=bin5)",
+          "NOT(ICMP>=bin1)",
+          "NOT(ICMP>=bin2)",
+          "NOT(ICMP>=bin5)",
+          "NOT(ICMP>=bin8)",
+          "NOT(IGMP>=bin2)"
+        ]
+      },
+      {
+        "clause_id": 761,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.7,
+        "mean_coef": -0.0057,
+        "n_literals": 2,
+        "literals": [
+          "rst_count>=bin1",
+          "HTTPS>=bin1"
+        ]
+      },
+      {
+        "clause_id": 699,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.667,
+        "mean_coef": -0.0078,
+        "n_literals": 2,
+        "literals": [
+          "rst_count>=bin1",
+          "HTTPS>=bin1"
+        ]
+      },
+      {
+        "clause_id": 1,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.633,
+        "mean_coef": -0.0017,
+        "n_literals": 2,
+        "literals": [
+          "rst_flag_number>=bin1",
+          "HTTPS>=bin1"
+        ]
+      },
+      {
+        "clause_id": 21,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.633,
+        "mean_coef": -0.005,
+        "n_literals": 2,
+        "literals": [
+          "rst_flag_number>=bin1",
+          "HTTPS>=bin1"
+        ]
+      },
+      {
+        "clause_id": 653,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.6,
+        "mean_coef": -0.0028,
+        "n_literals": 2,
+        "literals": [
+          "rst_flag_number>=bin1",
+          "HTTPS>=bin1"
+        ]
+      }
+    ]
+  }
+}

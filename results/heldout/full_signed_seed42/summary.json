@@ -1,0 +1,24 @@
+{
+  "seed": 42,
+  "B": 10,
+  "threshold": 0.9,
+  "positive": [
+    21,
+    29,
+    21,
+    21,
+    19,
+    39
+  ],
+  "negative": [
+    65,
+    130,
+    180,
+    67,
+    47,
+    96
+  ],
+  "positive_sum": 150,
+  "negative_sum": 585,
+  "scores_match": true
+}

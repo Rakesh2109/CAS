@@ -1,0 +1,32 @@
+# Full raw dataset -- do not commit (911MB); see README for download instructions.
+/data/*.csv
+/data/IoTM/
+
+# Large generated experiment artifacts (models, activation matrices, cached
+# booleanized data) -- regenerate by running the scripts/ pipeline.
+results*/**/*.pkl
+results*/**/*.npy
+results*/**/*.npz
+results*/**/*.txt
+*.pkl
+*.npy
+*.npz
+
+# LaTeX build junk
+*.aux
+*.log
+*.blg
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor / OS
+.DS_Store
+
+# Backup files created during paper revision passes
+*.bak

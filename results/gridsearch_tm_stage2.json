@@ -1,0 +1,2552 @@
+{
+  "stage": 2,
+  "n_configs": 70,
+  "total_time_s": 1325.9,
+  "feature_report": {
+    "n_features_raw": 39,
+    "dropped_time": [
+      "IAT"
+    ],
+    "dropped_correlated": [
+      [
+        "fin_count",
+        "fin_flag_number",
+        0.9952
+      ],
+      [
+        "IPv",
+        "ARP",
+        -1.0
+      ],
+      [
+        "LLC",
+        "ARP",
+        -1.0
+      ],
+      [
+        "Tot size",
+        "AVG",
+        1.0
+      ],
+      [
+        "Variance",
+        "Std",
+        0.9546
+      ]
+    ],
+    "corr_threshold": 0.95,
+    "kept_features": [
+      "Header_Length",
+      "Protocol Type",
+      "Time_To_Live",
+      "Rate",
+      "fin_flag_number",
+      "syn_flag_number",
+      "rst_flag_number",
+      "psh_flag_number",
+      "ack_flag_number",
+      "ece_flag_number",
+      "cwr_flag_number",
+      "ack_count",
+      "syn_count",
+      "rst_count",
+      "HTTP",
+      "HTTPS",
+      "DNS",
+      "Telnet",
+      "SMTP",
+      "SSH",
+      "IRC",
+      "TCP",
+      "UDP",
+      "DHCP",
+      "ARP",
+      "ICMP",
+      "IGMP",
+      "Tot sum",
+      "Min",
+      "Max",
+      "AVG",
+      "Std",
+      "Number"
+    ],
+    "n_kept": 33,
+    "train_shape": [
+      195338,
+      33
+    ],
+    "test_shape": [
+      80868,
+      33
+    ],
+    "train_class_counts": {
+      "Benign": 19291,
+      "DDoS": 40000,
+      "DoS": 40000,
+      "MQTT": 40000,
+      "Recon": 40000,
+      "Spoofing": 16047
+    },
+    "test_class_counts": {
+      "Benign": 15000,
+      "DDoS": 15000,
+      "DoS": 15000,
+      "MQTT": 15000,
+      "Recon": 15000,
+      "Spoofing": 5868
+    },
+    "note": "no IP or port fields exist in the CICIoMT2024 WiFi/MQTT schema"
+  },
+  "results": [
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 500,
+      "s": 8.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6487,
+      "best_epoch": 5,
+      "final_macro_f1": 0.5996,
+      "curve": [
+        [
+          5,
+          0.6487
+        ],
+        [
+          10,
+          0.615
+        ],
+        [
+          15,
+          0.5814
+        ],
+        [
+          20,
+          0.6021
+        ],
+        [
+          25,
+          0.5996
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 719.0
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 500,
+      "s": 6.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6419,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6032,
+      "curve": [
+        [
+          5,
+          0.6419
+        ],
+        [
+          10,
+          0.6168
+        ],
+        [
+          15,
+          0.6144
+        ],
+        [
+          20,
+          0.5873
+        ],
+        [
+          25,
+          0.6032
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 751.8
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 50,
+      "s": 5.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6406,
+      "best_epoch": 10,
+      "final_macro_f1": 0.6394,
+      "curve": [
+        [
+          5,
+          0.5873
+        ],
+        [
+          10,
+          0.6406
+        ],
+        [
+          15,
+          0.5892
+        ],
+        [
+          20,
+          0.6115
+        ],
+        [
+          25,
+          0.6394
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 506.8
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1500,
+      "s": 5.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.64,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6344,
+      "curve": [
+        [
+          5,
+          0.64
+        ],
+        [
+          10,
+          0.6268
+        ],
+        [
+          15,
+          0.6178
+        ],
+        [
+          20,
+          0.6166
+        ],
+        [
+          25,
+          0.6344
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 701.3
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1250,
+      "s": 12.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.639,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6098,
+      "curve": [
+        [
+          5,
+          0.639
+        ],
+        [
+          10,
+          0.6206
+        ],
+        [
+          15,
+          0.5859
+        ],
+        [
+          20,
+          0.5975
+        ],
+        [
+          25,
+          0.6098
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 704.3
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1500,
+      "s": 6.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6372,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6372,
+      "curve": [
+        [
+          5,
+          0.6326
+        ],
+        [
+          10,
+          0.6289
+        ],
+        [
+          15,
+          0.6086
+        ],
+        [
+          20,
+          0.6022
+        ],
+        [
+          25,
+          0.6372
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 752.7
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1250,
+      "s": 10.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.636,
+      "best_epoch": 5,
+      "final_macro_f1": 0.5953,
+      "curve": [
+        [
+          5,
+          0.636
+        ],
+        [
+          10,
+          0.62
+        ],
+        [
+          15,
+          0.5991
+        ],
+        [
+          20,
+          0.5858
+        ],
+        [
+          25,
+          0.5953
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 702.7
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 250,
+      "s": 6.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6343,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6186,
+      "curve": [
+        [
+          5,
+          0.6343
+        ],
+        [
+          10,
+          0.614
+        ],
+        [
+          15,
+          0.5884
+        ],
+        [
+          20,
+          0.5913
+        ],
+        [
+          25,
+          0.6186
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 751.5
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 750,
+      "s": 5.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.634,
+      "best_epoch": 20,
+      "final_macro_f1": 0.6163,
+      "curve": [
+        [
+          5,
+          0.5792
+        ],
+        [
+          10,
+          0.6108
+        ],
+        [
+          15,
+          0.6279
+        ],
+        [
+          20,
+          0.634
+        ],
+        [
+          25,
+          0.6163
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 512.7
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 250,
+      "s": 5.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6336,
+      "best_epoch": 15,
+      "final_macro_f1": 0.615,
+      "curve": [
+        [
+          5,
+          0.6135
+        ],
+        [
+          10,
+          0.6097
+        ],
+        [
+          15,
+          0.6336
+        ],
+        [
+          20,
+          0.6333
+        ],
+        [
+          25,
+          0.615
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 509.0
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 625,
+      "s": 3.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6335,
+      "best_epoch": 20,
+      "final_macro_f1": 0.6122,
+      "curve": [
+        [
+          5,
+          0.613
+        ],
+        [
+          10,
+          0.5942
+        ],
+        [
+          15,
+          0.6126
+        ],
+        [
+          20,
+          0.6335
+        ],
+        [
+          25,
+          0.6122
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 585.7
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1000,
+      "s": 10.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6334,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6119,
+      "curve": [
+        [
+          5,
+          0.6334
+        ],
+        [
+          10,
+          0.602
+        ],
+        [
+          15,
+          0.6008
+        ],
+        [
+          20,
+          0.621
+        ],
+        [
+          25,
+          0.6119
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 705.0
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1000,
+      "s": 6.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6331,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6123,
+      "curve": [
+        [
+          5,
+          0.6331
+        ],
+        [
+          10,
+          0.6119
+        ],
+        [
+          15,
+          0.586
+        ],
+        [
+          20,
+          0.5848
+        ],
+        [
+          25,
+          0.6123
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 744.3
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1250,
+      "s": 6.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6324,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6297,
+      "curve": [
+        [
+          5,
+          0.6324
+        ],
+        [
+          10,
+          0.6123
+        ],
+        [
+          15,
+          0.5982
+        ],
+        [
+          20,
+          0.6029
+        ],
+        [
+          25,
+          0.6297
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 745.1
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 800,
+      "s": 3.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6324,
+      "best_epoch": 10,
+      "final_macro_f1": 0.6266,
+      "curve": [
+        [
+          5,
+          0.6142
+        ],
+        [
+          10,
+          0.6324
+        ],
+        [
+          15,
+          0.5747
+        ],
+        [
+          20,
+          0.6103
+        ],
+        [
+          25,
+          0.6266
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 911.8
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1000,
+      "s": 7.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6323,
+      "best_epoch": 10,
+      "final_macro_f1": 0.6105,
+      "curve": [
+        [
+          5,
+          0.6253
+        ],
+        [
+          10,
+          0.6323
+        ],
+        [
+          15,
+          0.573
+        ],
+        [
+          20,
+          0.5833
+        ],
+        [
+          25,
+          0.6105
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 740.6
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 750,
+      "s": 7.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6309,
+      "best_epoch": 20,
+      "final_macro_f1": 0.627,
+      "curve": [
+        [
+          5,
+          0.5468
+        ],
+        [
+          10,
+          0.5718
+        ],
+        [
+          15,
+          0.629
+        ],
+        [
+          20,
+          0.6309
+        ],
+        [
+          25,
+          0.627
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 481.7
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1250,
+      "s": 3.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6299,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6299,
+      "curve": [
+        [
+          5,
+          0.6061
+        ],
+        [
+          10,
+          0.6147
+        ],
+        [
+          15,
+          0.5846
+        ],
+        [
+          20,
+          0.6103
+        ],
+        [
+          25,
+          0.6299
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 832.5
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1500,
+      "s": 7.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6297,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6297,
+      "curve": [
+        [
+          5,
+          0.6256
+        ],
+        [
+          10,
+          0.5973
+        ],
+        [
+          15,
+          0.607
+        ],
+        [
+          20,
+          0.5978
+        ],
+        [
+          25,
+          0.6297
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 662.8
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1000,
+      "s": 5.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6295,
+      "best_epoch": 10,
+      "final_macro_f1": 0.6252,
+      "curve": [
+        [
+          5,
+          0.618
+        ],
+        [
+          10,
+          0.6295
+        ],
+        [
+          15,
+          0.6147
+        ],
+        [
+          20,
+          0.6191
+        ],
+        [
+          25,
+          0.6252
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 781.4
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 625,
+      "s": 7.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6283,
+      "best_epoch": 15,
+      "final_macro_f1": 0.6035,
+      "curve": [
+        [
+          5,
+          0.5543
+        ],
+        [
+          10,
+          0.5951
+        ],
+        [
+          15,
+          0.6283
+        ],
+        [
+          20,
+          0.6024
+        ],
+        [
+          25,
+          0.6035
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 482.8
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 250,
+      "s": 7.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.628,
+      "best_epoch": 10,
+      "final_macro_f1": 0.5874,
+      "curve": [
+        [
+          5,
+          0.5478
+        ],
+        [
+          10,
+          0.628
+        ],
+        [
+          15,
+          0.6013
+        ],
+        [
+          20,
+          0.5791
+        ],
+        [
+          25,
+          0.5874
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 480.1
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 400,
+      "s": 7.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6273,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6273,
+      "curve": [
+        [
+          5,
+          0.5307
+        ],
+        [
+          10,
+          0.5772
+        ],
+        [
+          15,
+          0.5738
+        ],
+        [
+          20,
+          0.5793
+        ],
+        [
+          25,
+          0.6273
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 478.5
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 800,
+      "s": 5.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6268,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6243,
+      "curve": [
+        [
+          5,
+          0.6268
+        ],
+        [
+          10,
+          0.5969
+        ],
+        [
+          15,
+          0.6059
+        ],
+        [
+          20,
+          0.6112
+        ],
+        [
+          25,
+          0.6243
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 784.3
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1250,
+      "s": 7.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6265,
+      "best_epoch": 10,
+      "final_macro_f1": 0.6218,
+      "curve": [
+        [
+          5,
+          0.6173
+        ],
+        [
+          10,
+          0.6265
+        ],
+        [
+          15,
+          0.6033
+        ],
+        [
+          20,
+          0.5964
+        ],
+        [
+          25,
+          0.6218
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 658.0
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1500,
+      "s": 12.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6263,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6076,
+      "curve": [
+        [
+          5,
+          0.6263
+        ],
+        [
+          10,
+          0.6018
+        ],
+        [
+          15,
+          0.5784
+        ],
+        [
+          20,
+          0.5902
+        ],
+        [
+          25,
+          0.6076
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 691.8
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1250,
+      "s": 8.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6255,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6193,
+      "curve": [
+        [
+          5,
+          0.6255
+        ],
+        [
+          10,
+          0.6063
+        ],
+        [
+          15,
+          0.5815
+        ],
+        [
+          20,
+          0.5967
+        ],
+        [
+          25,
+          0.6193
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 721.1
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 500,
+      "s": 12.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.625,
+      "best_epoch": 10,
+      "final_macro_f1": 0.5598,
+      "curve": [
+        [
+          5,
+          0.6248
+        ],
+        [
+          10,
+          0.625
+        ],
+        [
+          15,
+          0.5889
+        ],
+        [
+          20,
+          0.6021
+        ],
+        [
+          25,
+          0.5598
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 681.3
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 250,
+      "s": 5.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6242,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6242,
+      "curve": [
+        [
+          5,
+          0.6198
+        ],
+        [
+          10,
+          0.6102
+        ],
+        [
+          15,
+          0.5914
+        ],
+        [
+          20,
+          0.5805
+        ],
+        [
+          25,
+          0.6242
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 771.2
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1500,
+      "s": 10.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6241,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6119,
+      "curve": [
+        [
+          5,
+          0.6241
+        ],
+        [
+          10,
+          0.5879
+        ],
+        [
+          15,
+          0.5902
+        ],
+        [
+          20,
+          0.5902
+        ],
+        [
+          25,
+          0.6119
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 709.2
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 250,
+      "s": 3.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6241,
+      "best_epoch": 10,
+      "final_macro_f1": 0.6066,
+      "curve": [
+        [
+          5,
+          0.6119
+        ],
+        [
+          10,
+          0.6241
+        ],
+        [
+          15,
+          0.5804
+        ],
+        [
+          20,
+          0.6037
+        ],
+        [
+          25,
+          0.6066
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 596.8
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 100,
+      "s": 12.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6233,
+      "best_epoch": 5,
+      "final_macro_f1": 0.5959,
+      "curve": [
+        [
+          5,
+          0.6233
+        ],
+        [
+          10,
+          0.6114
+        ],
+        [
+          15,
+          0.5976
+        ],
+        [
+          20,
+          0.594
+        ],
+        [
+          25,
+          0.5959
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 679.5
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1500,
+      "s": 3.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6233,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6233,
+      "curve": [
+        [
+          5,
+          0.6181
+        ],
+        [
+          10,
+          0.6184
+        ],
+        [
+          15,
+          0.596
+        ],
+        [
+          20,
+          0.6222
+        ],
+        [
+          25,
+          0.6233
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 845.5
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 500,
+      "s": 5.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6232,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6232,
+      "curve": [
+        [
+          5,
+          0.612
+        ],
+        [
+          10,
+          0.6077
+        ],
+        [
+          15,
+          0.5939
+        ],
+        [
+          20,
+          0.6201
+        ],
+        [
+          25,
+          0.6232
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 774.6
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 400,
+      "s": 5.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6231,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6231,
+      "curve": [
+        [
+          5,
+          0.5925
+        ],
+        [
+          10,
+          0.6229
+        ],
+        [
+          15,
+          0.6098
+        ],
+        [
+          20,
+          0.6166
+        ],
+        [
+          25,
+          0.6231
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 512.0
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1000,
+      "s": 3.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6229,
+      "best_epoch": 10,
+      "final_macro_f1": 0.6095,
+      "curve": [
+        [
+          5,
+          0.6067
+        ],
+        [
+          10,
+          0.6229
+        ],
+        [
+          15,
+          0.5969
+        ],
+        [
+          20,
+          0.5673
+        ],
+        [
+          25,
+          0.6095
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 904.9
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1250,
+      "s": 5.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6223,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6196,
+      "curve": [
+        [
+          5,
+          0.6223
+        ],
+        [
+          10,
+          0.6221
+        ],
+        [
+          15,
+          0.6067
+        ],
+        [
+          20,
+          0.5958
+        ],
+        [
+          25,
+          0.6196
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 704.0
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 250,
+      "s": 8.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6222,
+      "best_epoch": 5,
+      "final_macro_f1": 0.5713,
+      "curve": [
+        [
+          5,
+          0.6222
+        ],
+        [
+          10,
+          0.5828
+        ],
+        [
+          15,
+          0.5924
+        ],
+        [
+          20,
+          0.5358
+        ],
+        [
+          25,
+          0.5713
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 710.4
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 125,
+      "s": 5.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6205,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6205,
+      "curve": [
+        [
+          5,
+          0.5972
+        ],
+        [
+          10,
+          0.6031
+        ],
+        [
+          15,
+          0.6169
+        ],
+        [
+          20,
+          0.6151
+        ],
+        [
+          25,
+          0.6205
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 503.9
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 250,
+      "s": 10.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6204,
+      "best_epoch": 5,
+      "final_macro_f1": 0.5842,
+      "curve": [
+        [
+          5,
+          0.6204
+        ],
+        [
+          10,
+          0.5911
+        ],
+        [
+          15,
+          0.5775
+        ],
+        [
+          20,
+          0.5609
+        ],
+        [
+          25,
+          0.5842
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 693.8
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1000,
+      "s": 12.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6202,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6202,
+      "curve": [
+        [
+          5,
+          0.6178
+        ],
+        [
+          10,
+          0.614
+        ],
+        [
+          15,
+          0.5958
+        ],
+        [
+          20,
+          0.5894
+        ],
+        [
+          25,
+          0.6202
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 690.0
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 500,
+      "s": 7.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6201,
+      "best_epoch": 15,
+      "final_macro_f1": 0.611,
+      "curve": [
+        [
+          5,
+          0.5557
+        ],
+        [
+          10,
+          0.5934
+        ],
+        [
+          15,
+          0.6201
+        ],
+        [
+          20,
+          0.5956
+        ],
+        [
+          25,
+          0.611
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 484.0
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 800,
+      "s": 12.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6197,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6082,
+      "curve": [
+        [
+          5,
+          0.6197
+        ],
+        [
+          10,
+          0.6038
+        ],
+        [
+          15,
+          0.6091
+        ],
+        [
+          20,
+          0.5756
+        ],
+        [
+          25,
+          0.6082
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 687.5
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 500,
+      "s": 5.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6196,
+      "best_epoch": 15,
+      "final_macro_f1": 0.6121,
+      "curve": [
+        [
+          5,
+          0.5613
+        ],
+        [
+          10,
+          0.5917
+        ],
+        [
+          15,
+          0.6196
+        ],
+        [
+          20,
+          0.6158
+        ],
+        [
+          25,
+          0.6121
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 511.0
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 800,
+      "s": 8.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6195,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6195,
+      "curve": [
+        [
+          5,
+          0.6111
+        ],
+        [
+          10,
+          0.6079
+        ],
+        [
+          15,
+          0.5851
+        ],
+        [
+          20,
+          0.5772
+        ],
+        [
+          25,
+          0.6195
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 713.2
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 250,
+      "s": 3.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6194,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6084,
+      "curve": [
+        [
+          5,
+          0.6194
+        ],
+        [
+          10,
+          0.6091
+        ],
+        [
+          15,
+          0.5845
+        ],
+        [
+          20,
+          0.606
+        ],
+        [
+          25,
+          0.6084
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 923.7
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1000,
+      "s": 8.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.619,
+      "best_epoch": 10,
+      "final_macro_f1": 0.5951,
+      "curve": [
+        [
+          5,
+          0.6171
+        ],
+        [
+          10,
+          0.619
+        ],
+        [
+          15,
+          0.5997
+        ],
+        [
+          20,
+          0.5963
+        ],
+        [
+          25,
+          0.5951
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 724.0
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 500,
+      "s": 3.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6186,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6186,
+      "curve": [
+        [
+          5,
+          0.6144
+        ],
+        [
+          10,
+          0.6172
+        ],
+        [
+          15,
+          0.5856
+        ],
+        [
+          20,
+          0.5994
+        ],
+        [
+          25,
+          0.6186
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 927.9
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 100,
+      "s": 10.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6183,
+      "best_epoch": 10,
+      "final_macro_f1": 0.592,
+      "curve": [
+        [
+          5,
+          0.5597
+        ],
+        [
+          10,
+          0.6183
+        ],
+        [
+          15,
+          0.5891
+        ],
+        [
+          20,
+          0.5463
+        ],
+        [
+          25,
+          0.592
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 692.1
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 1500,
+      "s": 8.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6181,
+      "best_epoch": 20,
+      "final_macro_f1": 0.6115,
+      "curve": [
+        [
+          5,
+          0.6148
+        ],
+        [
+          10,
+          0.5963
+        ],
+        [
+          15,
+          0.6027
+        ],
+        [
+          20,
+          0.6181
+        ],
+        [
+          25,
+          0.6115
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 717.2
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 100,
+      "s": 6.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6177,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6177,
+      "curve": [
+        [
+          5,
+          0.5864
+        ],
+        [
+          10,
+          0.5977
+        ],
+        [
+          15,
+          0.5914
+        ],
+        [
+          20,
+          0.6063
+        ],
+        [
+          25,
+          0.6177
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 742.2
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 125,
+      "s": 3.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6167,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6167,
+      "curve": [
+        [
+          5,
+          0.6073
+        ],
+        [
+          10,
+          0.6074
+        ],
+        [
+          15,
+          0.6117
+        ],
+        [
+          20,
+          0.6059
+        ],
+        [
+          25,
+          0.6167
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 595.8
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 800,
+      "s": 7.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6167,
+      "best_epoch": 10,
+      "final_macro_f1": 0.607,
+      "curve": [
+        [
+          5,
+          0.5982
+        ],
+        [
+          10,
+          0.6167
+        ],
+        [
+          15,
+          0.5715
+        ],
+        [
+          20,
+          0.5748
+        ],
+        [
+          25,
+          0.607
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 733.1
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 500,
+      "s": 7.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6165,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6165,
+      "curve": [
+        [
+          5,
+          0.5913
+        ],
+        [
+          10,
+          0.575
+        ],
+        [
+          15,
+          0.5685
+        ],
+        [
+          20,
+          0.5872
+        ],
+        [
+          25,
+          0.6165
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 731.5
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 800,
+      "s": 10.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.616,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6015,
+      "curve": [
+        [
+          5,
+          0.616
+        ],
+        [
+          10,
+          0.6068
+        ],
+        [
+          15,
+          0.5724
+        ],
+        [
+          20,
+          0.587
+        ],
+        [
+          25,
+          0.6015
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 701.0
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 625,
+      "s": 5.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6152,
+      "best_epoch": 20,
+      "final_macro_f1": 0.6134,
+      "curve": [
+        [
+          5,
+          0.5898
+        ],
+        [
+          10,
+          0.6066
+        ],
+        [
+          15,
+          0.6108
+        ],
+        [
+          20,
+          0.6152
+        ],
+        [
+          25,
+          0.6134
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 510.6
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 100,
+      "s": 3.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6143,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6143,
+      "curve": [
+        [
+          5,
+          0.5932
+        ],
+        [
+          10,
+          0.5786
+        ],
+        [
+          15,
+          0.5847
+        ],
+        [
+          20,
+          0.6037
+        ],
+        [
+          25,
+          0.6143
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 925.5
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 125,
+      "s": 7.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6141,
+      "best_epoch": 10,
+      "final_macro_f1": 0.576,
+      "curve": [
+        [
+          5,
+          0.5586
+        ],
+        [
+          10,
+          0.6141
+        ],
+        [
+          15,
+          0.6073
+        ],
+        [
+          20,
+          0.5644
+        ],
+        [
+          25,
+          0.576
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 479.4
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 800,
+      "s": 6.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6113,
+      "best_epoch": 5,
+      "final_macro_f1": 0.6008,
+      "curve": [
+        [
+          5,
+          0.6113
+        ],
+        [
+          10,
+          0.6062
+        ],
+        [
+          15,
+          0.611
+        ],
+        [
+          20,
+          0.5667
+        ],
+        [
+          25,
+          0.6008
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 745.2
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 50,
+      "s": 3.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6102,
+      "best_epoch": 20,
+      "final_macro_f1": 0.5913,
+      "curve": [
+        [
+          5,
+          0.581
+        ],
+        [
+          10,
+          0.5811
+        ],
+        [
+          15,
+          0.5995
+        ],
+        [
+          20,
+          0.6102
+        ],
+        [
+          25,
+          0.5913
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 595.3
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 250,
+      "s": 7.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6095,
+      "best_epoch": 25,
+      "final_macro_f1": 0.6095,
+      "curve": [
+        [
+          5,
+          0.5969
+        ],
+        [
+          10,
+          0.5754
+        ],
+        [
+          15,
+          0.5716
+        ],
+        [
+          20,
+          0.5397
+        ],
+        [
+          25,
+          0.6095
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 724.1
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 400,
+      "s": 3.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6069,
+      "best_epoch": 20,
+      "final_macro_f1": 0.5681,
+      "curve": [
+        [
+          5,
+          0.6051
+        ],
+        [
+          10,
+          0.6032
+        ],
+        [
+          15,
+          0.5813
+        ],
+        [
+          20,
+          0.6069
+        ],
+        [
+          25,
+          0.5681
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 587.4
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 750,
+      "s": 3.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6065,
+      "best_epoch": 20,
+      "final_macro_f1": 0.5604,
+      "curve": [
+        [
+          5,
+          0.6041
+        ],
+        [
+          10,
+          0.5658
+        ],
+        [
+          15,
+          0.5829
+        ],
+        [
+          20,
+          0.6065
+        ],
+        [
+          25,
+          0.5604
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 587.7
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 500,
+      "s": 10.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.606,
+      "best_epoch": 25,
+      "final_macro_f1": 0.606,
+      "curve": [
+        [
+          5,
+          0.5831
+        ],
+        [
+          10,
+          0.581
+        ],
+        [
+          15,
+          0.5544
+        ],
+        [
+          20,
+          0.5676
+        ],
+        [
+          25,
+          0.606
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 688.2
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 500,
+      "s": 3.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.6051,
+      "best_epoch": 5,
+      "final_macro_f1": 0.5809,
+      "curve": [
+        [
+          5,
+          0.6051
+        ],
+        [
+          10,
+          0.5984
+        ],
+        [
+          15,
+          0.585
+        ],
+        [
+          20,
+          0.5955
+        ],
+        [
+          25,
+          0.5809
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 586.3
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 250,
+      "s": 12.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.5997,
+      "best_epoch": 5,
+      "final_macro_f1": 0.5842,
+      "curve": [
+        [
+          5,
+          0.5997
+        ],
+        [
+          10,
+          0.5848
+        ],
+        [
+          15,
+          0.5976
+        ],
+        [
+          20,
+          0.568
+        ],
+        [
+          25,
+          0.5842
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 688.0
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 100,
+      "s": 5.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.5962,
+      "best_epoch": 25,
+      "final_macro_f1": 0.5962,
+      "curve": [
+        [
+          5,
+          0.591
+        ],
+        [
+          10,
+          0.5954
+        ],
+        [
+          15,
+          0.5802
+        ],
+        [
+          20,
+          0.5893
+        ],
+        [
+          25,
+          0.5962
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 770.7
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 100,
+      "s": 7.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.591,
+      "best_epoch": 20,
+      "final_macro_f1": 0.5767,
+      "curve": [
+        [
+          5,
+          0.5865
+        ],
+        [
+          10,
+          0.5731
+        ],
+        [
+          15,
+          0.5628
+        ],
+        [
+          20,
+          0.591
+        ],
+        [
+          25,
+          0.5767
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 716.2
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 500,
+      "T": 50,
+      "s": 7.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.5848,
+      "best_epoch": 25,
+      "final_macro_f1": 0.5848,
+      "curve": [
+        [
+          5,
+          0.5528
+        ],
+        [
+          10,
+          0.5749
+        ],
+        [
+          15,
+          0.5245
+        ],
+        [
+          20,
+          0.5837
+        ],
+        [
+          25,
+          0.5848
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 479.9
+    },
+    {
+      "binarizer": "kbins",
+      "clauses": 1000,
+      "T": 100,
+      "s": 8.0,
+      "epochs": 25,
+      "seed": 42,
+      "best_macro_f1": 0.5813,
+      "best_epoch": 5,
+      "final_macro_f1": 0.5627,
+      "curve": [
+        [
+          5,
+          0.5813
+        ],
+        [
+          10,
+          0.5767
+        ],
+        [
+          15,
+          0.5634
+        ],
+        [
+          20,
+          0.5644
+        ],
+        [
+          25,
+          0.5627
+        ]
+      ],
+      "n_literals": 253,
+      "time_s": 714.5
+    }
+  ]
+}

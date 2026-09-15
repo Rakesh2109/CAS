@@ -1,0 +1,158 @@
+{
+  "representation": "binary",
+  "model": "dt",
+  "n_features": 154,
+  "training_rows": 175803,
+  "selection_rows": 19535,
+  "test_rows": 80868,
+  "seeds": [
+    42,
+    7,
+    123
+  ],
+  "split_seed": 0,
+  "smote": false,
+  "l1_standardized": false,
+  "sklearn_version": "1.8.0",
+  "per_seed": [
+    {
+      "seed": 42,
+      "hp": null,
+      "selection_macro_f1": 0.8640609571465884,
+      "test_f1": 0.6627290747076499,
+      "test_acc": 0.6932532027501608,
+      "prediction_sha256": "2cfb8297ea68012a87e46312d6fa10841d26d4be3f308c2abb054f294fc21cf3",
+      "trials": [
+        {
+          "hp": 4,
+          "selection_macro_f1": 0.7759409248304124,
+          "seconds": 0.5746970176696777
+        },
+        {
+          "hp": 6,
+          "selection_macro_f1": 0.8291749110304693,
+          "seconds": 0.6282603740692139
+        },
+        {
+          "hp": 8,
+          "selection_macro_f1": 0.8547765391888148,
+          "seconds": 0.6857404708862305
+        },
+        {
+          "hp": 10,
+          "selection_macro_f1": 0.8623819991411485,
+          "seconds": 0.7129027843475342
+        },
+        {
+          "hp": 12,
+          "selection_macro_f1": 0.8637829437335548,
+          "seconds": 0.7109792232513428
+        },
+        {
+          "hp": 16,
+          "selection_macro_f1": 0.8638748787997231,
+          "seconds": 0.69576096534729
+        },
+        {
+          "hp": null,
+          "selection_macro_f1": 0.8640609571465884,
+          "seconds": 0.7038974761962891
+        }
+      ]
+    },
+    {
+      "seed": 7,
+      "hp": 16,
+      "selection_macro_f1": 0.8639679206080451,
+      "test_f1": 0.6628080298734644,
+      "test_acc": 0.6933273977345799,
+      "prediction_sha256": "50c1fec9cd1663218bcfb6f51c3c481f209b692b8952906e9641fc7b0726b39a",
+      "trials": [
+        {
+          "hp": 4,
+          "selection_macro_f1": 0.7759409248304124,
+          "seconds": 0.5587821006774902
+        },
+        {
+          "hp": 6,
+          "selection_macro_f1": 0.8291749110304693,
+          "seconds": 0.6170985698699951
+        },
+        {
+          "hp": 8,
+          "selection_macro_f1": 0.8548405214725282,
+          "seconds": 0.6528713703155518
+        },
+        {
+          "hp": 10,
+          "selection_macro_f1": 0.8622262451391469,
+          "seconds": 0.6676781177520752
+        },
+        {
+          "hp": 12,
+          "selection_macro_f1": 0.8636268422429789,
+          "seconds": 0.6775498390197754
+        },
+        {
+          "hp": 16,
+          "selection_macro_f1": 0.8639679206080451,
+          "seconds": 0.6700382232666016
+        },
+        {
+          "hp": null,
+          "selection_macro_f1": 0.8639045072211173,
+          "seconds": 0.6655421257019043
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "hp": null,
+      "selection_macro_f1": 0.8640226801749121,
+      "test_f1": 0.6625693014150212,
+      "test_acc": 0.6931171786120591,
+      "prediction_sha256": "09096e7719113100c43ff5ca850088a4ff6ce06bfd20a1da7618973288ef34ff",
+      "trials": [
+        {
+          "hp": 4,
+          "selection_macro_f1": 0.7759409248304124,
+          "seconds": 0.5343055725097656
+        },
+        {
+          "hp": 6,
+          "selection_macro_f1": 0.8291749110304693,
+          "seconds": 0.5883693695068359
+        },
+        {
+          "hp": 8,
+          "selection_macro_f1": 0.8546114946684732,
+          "seconds": 0.6282386779785156
+        },
+        {
+          "hp": 10,
+          "selection_macro_f1": 0.8623090544158912,
+          "seconds": 0.6173787117004395
+        },
+        {
+          "hp": 12,
+          "selection_macro_f1": 0.8637435004450458,
+          "seconds": 0.6423301696777344
+        },
+        {
+          "hp": 16,
+          "selection_macro_f1": 0.8637919767797356,
+          "seconds": 0.6743066310882568
+        },
+        {
+          "hp": null,
+          "selection_macro_f1": 0.8640226801749121,
+          "seconds": 0.6951088905334473
+        }
+      ]
+    }
+  ],
+  "test_f1_mean": 0.6627021353320451,
+  "test_f1_sd": 9.930463797877538e-05,
+  "test_acc_mean": 0.6932325930322666,
+  "test_acc_sd": 8.705013965948901e-05
+}

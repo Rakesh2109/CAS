@@ -1,0 +1,556 @@
+{
+  "normal": {
+    "inculpatory": [
+      {
+        "clause_id": 329,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": 0.0919,
+        "n_literals": 1,
+        "literals": [
+          "NOT(DstJitter>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 36,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": 0.1001,
+        "n_literals": 1,
+        "literals": [
+          "NOT(DstJitter>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 313,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.933,
+        "mean_coef": 0.0994,
+        "n_literals": 1,
+        "literals": [
+          "NOT(DstJitter>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 77,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.9,
+        "mean_coef": 0.1264,
+        "n_literals": 2,
+        "literals": [
+          "SYS>=bin3",
+          "NOT(DIntPkt>=bin5)"
+        ]
+      },
+      {
+        "clause_id": 399,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.767,
+        "mean_coef": 0.0272,
+        "n_literals": 1,
+        "literals": [
+          "NOT(DIntPkt>=bin3)"
+        ]
+      },
+      {
+        "clause_id": 63,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.733,
+        "mean_coef": 0.1146,
+        "n_literals": 3,
+        "literals": [
+          "Pulse_Rate>=bin1",
+          "NOT(DIntPkt>=bin4)",
+          "NOT(DstJitter>=bin5)"
+        ]
+      },
+      {
+        "clause_id": 323,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.733,
+        "mean_coef": 0.0361,
+        "n_literals": 1,
+        "literals": [
+          "NOT(DIntPkt>=bin3)"
+        ]
+      },
+      {
+        "clause_id": 325,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.733,
+        "mean_coef": 0.0569,
+        "n_literals": 9,
+        "literals": [
+          "Temp>=bin1",
+          "Temp>=bin2",
+          "SpO2>=bin1",
+          "NOT(DIntPkt>=bin9)",
+          "NOT(SIntPktAct>=bin7)",
+          "NOT(Temp>=bin8)",
+          "NOT(SpO2>=bin6)",
+          "NOT(SYS>=bin5)",
+          "NOT(Resp_Rate>=bin4)"
+        ]
+      }
+    ],
+    "exculpatory": [
+      {
+        "clause_id": 122,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.967,
+        "mean_coef": -0.0674,
+        "n_literals": 7,
+        "literals": [
+          "DIntPkt>=bin6",
+          "DIntPkt>=bin9",
+          "Dur>=bin9",
+          "NOT(sMaxPktSz>=bin1)",
+          "NOT(Load>=bin4)",
+          "NOT(Pulse_Rate>=bin7)",
+          "NOT(Resp_Rate>=bin6)"
+        ]
+      },
+      {
+        "clause_id": 183,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.967,
+        "mean_coef": -0.0533,
+        "n_literals": 8,
+        "literals": [
+          "SIntPkt>=bin6",
+          "SIntPkt>=bin7",
+          "DIntPkt>=bin9",
+          "DstJitter>=bin6",
+          "DstJitter>=bin8",
+          "DstJitter>=bin9",
+          "NOT(SrcLoad>=bin1)",
+          "NOT(SrcLoad>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 222,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": -0.0844,
+        "n_literals": 2,
+        "literals": [
+          "DstJitter>=bin9",
+          "NOT(Load>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 252,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": -0.08,
+        "n_literals": 7,
+        "literals": [
+          "DIntPkt>=bin9",
+          "Pulse_Rate>=bin1",
+          "NOT(SrcLoad>=bin1)",
+          "NOT(SrcLoad>=bin2)",
+          "NOT(Load>=bin1)",
+          "NOT(Rate>=bin1)",
+          "NOT(Resp_Rate>=bin6)"
+        ]
+      },
+      {
+        "clause_id": 257,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": -0.0739,
+        "n_literals": 4,
+        "literals": [
+          "DIntPkt>=bin9",
+          "Dur>=bin9",
+          "NOT(DstLoad>=bin1)",
+          "NOT(DstLoad>=bin2)"
+        ]
+      },
+      {
+        "clause_id": 262,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": -0.058,
+        "n_literals": 3,
+        "literals": [
+          "DstJitter>=bin9",
+          "NOT(TotBytes>=bin8)",
+          "NOT(Load>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 270,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": -0.0597,
+        "n_literals": 4,
+        "literals": [
+          "SIntPkt>=bin7",
+          "DIntPkt>=bin9",
+          "NOT(DstLoad>=bin1)",
+          "NOT(SYS>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 272,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": -0.0671,
+        "n_literals": 4,
+        "literals": [
+          "DstJitter>=bin9",
+          "NOT(SrcLoad>=bin1)",
+          "NOT(Load>=bin1)",
+          "NOT(Load>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 293,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": -0.0743,
+        "n_literals": 2,
+        "literals": [
+          "DstJitter>=bin9",
+          "NOT(Rate>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 294,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": -0.082,
+        "n_literals": 4,
+        "literals": [
+          "SIntPkt>=bin7",
+          "DstJitter>=bin9",
+          "Dur>=bin9",
+          "NOT(DstLoad>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 123,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.933,
+        "mean_coef": -0.0752,
+        "n_literals": 4,
+        "literals": [
+          "DIntPkt>=bin9",
+          "DstJitter>=bin8",
+          "DstJitter>=bin9",
+          "NOT(Load>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 276,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.667,
+        "mean_coef": -0.0308,
+        "n_literals": 3,
+        "literals": [
+          "DIntPkt>=bin5",
+          "Pulse_Rate>=bin5",
+          "DIA>=bin3"
+        ]
+      }
+    ]
+  },
+  "attack": {
+    "inculpatory": [
+      {
+        "clause_id": 122,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.933,
+        "mean_coef": 0.0637,
+        "n_literals": 7,
+        "literals": [
+          "DIntPkt>=bin6",
+          "DIntPkt>=bin9",
+          "Dur>=bin9",
+          "NOT(sMaxPktSz>=bin1)",
+          "NOT(Load>=bin4)",
+          "NOT(Pulse_Rate>=bin7)",
+          "NOT(Resp_Rate>=bin6)"
+        ]
+      },
+      {
+        "clause_id": 123,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.933,
+        "mean_coef": 0.0614,
+        "n_literals": 4,
+        "literals": [
+          "DIntPkt>=bin9",
+          "DstJitter>=bin8",
+          "DstJitter>=bin9",
+          "NOT(Load>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 183,
+        "source_bank": "normal",
+        "polarity": "negative",
+        "pi_hat": 0.933,
+        "mean_coef": 0.0511,
+        "n_literals": 8,
+        "literals": [
+          "SIntPkt>=bin6",
+          "SIntPkt>=bin7",
+          "DIntPkt>=bin9",
+          "DstJitter>=bin6",
+          "DstJitter>=bin8",
+          "DstJitter>=bin9",
+          "NOT(SrcLoad>=bin1)",
+          "NOT(SrcLoad>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 222,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.933,
+        "mean_coef": 0.0627,
+        "n_literals": 2,
+        "literals": [
+          "DstJitter>=bin9",
+          "NOT(Load>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 252,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.933,
+        "mean_coef": 0.0794,
+        "n_literals": 7,
+        "literals": [
+          "DIntPkt>=bin9",
+          "Pulse_Rate>=bin1",
+          "NOT(SrcLoad>=bin1)",
+          "NOT(SrcLoad>=bin2)",
+          "NOT(Load>=bin1)",
+          "NOT(Rate>=bin1)",
+          "NOT(Resp_Rate>=bin6)"
+        ]
+      },
+      {
+        "clause_id": 257,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.933,
+        "mean_coef": 0.0595,
+        "n_literals": 4,
+        "literals": [
+          "DIntPkt>=bin9",
+          "Dur>=bin9",
+          "NOT(DstLoad>=bin1)",
+          "NOT(DstLoad>=bin2)"
+        ]
+      },
+      {
+        "clause_id": 262,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.933,
+        "mean_coef": 0.0487,
+        "n_literals": 3,
+        "literals": [
+          "DstJitter>=bin9",
+          "NOT(TotBytes>=bin8)",
+          "NOT(Load>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 270,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.933,
+        "mean_coef": 0.0688,
+        "n_literals": 4,
+        "literals": [
+          "SIntPkt>=bin7",
+          "DIntPkt>=bin9",
+          "NOT(DstLoad>=bin1)",
+          "NOT(SYS>=bin9)"
+        ]
+      },
+      {
+        "clause_id": 272,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.933,
+        "mean_coef": 0.0856,
+        "n_literals": 4,
+        "literals": [
+          "DstJitter>=bin9",
+          "NOT(SrcLoad>=bin1)",
+          "NOT(Load>=bin1)",
+          "NOT(Load>=bin7)"
+        ]
+      },
+      {
+        "clause_id": 293,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.933,
+        "mean_coef": 0.0686,
+        "n_literals": 2,
+        "literals": [
+          "DstJitter>=bin9",
+          "NOT(Rate>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 294,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.933,
+        "mean_coef": 0.0796,
+        "n_literals": 4,
+        "literals": [
+          "SIntPkt>=bin7",
+          "DstJitter>=bin9",
+          "Dur>=bin9",
+          "NOT(DstLoad>=bin1)"
+        ]
+      },
+      {
+        "clause_id": 276,
+        "source_bank": "attack",
+        "polarity": "positive",
+        "pi_hat": 0.633,
+        "mean_coef": 0.0308,
+        "n_literals": 3,
+        "literals": [
+          "DIntPkt>=bin5",
+          "Pulse_Rate>=bin5",
+          "DIA>=bin3"
+        ]
+      }
+    ],
+    "exculpatory": [
+      {
+        "clause_id": 313,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1034,
+        "n_literals": 1,
+        "literals": [
+          "NOT(DstJitter>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 329,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 1.0,
+        "mean_coef": -0.1021,
+        "n_literals": 1,
+        "literals": [
+          "NOT(DstJitter>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 36,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.967,
+        "mean_coef": -0.078,
+        "n_literals": 1,
+        "literals": [
+          "NOT(DstJitter>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 77,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.933,
+        "mean_coef": -0.1131,
+        "n_literals": 2,
+        "literals": [
+          "SYS>=bin3",
+          "NOT(DIntPkt>=bin5)"
+        ]
+      },
+      {
+        "clause_id": 325,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.867,
+        "mean_coef": -0.0519,
+        "n_literals": 9,
+        "literals": [
+          "Temp>=bin1",
+          "Temp>=bin2",
+          "SpO2>=bin1",
+          "NOT(DIntPkt>=bin9)",
+          "NOT(SIntPktAct>=bin7)",
+          "NOT(Temp>=bin8)",
+          "NOT(SpO2>=bin6)",
+          "NOT(SYS>=bin5)",
+          "NOT(Resp_Rate>=bin4)"
+        ]
+      },
+      {
+        "clause_id": 63,
+        "source_bank": "normal",
+        "polarity": "positive",
+        "pi_hat": 0.667,
+        "mean_coef": -0.1165,
+        "n_literals": 3,
+        "literals": [
+          "Pulse_Rate>=bin1",
+          "NOT(DIntPkt>=bin4)",
+          "NOT(DstJitter>=bin5)"
+        ]
+      },
+      {
+        "clause_id": 323,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.667,
+        "mean_coef": -0.0454,
+        "n_literals": 1,
+        "literals": [
+          "NOT(DIntPkt>=bin3)"
+        ]
+      },
+      {
+        "clause_id": 399,
+        "source_bank": "attack",
+        "polarity": "negative",
+        "pi_hat": 0.667,
+        "mean_coef": -0.0336,
+        "n_literals": 1,
+        "literals": [
+          "NOT(DIntPkt>=bin3)"
+        ]
+      }
+    ]
+  }
+}

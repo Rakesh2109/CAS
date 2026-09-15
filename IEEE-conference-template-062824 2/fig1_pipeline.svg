@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1010 360" font-family="DejaVu Serif, Times, serif">
+  <defs>
+    <marker id="arrowBlue"   viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/></marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker>
+    <marker id="arrowGreen"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#15803d"/></marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c2410c"/></marker>
+    <marker id="arrowRed"    viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/></marker>
+  </defs>
+
+  <style>
+    .lbl   { font-size: 13px; text-anchor: middle; fill: #111827; }
+    .lbl2  { font-size: 11.5px; text-anchor: middle; fill: #1f2937; }
+    .num   { font-size: 11px; text-anchor: middle; fill: white; font-weight: bold; }
+    .edge  { stroke-width: 2; fill: none; }
+    .box   { stroke-width: 2; }
+  </style>
+
+  <!-- background -->
+  <rect x="0" y="0" width="1010" height="360" fill="white"/>
+
+  <!-- ================= top row ================= -->
+  <!-- 1: input data -->
+  <rect class="box" x="20" y="24" width="180" height="62" rx="10" fill="#dbeafe" stroke="#1d4ed8"/>
+  <circle cx="34" cy="24" r="11" fill="#1d4ed8"/><text class="num" x="34" y="28">1</text>
+  <text class="lbl"  x="110" y="50">CICIoMT2024 flows</text>
+  <text class="lbl2" x="110" y="68">22 numeric features</text>
+
+  <!-- 2: preprocessing -->
+  <rect class="box" x="264" y="24" width="180" height="62" rx="10" fill="#dbeafe" stroke="#1d4ed8"/>
+  <circle cx="278" cy="24" r="11" fill="#1d4ed8"/><text class="num" x="278" y="28">2</text>
+  <text class="lbl"  x="354" y="50">Quantile binarization</text>
+  <text class="lbl2" x="354" y="68">thermometer bits</text>
+
+  <!-- 3: base detector (purple, highlighted) -->
+  <rect class="box" x="508" y="24" width="180" height="62" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+  <circle cx="522" cy="24" r="11" fill="#7c3aed"/><text class="num" x="522" y="28">3</text>
+  <text class="lbl"  x="598" y="50">Weighted TM</text>
+  <text class="lbl2" x="598" y="68">6 &#215; 400 clauses</text>
+
+  <!-- 4: clause activations (green) -->
+  <rect class="box" x="752" y="24" width="238" height="62" rx="10" fill="#dcfce7" stroke="#15803d"/>
+  <circle cx="766" cy="24" r="11" fill="#15803d"/><text class="num" x="766" y="28">4</text>
+  <text class="lbl"  x="871" y="50">Clause activations</text>
+  <text class="lbl2" x="871" y="68">Z &#8712; {0,1}^(n&#215;2400)</text>
+
+  <!-- ================= bottom row ================= -->
+  <!-- 7: attribution / final output (red) -->
+  <rect class="box" x="264" y="180" width="180" height="62" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="3"/>
+  <circle cx="278" cy="180" r="11" fill="#b91c1c"/><text class="num" x="278" y="184">7</text>
+  <text class="lbl"  x="354" y="206">Attribution</text>
+  <text class="lbl2" x="354" y="224">y-hat = argmax_l s_l(x)</text>
+
+  <!-- 6: signed signatures (orange) -->
+  <rect class="box" x="508" y="180" width="180" height="62" rx="10" fill="#ffedd5" stroke="#c2410c"/>
+  <circle cx="522" cy="180" r="11" fill="#c2410c"/><text class="num" x="522" y="184">6</text>
+  <text class="lbl"  x="598" y="203">Signed signatures</text>
+  <text class="lbl2" x="598" y="220">S_l+ (for) / S_l- (against)</text>
+
+  <!-- 5: CPSS per family (orange) -->
+  <rect class="box" x="752" y="180" width="238" height="62" rx="10" fill="#ffedd5" stroke="#c2410c"/>
+  <circle cx="766" cy="180" r="11" fill="#c2410c"/><text class="num" x="766" y="184">5</text>
+  <text class="lbl"  x="871" y="203">CPSS per family</text>
+  <text class="lbl2" x="871" y="220">pi-hat_j &#8805; pi_thr, sign split</text>
+
+  <!-- ================= certificates band ================= -->
+  <rect x="20" y="284" width="970" height="54" rx="10" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+  <text class="lbl"  x="505" y="305" font-weight="bold" fill="#334155">Certificates</text>
+  <text class="lbl2" x="505" y="323">Shah&#8211;Samworth E[V] bound (error control) &#183; t-disjunct identifiability (mixture decoding)</text>
+
+  <!-- ================= arrows ================= -->
+  <path class="edge" d="M200,55 L264,55" stroke="#1d4ed8" marker-end="url(#arrowBlue)"/>
+  <path class="edge" d="M444,55 L508,55" stroke="#1d4ed8" marker-end="url(#arrowBlue)"/>
+  <path class="edge" d="M688,55 L752,55" stroke="#7c3aed" marker-end="url(#arrowPurple)"/>
+
+  <path class="edge" d="M871,86 L871,180" stroke="#15803d" marker-end="url(#arrowGreen)"/>
+
+  <path class="edge" d="M752,211 L688,211" stroke="#c2410c" marker-end="url(#arrowOrange)"/>
+  <path class="edge" d="M508,211 L444,211" stroke="#c2410c" marker-end="url(#arrowRed)"/>
+</svg>

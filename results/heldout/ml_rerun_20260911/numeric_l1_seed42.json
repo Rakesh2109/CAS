@@ -1,0 +1,77 @@
+{
+  "representation": "numeric",
+  "model": "l1",
+  "n_features": 22,
+  "training_rows": 175803,
+  "selection_rows": 19535,
+  "test_rows": 80868,
+  "seeds": [
+    42,
+    7,
+    123
+  ],
+  "split_seed": 0,
+  "smote": false,
+  "l1_standardized": true,
+  "sklearn_version": "1.8.0",
+  "per_seed": [
+    {
+      "seed": 42,
+      "hp": 1.0,
+      "selection_macro_f1": 0.7747397764609595,
+      "test_f1": 0.6691928629713412,
+      "test_acc": 0.6869837265667508,
+      "prediction_sha256": "f7b826965f0d49937645a8f3b4996a47ce02a4676ae87f0596d9e6a8f145ae2b",
+      "trials": [
+        {
+          "hp": 0.001,
+          "selection_macro_f1": 0.6412644824277657,
+          "seconds": 6.961422920227051
+        },
+        {
+          "hp": 0.0025118864315095794,
+          "selection_macro_f1": 0.6455520323046161,
+          "seconds": 11.805891990661621
+        },
+        {
+          "hp": 0.006309573444801929,
+          "selection_macro_f1": 0.6899438433277689,
+          "seconds": 17.607683897018433
+        },
+        {
+          "hp": 0.01584893192461114,
+          "selection_macro_f1": 0.7125494833145388,
+          "seconds": 26.56691312789917
+        },
+        {
+          "hp": 0.039810717055349734,
+          "selection_macro_f1": 0.7300691605588305,
+          "seconds": 137.23379516601562
+        },
+        {
+          "hp": 0.1,
+          "selection_macro_f1": 0.7578579256523432,
+          "seconds": 280.5965967178345
+        },
+        {
+          "hp": 1.0,
+          "selection_macro_f1": 0.7747397764609595,
+          "seconds": 557.2068972587585
+        }
+      ],
+      "nonzero_coefficients": 127,
+      "iterations": [
+        188,
+        90,
+        52,
+        46,
+        72,
+        143
+      ]
+    }
+  ],
+  "test_f1_mean": 0.6691928629713412,
+  "test_f1_sd": 0.0,
+  "test_acc_mean": 0.6869837265667508,
+  "test_acc_sd": 0.0
+}
