@@ -28,6 +28,8 @@
 \maketitle
 
 \begin{abstract}
+%Attack-family attribution in the Internet of Medical Things (IoMT) requires accurate predictions and evidence that analysts can inspect. In this paper, we introduce Clause-Activation Signatures (CAS) to extract signed clause evidence from a trained, weighted Tsetlin Machine (WTM), which offers logically faithful explainability combined with competitive inference speed and energy efficiency compared to other deep learning approaches. Here, weight-based pruning reduces the candidate pool before complementary-pairs stability selection identifies repeatedly selected clauses. Then, averaged coefficient signs distinguish supporting from opposing evidence. To evaluate this methodology, we used the CICIoMT2024 WiFi/MQTT dataset. In the results, we observed that the full 2,400-clause TM achieves macro-F1 $0.6660\pm0.0125$, and after pruning, CAS achieves $0.6660\pm0.0316$ at $\pi_{\mathrm{thr}}=0.8$ and $0.6599\pm0.0371$ at $\pi_{\mathrm{thr}}=0.9$. Including both evidence signs, these settings use 216 and 193 distinct clauses on average, respectively. As a state-of-the-art comparison, we considered five standard classifiers using the same underlying features and achieved  $0.6284$ to $0.6733$ macro-F1. The results suggest that CAS provides a concise clause representation for IoMT attack-family attribution while maintaining predictive performance comparable to the full TM. Additionally, storing only the selected clauses may reduce memory requirements.
+
 Attack-family attribution in the Internet of Medical Things (IoMT) requires accurate predictions while retaining a model that can be inspected and analyzed. In this paper, we propose Clause-Activation Signatures (CAS), a compact representation of a trained, weighted Tsetlin Machine (WTM) that identifies a small subset of informative clauses while preserving predictive performance. The key idea is to substantially reduce the number of clauses used by the model before performing stability-based selection. Specifically, weight-based pruning first removes clauses with limited contribution, after which complementary-pairs stability selection identifies clauses that are repeatedly selected across trained data. The signs of the averaged clause coefficients are then used to distinguish supporting from opposing evidence. We evaluate CAS on the CICIoMT2024 WiFi/MQTT dataset. The full 2,400-clause TM achieves a macro-F1 of $0.6660\pm0.0125$, while CAS achieves $0.6660\pm0.0316$ at $\pi_{\mathrm{thr}}=0.8$ and $0.6599\pm0.0371$ at $\pi_{\mathrm{thr}}=0.9$. Including both evidence signs, these settings retain only 216 and 193 distinct clauses on average, respectively, representing a substantial reduction from the original model size with little or no loss in predictive performance. For comparison, five standard classifiers using the same underlying features achieve macro-F1 scores ranging from $0.6284$ to $0.6733$. These results demonstrate that CAS can substantially simplify a WTM while maintaining competitive performance in attack-family attribution. The resulting compact clause representation reduces the storage footprint for deployment and provides a smaller, more focused set of clauses for subsequent interpretability analysis.
 
 
@@ -35,7 +37,7 @@ Attack-family attribution in the Internet of Medical Things (IoMT) requires accu
 \end{abstract}
 
 \begin{IEEEkeywords}
-attack attribution, intrusion detection, interpretable machine learning,
+attack attribution, intrusion detection, interpretable ML,
 IoMT, stability selection, Tsetlin Machine
 \end{IEEEkeywords}
 
@@ -48,31 +50,27 @@ et al.~\cite{abeyrathna2020} applied TM rules to intrusion detection on
 KDD'99. Their model provided both predictions and inspectable rules.
 More recently, Jaiswal et al.~\cite{jaiswal2026iomt} evaluated a TM detector on CICIoMT2024 and explained individual predictions through class-wise vote scores and clause-activation heatmaps. Also, in another study~\cite{jaiswal2026medsec}, the authors used MedSec-25 and examined feature contributions and clause activations. In addition, several datasets, such as CICIDS2017, KDD99, NSL-KDD, UNSW-NB15, and UNSW Bot-IoT, are considered, and anomaly detection is addressed using TM~\cite{10455063}. Since the TM consumes boolean data, ~\cite{jaiswal2026iomt,jaiswal2026medsec} and ~\cite{10455063} uses a $K$-bin discritizer from sklearn and a standard booleanizer from the TMU library, respectively. These studies establish both rule-based detection and
 inspection of the clauses contributing to a prediction. However, previous work has not investigated how to reduce the clause pool while preserving attack-family attribution performance and identifying the most important clauses. Reducing the clause pool can ease the burden of clause-level interpretability analysis and reduce the memory required during inference.
+ 
 
 In this paper, we introduce Clause-Activation Signatures (CAS)
-to select compact, reusable class signatures from a trained clause pool.
-More specifically, a weight-based pruning first
-reduces the candidate pool, and it then applies complementary-pairs stability
-selection (CPSS)~\cite{meinshausen2010,shah2013} to the retained clauses'
-activations. Further, averaged coefficients from
+to select compact, reusable class signatures from a trained clause pool. More specifically, a weight-based pruning first reduces the candidate pool, and it then applies complementary-pairs stability selection (CPSS)~\cite{meinshausen2010,shah2013} to the retained clauses' activations. Further, averaged coefficients from
 one-versus-rest models identify supporting and opposing evidence for
 each class. These evidence signs are estimated separately from the
 original TM voting signs. CAS scores each flow by normalizing the signed
 evidence from selected clauses that activate.
 We evaluate whether CAS reduces the evidence set while retaining
-predictive performance.
+predictive performance. 
+%The main contributions include the following aspects:
+%\begin{itemize}
+%\item A clause-based attribution layer that combines CPSS with signed, normalized evidence to construct reusable class signatures.
+%\item A sufficient margin condition for prediction-preserving TM pruning and an explicit account of the scope of CPSS error control.
+%\end{itemize}
+The main contributions are: (1) a CPSS-based attribution layer with signed, normalized evidence for reusable class signatures; and (2) a sufficient margin condition for prediction-preserving TM pruning and a characterization of CPSS error control.
 
-The main contributions include the following aspects:
-\begin{itemize}
-\item A clause-based attribution layer that combines CPSS with signed,
-normalized evidence to construct reusable class signatures.
-\item A sufficient margin condition for prediction-preserving TM pruning
-and an explicit account of the scope of CPSS error control.
-\end{itemize}
 
 \begin{figure*}[!t]
 \centering
-\includegraphics[width=1\textwidth]{fig_cpss_protocol.pdf}
+\includegraphics[width=0.8\textwidth]{fig_cpss_protocol.pdf}
 \caption{CAS pipeline with disjoint TM-fit, CPSS-fit, selection, and
 report partitions.}
 \label{fig:cpss}
@@ -83,9 +81,9 @@ report partitions.}
 \label{sec:bool}
 Figure~\ref{fig:cpss} summarizes the pipeline. Since the TM consumes boolean data,~\cite{jaiswal2026iomt,jaiswal2026medsec} and~\cite{10455063} use a $K$-bin discritizer from sklearn and a standard booleanizer from the TMU library, respectively. In this paper, training-fitted quantile
 bins encode numeric features as cumulative thermometer bits (non-finite
-values are replaced with the finite training maximum).
+values are replaced with the finite training maximum). %TMU~\cite{tmu} supplies literal negation internally. 
 
-For $N_{\mathrm{cls}}$ classes indexed by $c\in\{1,\dots,N_{\mathrm{cls}}\}$ and $C$ clauses per class indexed by $j\in\{1,\dots,C\}$, the trained pool produces Boolean activations
+For $N_{\mathrm{cls}}$ classes and $C$ clauses per class, the trained pool produces Boolean activations
 $z_{c,j}(x)$ and signed class sums
 \begin{equation}
  f_c(x)=\sum_{j=1}^{C} w_{c,j}z_{c,j}(x),\qquad
@@ -93,7 +91,7 @@ $z_{c,j}(x)$ and signed class sums
  \label{eq:tm}
 \end{equation}
 Flattening class and clause indices gives the activation matrix
-$Z\in\{0,1\}^{n\times p}$ over $n$ samples (flows), initially with $p=N_{\mathrm{cls}}C$.
+$Z\in\{0,1\}^{n\times p}$, initially with $p=N_{\mathrm{cls}}C$.
 
 
 
@@ -135,8 +133,7 @@ weights minimize this surrogate:
 
 \subsection{CPSS and Signed Evidence}
 \label{sec:cpss}
-For each class $\ell$, CPSS divides the fit partition into $B$
-Complementary pairs as shown in Fig~1. On each of the $2B$ halves, a class-balanced
+For each class $\ell$, CPSS divides the fit partition into $B$ complementary pairs as shown in Fig~1. On each of the $2B$ halves, a class-balanced
 $\ell_1$ logistic model predicts the one-versus-rest class label from
 $Z$. For half $h$ and inverse-regularisation strength
 $\kappa\in\Lambda$, let $\beta_{\ell j}^{h,\kappa}$ be the fitted
@@ -154,7 +151,7 @@ Let $\bar\beta_{\ell j}$ average coefficients over all halves and grid points, i
                                   \pm\bar\beta_{\ell j}>0\}.
  \label{eq:sign}
 \end{equation}
-Positive coefficients provide inculpatory evidence; negative ones provide exculpatory evidence. The attribution rule is
+Positive coefficients provide inculpatory evidence while negative ones provide exculpatory evidence. The attribution rule is
 \begin{equation}
  s_\ell(x)=\frac{\sum_{j\in S_\ell^+}\hat\pi_{\ell j}z_j(x)
                  -\sum_{j\in S_\ell^-}\hat\pi_{\ell j}z_j(x)}
@@ -200,7 +197,7 @@ training.
 The TM-based booleanizer encodes each feature into bit vectors using quantile-based thresholds. Hence,
 the 22 numeric features use up to ten quantile bins, giving a cached
 154-bit representation that includes redundant bits from repeated
-quantiles. The TM hyperparameter used in this work is $C=400$ clauses per class (200 positive and
+quantiles. The TM hyperparameter used is $C=400$ clauses per class (200 positive and
 200 negative), $T=320$, $s=8$, and 25 epochs.
 CPSS uses class-balanced liblinear fits with 200 maximum iterations,
 $\delta=10^{-8}$, and $\Lambda=\operatorname{geomspace}(0.001,0.1,6)$.
@@ -264,7 +261,8 @@ Input literals, same readout & $(10,0.9)$ & --- & $0.5876\pm0.0112$ & 0.6271 \\
 
 \subsection{Comparison with Standard Classifiers}
 \label{sec:baselines}
-Table~\ref{tab:baselines} compares CAS with five standard classifiers. All the baselines are also provided with the same dataset as presented in Section~IIIA.
+Table~\ref{tab:baselines} compares CAS with five standard classifiers. All the baselines are also provided with the same dataset as presented in Section~IIIA. 
+%Each baseline receives the 22 numeric features in their original continuous form. The TM uses thermometer encoding. We fit all baselines on the union of the TM-fit and CPSS-fit partitions. This gives them the175,803 labelled rows CAS uses across its two stages. 
 We choose
 hyperparameters on the selection partition and evaluate each model once
 on the report set. The 300-tree random
@@ -282,6 +280,12 @@ It is important to note that the BNN reaches $0.6503$ using 106,496 binary weigh
 $0.6660$ from 216 distinct signed clauses. These counts describe
 different model components as they do not establish relative memory or
 runtime costs.
+
+%These baselines provide several points of comparison. A single decision tree and an $\ell_1$ linear model serve as interpretable references.
+%Bagged and boosted tree ensembles provide black-box references.
+
+
+
 
 
 \begin{table}[t]
@@ -306,7 +310,7 @@ $\ell_1$ logistic regression~\cite{tibshirani1996} & $0.6284$ & 0.6465 \\
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.9\columnwidth]{fig_signature_frontier.png}
+\includegraphics[width=0.8\columnwidth]{fig_signature_frontier.png}
 \caption{CAS size--performance trade-off. The band is TM mean$\pm$SD;
 23 of 25 pruned-pool settings lie within it.}
 \label{fig:frontier}
@@ -325,7 +329,7 @@ from 122 to 196 (Fig.~\ref{fig:frontier}).
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{fig_sweep_heldout.pdf}
+\includegraphics[width=0.8\columnwidth]{fig_sweep_heldout.pdf}
 \caption{CAS sensitivity (three-seed mean$\pm$SD): (a) threshold at
 $B=15$; (b) pair count at $\pi_{\mathrm{thr}}=0.8$. Dotted lines: pruned TM.}
 \label{fig:sweep}
@@ -334,20 +338,20 @@ $B=15$; (b) pair count at $\pi_{\mathrm{thr}}=0.8$. Dotted lines: pruned TM.}
 
 \subsection{Pruning and Signature Size}
 \label{sec:pruned}\label{sec:signatures}
-To examine the effect of pruning alone, Fig.~\ref{fig:pruning} shows
-TM performance across removal budgets. Report-set macro-F1 and
+To assess pruning alone, Fig.~\ref{fig:pruning} shows
+the performance across removal budgets. Report-set macro-F1 and
 accuracy remain approximately steady as the pool shrinks
 from 2,400 to roughly 360 clauses, then decline with further removal.
 Using only the selection partition to choose the pruning budget gives
 $k^*=340$. This leaves 60 clauses per class and 360 in total,
 a reduction of $85\%$. At that budget, the pruned TM achieves macro-F1
 $0.6615\pm0.0115$ against $0.6660\pm0.0125$ for the full pool
-(Table~\ref{tab:headline}). Pruning therefore removes most of the
+(Table~\ref{tab:headline}). Pruning thus removes most of the
 pool with a mean macro-F1 decrease of $0.0045$.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.92\columnwidth]{fig_clause_pruning_heldout.pdf}
+\includegraphics[width=0.8\columnwidth]{fig_clause_pruning_heldout.pdf}
 \caption{Pruning sensitivity (mean$\pm$SD); the dashed line marks
 $k^*=340$, chosen on the selection set.}
 \label{fig:pruning}
@@ -385,6 +389,8 @@ Total & 150 & 585 & 185 & 233 \\
 \end{table}
 
 \section{Conclusion}
+%CAS extracts reusable, signed clause evidence for IoMT attack-family attribution. On capped CICIoMT2024 data, pruning removes $85\%$ of the TM pool. CAS matches the full TM's mean macro-F1 of $0.6660$ with 216 distinct signed clauses. Using 193 yields $0.6599$. Ablations support the use of conjunctive rules and evidence signs. Both highlighted settings fall within the baseline performance range. Their compact evidence traces to the selected clauses. The pruning bound depends on the stated margin condition. Under its sampling assumptions, CPSS controls low-selection-probability inclusions, without certifying false discoveries or signs. Further datasets, analyst studies, and runtime measurements are needed to assess generalization, explanation value, and deployment savings.
+
 In this paper, we introduced CAS for compact, signed clause-based attribution of IoMT attacks. By combining weight-based pruning with complementary-pairs stability selection, CAS reduces a 2,400-clause TM to 216 distinct signed clauses while matching its macro-F1 of 0.6660. Further increasing the selection threshold reduces the representation to 193 clauses, with macro-F1 decreasing slightly to 0.6599. These results show that substantial clause reduction is possible with little loss in predictive performance in this application. Ablations further support the use of conjunctive clauses and signed evidence. The theoretical results for pruning and stability selection hold under their stated assumptions, while further evaluation on additional datasets is needed to assess generalization to other applications.
 
 
