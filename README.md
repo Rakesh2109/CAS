@@ -11,12 +11,10 @@ dataset). Clone this repo to exactly `/FPTM/CAS_IoMT_Empirical` (or symlink
 it there) for the commands below to work unmodified.
 
 ## Layout
-- `IEEE-conference-template-062824 2/` -- paper source (`CAS_4page.tex`,
-  `.bib`, IEEEtran class/style) and compiled PDF
 - `scripts/` -- pipeline code: data prep -> booleanize -> train TM -> CPSS
   signatures -> Task A/B eval -> stability -> figures
 - `results/` -- JSON metrics, trained models, and signatures from the pipeline
-- `figs/` -- figures, including the ones used in the paper
+- `figs/` -- figures produced by the pipeline
 - `data/sample/` -- small sampled dataset for smoke-testing (see Dataset below)
 
 ## Dataset
