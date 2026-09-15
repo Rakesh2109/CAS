@@ -5,8 +5,6 @@ pruning plus complementary-pairs stability selection (CPSS) on a trained
 weighted Tsetlin Machine (WTM), evaluated on **CICIoMT2024** (WiFi/MQTT
 subset) for IoMT attack-family attribution.
 
-Paper source: [`IEEE-conference-template-062824 2/CAS_4page.tex`](IEEE-conference-template-062824%202/CAS_4page.tex).
-
 **Note on paths:** every script uses absolute paths rooted at
 `/FPTM/CAS_IoMT_Empirical` (this repo) and `/FPTM/Datasets/IoTM` (the
 dataset). Clone this repo to exactly `/FPTM/CAS_IoMT_Empirical` (or symlink
