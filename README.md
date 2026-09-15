@@ -1,31 +1,11 @@
-# CAS / STABILIS Empirical Run -- IoT/IoMT dataset comparison
+# CAS -- Clause-Activation Signatures for Attack-Family Attribution in IoMT
 
-Empirical implementation of **Method 1 (STABILIS)** from
-`forensic_fingerprint_methods.md` -- stability-selected clause-activation
-signatures for attack-family attribution, on real data, scoped for a single
-session, run against **three** different IoT/IoMT datasets to check whether
-any one is actually "best" rather than assuming it.
+Empirical implementation of Clause-Activation Signatures (CAS): weight-based
+pruning plus complementary-pairs stability selection (CPSS) on a trained
+weighted Tsetlin Machine (WTM), evaluated on **CICIoMT2024** (WiFi/MQTT
+subset) for IoMT attack-family attribution.
 
-**Primary dataset going forward: IoTM (CICIoMT2024)** (user decision,
-2026-08-22). MedSec/WUSTL artifacts are kept on disk for the record but are
-no longer the active line of work. CAS here means **per-class** signatures
-(one-vs-rest per family) -- the binary normal-vs-attack arm is a fallback,
-not the definition of the method. Literature-grounded selection rationale:
-`results/DATASET_SELECTION_JUSTIFICATION.md`.
-
-- **`results/RESULTS.md`** -- full primary run on IoTM (CICIoMT2024,
-  family-level): what ran vs. documented limitations relative to the full spec.
-- **`results/DATASET_COMPARISON.md`** -- the three-way comparison (IoTM vs
-  MedSec-25 vs WUSTL-EHMS-2020): which dataset wins on which axis, and why
-  STABILIS beats the TM-argmax baseline on one dataset but loses on the
-  other two.
-- **`results/CAS_PER_CLASS_VS_BINARY.md`** -- per-class CAS feasibility
-  answer + the binary (normal-vs-attack) fallback: dedicated 2-class TMs,
-  CPSS attack-class signatures with E[V] certificates, 3-seed eval on all
-  three datasets, decoded attack evidence lists.
-- **`paper/cas_iomt_paper.md`** -- the paper: "Clause-Activation Signatures
-  (CAS) for Attack-Family Attribution in IoMT" (IoTM/CICIoMT2024 only;
-  `paper/paper.md` is the earlier MedSec-25 study, kept for the record).
+Paper source: [`IEEE-conference-template-062824 2/CAS_4page.tex`](IEEE-conference-template-062824%202/CAS_4page.tex).
 
 **Note on paths:** every script uses absolute paths rooted at
 `/FPTM/CAS_IoMT_Empirical` (this repo) and `/FPTM/Datasets/IoTM` (the
@@ -33,12 +13,13 @@ dataset). Clone this repo to exactly `/FPTM/CAS_IoMT_Empirical` (or symlink
 it there) for the commands below to work unmodified.
 
 ## Layout
-- `scripts/` -- pipeline code (data prep -> booleanize -> train TM -> CPSS
-  signatures -> Task A/B eval -> stability -> figures), per-dataset variants
-  suffixed `_medsec` / `_wustl`
-- `results/`, `results_medsec/`, `results_wustl/` -- JSON/NPZ metrics, trained
-  models, signatures, one dir per dataset
-- `figs/` -- PNG figures, including `cross_dataset_comparison.png`
+- `IEEE-conference-template-062824 2/` -- paper source (`CAS_4page.tex`,
+  `.bib`, IEEEtran class/style) and compiled PDF
+- `scripts/` -- pipeline code: data prep -> booleanize -> train TM -> CPSS
+  signatures -> Task A/B eval -> stability -> figures
+- `results/` -- JSON metrics, trained models, and signatures from the pipeline
+- `figs/` -- figures, including the ones used in the paper
+- `data/sample/` -- small sampled dataset for smoke-testing (see Dataset below)
 
 ## Dataset
 
@@ -73,6 +54,6 @@ python3 scripts/task_b_lofo.py
 python3 scripts/stability_kuncheva.py
 python3 scripts/make_figures.py
 # binary (normal-vs-attack) CAS fallback arm:
-python3 scripts/binary_cas.py iotm --seed 42   # also: medsec, wustl; seeds 42/7/123
+python3 scripts/binary_cas.py iotm --seed 42   # seeds 42/7/123
 python3 scripts/binary_cas_aggregate.py
 ```
