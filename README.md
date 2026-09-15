@@ -10,13 +10,6 @@ subset) for IoMT attack-family attribution.
 dataset). Clone this repo to exactly `/FPTM/CAS_IoMT_Empirical` (or symlink
 it there) for the commands below to work unmodified.
 
-## Layout
-- `scripts/` -- pipeline code: data prep -> booleanize -> train TM -> CPSS
-  signatures -> Task A/B eval -> stability -> figures
-- `results/` -- JSON metrics, trained models, and signatures from the pipeline
-- `figs/` -- figures produced by the pipeline
-- `data/sample/` -- small sampled dataset for smoke-testing (see Dataset below)
-
 ## Dataset
 
 The scripts read CICIoMT2024 (WiFi/MQTT subset) from `/FPTM/Datasets/IoTM/Train.csv`
@@ -24,20 +17,21 @@ and `/FPTM/Datasets/IoTM/Test.csv` (paths are hardcoded, not env-configurable, s
 this exact absolute path must exist -- a symlink into your own dataset location
 works fine).
 
-- **Full dataset (required to reproduce the paper's numbers):** download
-  CICIoMT2024 from the original source (CIC/University of New Brunswick) and
-  place the WiFi/MQTT `Train.csv` / `Test.csv` at `/FPTM/Datasets/IoTM/`. Not
-  included in this repo -- the two files are 911MB combined, over GitHub's
-  practical size limits, and redistribution terms for the raw data aren't
-  something we can clear here.
-- **`data/sample/`** -- a small, stratified 300/100-rows-per-class sample of
-  Train/Test (same 23 columns, same 6 families) checked into this repo for
-  smoke-testing the pipeline (`data_prep.py` -> `train_tm.py` -> ...) without
-  the full download. It reproduces the pipeline's mechanics, **not** the
-  paper's reported macro-F1 -- those numbers require the full capped split
-  (40,000 train / 15,000 test rows per class) described in the paper's
-  Experimental Setup section. To smoke-test, point `TRAIN_CSV`/`TEST_CSV` in
-  `scripts/data_prep.py` at the sample files instead of the full dataset.
+- **`data/IoTM_capped_Train.csv` / `data/IoTM_capped_Test.csv`** -- the exact
+  dataset used in the paper: the raw CICIoMT2024 WiFi/MQTT split, stratified
+  and capped per family (40,000 train / 15,000 test rows per class, seed 42),
+  producing the same 195,338 train / 80,868 test rows reported in the paper's
+  Experimental Setup. To reproduce the paper's numbers, point `TRAIN_CSV` /
+  `TEST_CSV` in `scripts/data_prep.py` at these two files -- no need to
+  download the full raw dataset.
+- **Full raw dataset (optional):** download CICIoMT2024 from the original
+  source (CIC/University of New Brunswick) and place the WiFi/MQTT
+  `Train.csv` / `Test.csv` at `/FPTM/Datasets/IoTM/`. Not included in this
+  repo -- the two raw files are 911MB combined, well beyond what's needed
+  once the capped split above is available.
+- **`data/sample/`** -- a much smaller, stratified 300/100-rows-per-class
+  sample for quick smoke-testing of the pipeline mechanics only; it does not
+  reproduce the paper's reported macro-F1.
 
 ## Reproduce
 ```

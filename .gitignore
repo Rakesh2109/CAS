@@ -1,5 +1,4 @@
 # Full raw dataset -- do not commit (911MB); see README for download instructions.
-/data/*.csv
 /data/IoTM/
 
 # Large generated experiment artifacts (models, activation matrices, cached
